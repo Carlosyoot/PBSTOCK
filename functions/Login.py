@@ -1,5 +1,8 @@
 from request.Request import GetLogin
 from functions.Admin import WindowManager
+from PyQt5.QtCore import QTimer
+
+
 
 
 def logar(ui, janela_atual):
@@ -9,19 +12,27 @@ def logar(ui, janela_atual):
     User = ui.lineEdit.text()
     Password = ui.lineEdit_2.text()
 
+    #FUNÇÃO ORIGINAL DE LOGIN / DESATIVADA PARA OBTER A PÁGINA DIRETAMENTE, APÓS, ATIVAR
     # Envia os dados para o servidor
-    response = GetLogin(User, Password)
+    #response = GetLogin(User, Password)
+    #
+    #
+    #status = response.get('status')
+    #redirect = response.get('redirect')
+    #user =  response.get('user')
     
-    status = response.get('status')
-    redirect = response.get('redirect')
+    redirect = 'admin'
+    status = 'sucess'
+    user = 'carlos'
 
     if redirect == 'admin' and status == 'sucess':
         ui.lineEdit.setStyleSheet(StyleSucess.style)
         ui.lineEdit_2.setStyleSheet(StyleSucess.style)
         print("Redirecionando para Admin")
 
-        janela_atual.close()
-        WindowManager.open_admin()
+    #QTIMER PARA JANELA DIRETA
+        QTimer.singleShot(200, janela_atual.close)
+        WindowManager.open_admin(user)
         
 #    FUTURA PAGE DE COLABORADOR
     #elif redirect == 'colaborador' and status == 'sucess':

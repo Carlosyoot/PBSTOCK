@@ -60,7 +60,7 @@ async def DataloginSemBanco(User, Password):
 
             if(Password == '123'):
                 
-                return {'status': 'sucess', 'message': 'Bem-vindo, administrador!','redirect': 'admin'}
+                return {'status': 'sucess', 'message': 'Bem-vindo, administrador!','redirect': 'admin', 'user': 'carlos'}
         else:
 
               return {'status': 'error', 'message': 'Usuário ou senha incorretos'}
