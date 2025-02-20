@@ -6,7 +6,7 @@ def corrigir_stylesheet(codigo):
     return codigo_corrigido
 
 # Ler o código do arquivo original
-with open("FRMadmin.py", "r", encoding="utf-8") as f:
+with open("FrmAdmin.py", "r", encoding="utf-8") as f:
     codigo_original = f.read()
 
 # Aplicar a correção

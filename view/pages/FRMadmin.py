@@ -37,12 +37,20 @@ class Ui_FrmAdmin(object):
         self.bara_menu_esquerda.setFrameShadow(QtWidgets.QFrame.Raised)
         self.bara_menu_esquerda.setObjectName("bara_menu_esquerda")
         self.btn_home = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_home.setGeometry(QtCore.QRect(0, 50, 61, 51))
+        self.btn_home.setGeometry(QtCore.QRect(0, 40, 61, 51))
         self.btn_home.setStatusTip("")
         self.btn_home.setWhatsThis("")
         self.btn_home.setAccessibleName("")
         self.btn_home.setAccessibleDescription("")
-        self.btn_home.setStyleSheet("QPushButton {\n""border: solid;\n""outline: 0;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_home.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_home.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/icones/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -51,7 +59,15 @@ class Ui_FrmAdmin(object):
         self.btn_home.setObjectName("btn_home")
         self.btn_Vendas = QtWidgets.QPushButton(self.bara_menu_esquerda)
         self.btn_Vendas.setGeometry(QtCore.QRect(0, 270, 61, 51))
-        self.btn_Vendas.setStyleSheet("QPushButton {\n""border: solid;\n""outline: 0;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_Vendas.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_Vendas.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/icones/pedidos.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -60,7 +76,15 @@ class Ui_FrmAdmin(object):
         self.btn_Vendas.setObjectName("btn_Vendas")
         self.btn_fornecedores = QtWidgets.QPushButton(self.bara_menu_esquerda)
         self.btn_fornecedores.setGeometry(QtCore.QRect(0, 380, 61, 51))
-        self.btn_fornecedores.setStyleSheet("QPushButton {\n""border: solid;\n""outline: 0;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_fornecedores.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_fornecedores.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(":/icones/pedidos2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -69,7 +93,15 @@ class Ui_FrmAdmin(object):
         self.btn_fornecedores.setObjectName("btn_fornecedores")
         self.btn_produtos = QtWidgets.QPushButton(self.bara_menu_esquerda)
         self.btn_produtos.setGeometry(QtCore.QRect(0, 320, 61, 51))
-        self.btn_produtos.setStyleSheet("QPushButton {\n""border: solid;\n""outline: 0;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_produtos.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_produtos.setText("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap(":/icones/nv_produtos.jpg-1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -78,7 +110,15 @@ class Ui_FrmAdmin(object):
         self.btn_produtos.setObjectName("btn_produtos")
         self.btn_colaboradores = QtWidgets.QPushButton(self.bara_menu_esquerda)
         self.btn_colaboradores.setGeometry(QtCore.QRect(0, 440, 61, 51))
-        self.btn_colaboradores.setStyleSheet("QPushButton {\n""border: solid;\n""outline: 0;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_colaboradores.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_colaboradores.setText("")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap(":/icones/add_users.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -87,7 +127,15 @@ class Ui_FrmAdmin(object):
         self.btn_colaboradores.setObjectName("btn_colaboradores")
         self.btn_clientes = QtWidgets.QPushButton(self.bara_menu_esquerda)
         self.btn_clientes.setGeometry(QtCore.QRect(0, 210, 61, 51))
-        self.btn_clientes.setStyleSheet("QPushButton {\n""outline: 0;\n""border: solid;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_clientes.setStyleSheet("QPushButton {\n"
+"outline: 0;\n"
+"border: solid;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_clientes.setText("")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap(":/icones/nv_clientes.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -96,7 +144,15 @@ class Ui_FrmAdmin(object):
         self.btn_clientes.setObjectName("btn_clientes")
         self.btn_vendas_2 = QtWidgets.QPushButton(self.bara_menu_esquerda)
         self.btn_vendas_2.setGeometry(QtCore.QRect(0, 150, 71, 51))
-        self.btn_vendas_2.setStyleSheet("QPushButton {\n""border: solid;\n""outline: 0;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_vendas_2.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_vendas_2.setText("")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap(":/icones/monitoramento.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -105,30 +161,36 @@ class Ui_FrmAdmin(object):
         self.btn_vendas_2.setObjectName("btn_vendas_2")
         self.btn_voltar = QtWidgets.QPushButton(self.bara_menu_esquerda)
         self.btn_voltar.setGeometry(QtCore.QRect(0, 560, 61, 51))
-        self.btn_voltar.setStyleSheet("QPushButton {\n""border: solid;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_voltar.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_voltar.setText("")
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("view/ui\\../../../../../Downloads/sign-out.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_voltar.setIcon(icon8)
         self.btn_voltar.setIconSize(QtCore.QSize(32, 32))
         self.btn_voltar.setObjectName("btn_voltar")
-        self.barra_menu_topo = QtWidgets.QFrame(self.Admin)
-        self.barra_menu_topo.setGeometry(QtCore.QRect(60, 0, 1041, 51))
-        self.barra_menu_topo.setStyleSheet("background-color: rgb(159, 63, 250);")
-        self.barra_menu_topo.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.barra_menu_topo.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.barra_menu_topo.setObjectName("barra_menu_topo")
-        self.lbl_seja_bem_vindo = QtWidgets.QLabel(self.barra_menu_topo)
-        self.lbl_seja_bem_vindo.setGeometry(QtCore.QRect(10, 10, 151, 31))
-        self.lbl_seja_bem_vindo.setStyleSheet("color: white;\n""font: 12pt \"Montserrat\";")
-        self.lbl_seja_bem_vindo.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
-        self.lbl_seja_bem_vindo.setObjectName("lbl_seja_bem_vindo")
-        self.btn_configs = QtWidgets.QPushButton(self.barra_menu_topo)
-        self.btn_configs.setGeometry(QtCore.QRect(980, 0, 41, 51))
-        self.btn_configs.setStyleSheet("QPushButton {\n""border: solid;\n""outline: 0;\n""}\n""\n""QPushButton:hover{\n""border: solid;\n""background-color: rgb(159, 103, 250);\n""}")
+        self.btn_configs = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_configs.setGeometry(QtCore.QRect(10, 90, 41, 51))
+        self.btn_configs.setStyleSheet("QPushButton {\n"
+"border: solid;\n"
+"outline: 0;\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover{\n"
+"border: solid;\n"
+"    background-color: rgb(159, 103, 250);\n"
+"}")
         self.btn_configs.setText("")
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/icones/engrenagem_ico.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon9.addPixmap(QtGui.QPixmap("view/ui\\../../../../../Downloads/configicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_configs.setIcon(icon9)
         self.btn_configs.setIconSize(QtCore.QSize(30, 30))
         self.btn_configs.setObjectName("btn_configs")
@@ -152,18 +214,21 @@ class Ui_FrmAdmin(object):
         self.home.setObjectName("home")
         self.quadro_noticias = QtWidgets.QFrame(self.home)
         self.quadro_noticias.setGeometry(QtCore.QRect(560, 40, 441, 481))
-        self.quadro_noticias.setStyleSheet("background-color: #9f3ffa;\n""border-radius: 5px;")
+        self.quadro_noticias.setStyleSheet("background-color: #9f3ffa;\n"
+"border-radius: 5px;")
         self.quadro_noticias.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.quadro_noticias.setFrameShadow(QtWidgets.QFrame.Raised)
         self.quadro_noticias.setObjectName("quadro_noticias")
         self.lbl_titulo = QtWidgets.QLabel(self.quadro_noticias)
         self.lbl_titulo.setGeometry(QtCore.QRect(110, 30, 221, 41))
-        self.lbl_titulo.setStyleSheet("color: white;\n""font: 20pt \"Montserrat\";")
+        self.lbl_titulo.setStyleSheet("color: white;\n"
+"font: 20pt \"Montserrat\";")
         self.lbl_titulo.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_titulo.setObjectName("lbl_titulo")
         self.lbl_noticia3 = QtWidgets.QLabel(self.quadro_noticias)
         self.lbl_noticia3.setGeometry(QtCore.QRect(90, 240, 341, 51))
-        self.lbl_noticia3.setStyleSheet("color: white;\n""font: 10pt \"Montserrat\";")
+        self.lbl_noticia3.setStyleSheet("color: white;\n"
+"font: 10pt \"Montserrat\";")
         self.lbl_noticia3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_noticia3.setObjectName("lbl_noticia3")
         self.lbl_imagem3 = QtWidgets.QLabel(self.quadro_noticias)
@@ -184,7 +249,8 @@ class Ui_FrmAdmin(object):
         self.lbl_imagem2.setObjectName("lbl_imagem2")
         self.lbl_noticia1 = QtWidgets.QLabel(self.quadro_noticias)
         self.lbl_noticia1.setGeometry(QtCore.QRect(90, 100, 341, 51))
-        self.lbl_noticia1.setStyleSheet("color: white;\n""font: 10pt \"Montserrat\";")
+        self.lbl_noticia1.setStyleSheet("color: white;\n"
+"font: 10pt \"Montserrat\";")
         self.lbl_noticia1.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_noticia1.setObjectName("lbl_noticia1")
         self.lbl_imagem1 = QtWidgets.QLabel(self.quadro_noticias)
@@ -197,7 +263,8 @@ class Ui_FrmAdmin(object):
         self.lbl_imagem1.setObjectName("lbl_imagem1")
         self.lbl_noticia2 = QtWidgets.QLabel(self.quadro_noticias)
         self.lbl_noticia2.setGeometry(QtCore.QRect(90, 170, 341, 51))
-        self.lbl_noticia2.setStyleSheet("color: white;\n""font: 10pt \"Montserrat\";")
+        self.lbl_noticia2.setStyleSheet("color: white;\n"
+"font: 10pt \"Montserrat\";")
         self.lbl_noticia2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_noticia2.setObjectName("lbl_noticia2")
         self.lbl_titulo.raise_()
@@ -207,19 +274,22 @@ class Ui_FrmAdmin(object):
         self.lbl_noticia2.raise_()
         self.lbl_noticia3.raise_()
         self.lbl_imagem3.raise_()
-        self.label_3 = QtWidgets.QLabel(self.home)
-        self.label_3.setGeometry(QtCore.QRect(60, 40, 481, 131))
-        self.label_3.setAutoFillBackground(False)
-        self.label_3.setStyleSheet("color: #9f3ffa;\n""background-color: rgb(197, 197, 197);\n""font: 28pt \"Montserrat\";")
-        self.label_3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
-        self.label_3.setObjectName("label_3")
         self.lbl_logo = QtWidgets.QLabel(self.home)
-        self.lbl_logo.setGeometry(QtCore.QRect(130, 210, 311, 311))
+        self.lbl_logo.setGeometry(QtCore.QRect(80, 40, 411, 311))
         self.lbl_logo.setStyleSheet("")
+        self.lbl_logo.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.lbl_logo.setText("")
         self.lbl_logo.setPixmap(QtGui.QPixmap("view/ui\\../../../../../Downloads/Estresse, hábitos parafuncionais (2).png"))
         self.lbl_logo.setScaledContents(True)
         self.lbl_logo.setObjectName("lbl_logo")
+        self.label_3 = QtWidgets.QLabel(self.home)
+        self.label_3.setGeometry(QtCore.QRect(60, 360, 441, 131))
+        self.label_3.setAutoFillBackground(False)
+        self.label_3.setStyleSheet("color: #9f3ffa;\n"
+"font: 28pt \"Montserrat\";\n"
+"text-align: \'center\';")
+        self.label_3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
+        self.label_3.setObjectName("label_3")
         self.funcoes.addWidget(self.home)
         self.page_11 = QtWidgets.QWidget()
         self.page_11.setObjectName("page_11")
@@ -235,42 +305,110 @@ class Ui_FrmAdmin(object):
         self.pg_configuracoes.setObjectName("pg_configuracoes")
         self.checkBox_finalizar_app = QtWidgets.QCheckBox(self.pg_configuracoes)
         self.checkBox_finalizar_app.setGeometry(QtCore.QRect(20, 80, 311, 20))
-        self.checkBox_finalizar_app.setStyleSheet("font: 10pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.checkBox_finalizar_app.setStyleSheet("font: 10pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.checkBox_finalizar_app.setObjectName("checkBox_finalizar_app")
         self.lbl_titulo_configuracoes = QtWidgets.QLabel(self.pg_configuracoes)
         self.lbl_titulo_configuracoes.setGeometry(QtCore.QRect(20, 20, 241, 41))
-        self.lbl_titulo_configuracoes.setStyleSheet("font: 16pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_configuracoes.setStyleSheet("font: 16pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_configuracoes.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_configuracoes.setWordWrap(False)
         self.lbl_titulo_configuracoes.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_configuracoes.setObjectName("lbl_titulo_configuracoes")
         self.btn_salvar = QtWidgets.QPushButton(self.pg_configuracoes)
         self.btn_salvar.setGeometry(QtCore.QRect(20, 180, 161, 31))
-        self.btn_salvar.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_salvar.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_salvar.setObjectName("btn_salvar")
         self.checkBox_finalizar_app_2 = QtWidgets.QCheckBox(self.pg_configuracoes)
         self.checkBox_finalizar_app_2.setGeometry(QtCore.QRect(20, 110, 311, 20))
-        self.checkBox_finalizar_app_2.setStyleSheet("font: 10pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.checkBox_finalizar_app_2.setStyleSheet("font: 10pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.checkBox_finalizar_app_2.setObjectName("checkBox_finalizar_app_2")
         self.Telas_do_menu.addWidget(self.pg_configuracoes)
         self.pg_fornecedores = QtWidgets.QWidget()
         self.pg_fornecedores.setObjectName("pg_fornecedores")
         self.lbl_titulo_forncedores = QtWidgets.QLabel(self.pg_fornecedores)
         self.lbl_titulo_forncedores.setGeometry(QtCore.QRect(20, 30, 371, 41))
-        self.lbl_titulo_forncedores.setStyleSheet("color: #9f3ffa;\n""font: 20pt \"Montserrat\";")
+        self.lbl_titulo_forncedores.setStyleSheet("color: #9f3ffa;\n"
+"font: 20pt \"Montserrat\";")
         self.lbl_titulo_forncedores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_titulo_forncedores.setObjectName("lbl_titulo_forncedores")
         self.btn_editar_fornecedores = QtWidgets.QPushButton(self.pg_fornecedores)
         self.btn_editar_fornecedores.setGeometry(QtCore.QRect(810, 330, 201, 41))
-        self.btn_editar_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_editar_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_editar_fornecedores.setObjectName("btn_editar_fornecedores")
         self.btn_excluir_fornecedores = QtWidgets.QPushButton(self.pg_fornecedores)
         self.btn_excluir_fornecedores.setGeometry(QtCore.QRect(810, 390, 201, 41))
-        self.btn_excluir_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color:rgb(255, 17, 49);\n""}\n""")
+        self.btn_excluir_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color:rgb(255, 17, 49);\n"
+"}\n"
+"")
         self.btn_excluir_fornecedores.setObjectName("btn_excluir_fornecedores")
         self.tabela_fornecedores = QtWidgets.QTableWidget(self.pg_fornecedores)
         self.tabela_fornecedores.setGeometry(QtCore.QRect(20, 170, 771, 371))
-        self.tabela_fornecedores.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_fornecedores.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_fornecedores.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_fornecedores.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_fornecedores.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -280,7 +418,7 @@ class Ui_FrmAdmin(object):
         self.tabela_fornecedores.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.tabela_fornecedores.setGridStyle(QtCore.Qt.SolidLine)
         self.tabela_fornecedores.setObjectName("tabela_fornecedores")
-        self.tabela_fornecedores.setColumnCount(3)
+        self.tabela_fornecedores.setColumnCount(5)
         self.tabela_fornecedores.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tabela_fornecedores.setHorizontalHeaderItem(0, item)
@@ -288,16 +426,45 @@ class Ui_FrmAdmin(object):
         self.tabela_fornecedores.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tabela_fornecedores.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabela_fornecedores.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabela_fornecedores.setHorizontalHeaderItem(4, item)
+        self.tabela_fornecedores.horizontalHeader().setStretchLastSection(True)
         self.tabela_fornecedores.verticalHeader().setVisible(False)
         self.tabela_fornecedores.verticalHeader().setSortIndicatorShown(False)
         self.tabela_fornecedores.verticalHeader().setStretchLastSection(False)
         self.btn_adicionar_forncedores = QtWidgets.QPushButton(self.pg_fornecedores)
         self.btn_adicionar_forncedores.setGeometry(QtCore.QRect(810, 270, 201, 41))
-        self.btn_adicionar_forncedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_adicionar_forncedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_adicionar_forncedores.setObjectName("btn_adicionar_forncedores")
         self.btn_filtrar_fornecedores = QtWidgets.QPushButton(self.pg_fornecedores)
         self.btn_filtrar_fornecedores.setGeometry(QtCore.QRect(20, 100, 51, 41))
-        self.btn_filtrar_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_filtrar_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_filtrar_fornecedores.setText("")
         icon10 = QtGui.QIcon()
         icon10.addPixmap(QtGui.QPixmap(":/icones/lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -306,13 +473,16 @@ class Ui_FrmAdmin(object):
         self.btn_filtrar_fornecedores.setObjectName("btn_filtrar_fornecedores")
         self.line_search_Bar_fornecedores = QtWidgets.QLineEdit(self.pg_fornecedores)
         self.line_search_Bar_fornecedores.setGeometry(QtCore.QRect(70, 100, 291, 41))
-        self.line_search_Bar_fornecedores.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_fornecedores.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_fornecedores.setCursorPosition(0)
         self.line_search_Bar_fornecedores.setClearButtonEnabled(True)
         self.line_search_Bar_fornecedores.setObjectName("line_search_Bar_fornecedores")
         self.lbl_hora_data_fornecedores = QtWidgets.QLabel(self.pg_fornecedores)
         self.lbl_hora_data_fornecedores.setGeometry(QtCore.QRect(820, 510, 181, 21))
-        self.lbl_hora_data_fornecedores.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_fornecedores.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_fornecedores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_fornecedores.setWordWrap(False)
         self.lbl_hora_data_fornecedores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -322,25 +492,64 @@ class Ui_FrmAdmin(object):
         self.pg_alterar_fornecedores.setObjectName("pg_alterar_fornecedores")
         self.lbl_titulo_alterar_fornecedores = QtWidgets.QLabel(self.pg_alterar_fornecedores)
         self.lbl_titulo_alterar_fornecedores.setGeometry(QtCore.QRect(20, 20, 371, 41))
-        self.lbl_titulo_alterar_fornecedores.setStyleSheet("color: #9f3ffa;\n""font: 20pt \"Montserrat\";")
+        self.lbl_titulo_alterar_fornecedores.setStyleSheet("color: #9f3ffa;\n"
+"font: 20pt \"Montserrat\";")
         self.lbl_titulo_alterar_fornecedores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_titulo_alterar_fornecedores.setObjectName("lbl_titulo_alterar_fornecedores")
         self.btn_flitrar_fornecedores = QtWidgets.QPushButton(self.pg_alterar_fornecedores)
         self.btn_flitrar_fornecedores.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_flitrar_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_flitrar_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_flitrar_fornecedores.setText("")
         self.btn_flitrar_fornecedores.setIcon(icon10)
         self.btn_flitrar_fornecedores.setIconSize(QtCore.QSize(25, 25))
         self.btn_flitrar_fornecedores.setObjectName("btn_flitrar_fornecedores")
         self.line_search_Bar_altarar_fornecedor = QtWidgets.QLineEdit(self.pg_alterar_fornecedores)
         self.line_search_Bar_altarar_fornecedor.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_Bar_altarar_fornecedor.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_altarar_fornecedor.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_altarar_fornecedor.setCursorPosition(0)
         self.line_search_Bar_altarar_fornecedor.setClearButtonEnabled(True)
         self.line_search_Bar_altarar_fornecedor.setObjectName("line_search_Bar_altarar_fornecedor")
         self.tabela_alterar_fornecedores = QtWidgets.QTableWidget(self.pg_alterar_fornecedores)
         self.tabela_alterar_fornecedores.setGeometry(QtCore.QRect(20, 190, 991, 361))
-        self.tabela_alterar_fornecedores.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_alterar_fornecedores.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_alterar_fornecedores.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_alterar_fornecedores.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_alterar_fornecedores.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -358,34 +567,67 @@ class Ui_FrmAdmin(object):
         self.tabela_alterar_fornecedores.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tabela_alterar_fornecedores.setHorizontalHeaderItem(2, item)
+        self.tabela_alterar_fornecedores.horizontalHeader().setStretchLastSection(True)
         self.tabela_alterar_fornecedores.verticalHeader().setVisible(False)
         self.tabela_alterar_fornecedores.verticalHeader().setSortIndicatorShown(False)
         self.tabela_alterar_fornecedores.verticalHeader().setStretchLastSection(False)
         self.line_alterar_nome_fornecedor = QtWidgets.QLineEdit(self.pg_alterar_fornecedores)
         self.line_alterar_nome_fornecedor.setGeometry(QtCore.QRect(20, 140, 161, 31))
-        self.line_alterar_nome_fornecedor.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_alterar_nome_fornecedor.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_alterar_nome_fornecedor.setText("")
         self.line_alterar_nome_fornecedor.setClearButtonEnabled(True)
         self.line_alterar_nome_fornecedor.setObjectName("line_alterar_nome_fornecedor")
         self.line_alterar_endereco_fornecedor = QtWidgets.QLineEdit(self.pg_alterar_fornecedores)
         self.line_alterar_endereco_fornecedor.setGeometry(QtCore.QRect(200, 140, 161, 31))
-        self.line_alterar_endereco_fornecedor.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_alterar_endereco_fornecedor.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_alterar_endereco_fornecedor.setText("")
         self.line_alterar_endereco_fornecedor.setClearButtonEnabled(True)
         self.line_alterar_endereco_fornecedor.setObjectName("line_alterar_endereco_fornecedor")
         self.line_alterar_contato_fornecedor = QtWidgets.QLineEdit(self.pg_alterar_fornecedores)
         self.line_alterar_contato_fornecedor.setGeometry(QtCore.QRect(380, 140, 161, 31))
-        self.line_alterar_contato_fornecedor.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_alterar_contato_fornecedor.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_alterar_contato_fornecedor.setText("")
         self.line_alterar_contato_fornecedor.setClearButtonEnabled(True)
         self.line_alterar_contato_fornecedor.setObjectName("line_alterar_contato_fornecedor")
         self.btn_alterar_fornecedores = QtWidgets.QPushButton(self.pg_alterar_fornecedores)
         self.btn_alterar_fornecedores.setGeometry(QtCore.QRect(380, 90, 161, 31))
-        self.btn_alterar_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_alterar_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_alterar_fornecedores.setObjectName("btn_alterar_fornecedores")
         self.lbl_hora_data_alterar_fornecedores = QtWidgets.QLabel(self.pg_alterar_fornecedores)
         self.lbl_hora_data_alterar_fornecedores.setGeometry(QtCore.QRect(830, 150, 181, 21))
-        self.lbl_hora_data_alterar_fornecedores.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_alterar_fornecedores.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_alterar_fornecedores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_alterar_fornecedores.setWordWrap(False)
         self.lbl_hora_data_alterar_fornecedores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -395,47 +637,116 @@ class Ui_FrmAdmin(object):
         self.pg_cadastrar_fornecedores.setObjectName("pg_cadastrar_fornecedores")
         self.btn_cadastrar_forncedores = QtWidgets.QPushButton(self.pg_cadastrar_fornecedores)
         self.btn_cadastrar_forncedores.setGeometry(QtCore.QRect(380, 90, 161, 31))
-        self.btn_cadastrar_forncedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_cadastrar_forncedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_cadastrar_forncedores.setObjectName("btn_cadastrar_forncedores")
         self.line_cadastrar_nome_fornecedores = QtWidgets.QLineEdit(self.pg_cadastrar_fornecedores)
         self.line_cadastrar_nome_fornecedores.setGeometry(QtCore.QRect(20, 140, 161, 31))
-        self.line_cadastrar_nome_fornecedores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_cadastrar_nome_fornecedores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_cadastrar_nome_fornecedores.setText("")
         self.line_cadastrar_nome_fornecedores.setClearButtonEnabled(True)
         self.line_cadastrar_nome_fornecedores.setObjectName("line_cadastrar_nome_fornecedores")
         self.line_search_Bar_cadastrar_fornecedores = QtWidgets.QLineEdit(self.pg_cadastrar_fornecedores)
         self.line_search_Bar_cadastrar_fornecedores.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_Bar_cadastrar_fornecedores.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_cadastrar_fornecedores.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_cadastrar_fornecedores.setCursorPosition(0)
         self.line_search_Bar_cadastrar_fornecedores.setClearButtonEnabled(True)
         self.line_search_Bar_cadastrar_fornecedores.setObjectName("line_search_Bar_cadastrar_fornecedores")
         self.btn_pesquisar_fornecedores = QtWidgets.QPushButton(self.pg_cadastrar_fornecedores)
         self.btn_pesquisar_fornecedores.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_pesquisar_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_fornecedores.setText("")
         self.btn_pesquisar_fornecedores.setIcon(icon10)
         self.btn_pesquisar_fornecedores.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_fornecedores.setObjectName("btn_pesquisar_fornecedores")
         self.line_cadastrar_endereco_fornecedores = QtWidgets.QLineEdit(self.pg_cadastrar_fornecedores)
         self.line_cadastrar_endereco_fornecedores.setGeometry(QtCore.QRect(200, 140, 161, 31))
-        self.line_cadastrar_endereco_fornecedores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_cadastrar_endereco_fornecedores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_cadastrar_endereco_fornecedores.setText("")
         self.line_cadastrar_endereco_fornecedores.setClearButtonEnabled(True)
         self.line_cadastrar_endereco_fornecedores.setObjectName("line_cadastrar_endereco_fornecedores")
         self.lbl_titulo_cadastrar_fornecedores = QtWidgets.QLabel(self.pg_cadastrar_fornecedores)
         self.lbl_titulo_cadastrar_fornecedores.setGeometry(QtCore.QRect(20, 20, 371, 41))
-        self.lbl_titulo_cadastrar_fornecedores.setStyleSheet("color: #9f3ffa;\n""font: 20pt \"Montserrat\";")
+        self.lbl_titulo_cadastrar_fornecedores.setStyleSheet("color: #9f3ffa;\n"
+"font: 20pt \"Montserrat\";")
         self.lbl_titulo_cadastrar_fornecedores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_titulo_cadastrar_fornecedores.setObjectName("lbl_titulo_cadastrar_fornecedores")
         self.line_cadastrar_contato_fornecedores = QtWidgets.QLineEdit(self.pg_cadastrar_fornecedores)
         self.line_cadastrar_contato_fornecedores.setGeometry(QtCore.QRect(380, 140, 161, 31))
-        self.line_cadastrar_contato_fornecedores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_cadastrar_contato_fornecedores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_cadastrar_contato_fornecedores.setText("")
         self.line_cadastrar_contato_fornecedores.setClearButtonEnabled(True)
         self.line_cadastrar_contato_fornecedores.setObjectName("line_cadastrar_contato_fornecedores")
         self.tabela_cadastrar_fornecedores = QtWidgets.QTableWidget(self.pg_cadastrar_fornecedores)
         self.tabela_cadastrar_fornecedores.setGeometry(QtCore.QRect(20, 190, 991, 361))
-        self.tabela_cadastrar_fornecedores.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_cadastrar_fornecedores.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_cadastrar_fornecedores.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_cadastrar_fornecedores.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_cadastrar_fornecedores.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -453,12 +764,15 @@ class Ui_FrmAdmin(object):
         self.tabela_cadastrar_fornecedores.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tabela_cadastrar_fornecedores.setHorizontalHeaderItem(2, item)
+        self.tabela_cadastrar_fornecedores.horizontalHeader().setStretchLastSection(True)
         self.tabela_cadastrar_fornecedores.verticalHeader().setVisible(False)
         self.tabela_cadastrar_fornecedores.verticalHeader().setSortIndicatorShown(False)
         self.tabela_cadastrar_fornecedores.verticalHeader().setStretchLastSection(False)
         self.lbl_hora_data_cadastrar_fornecedores = QtWidgets.QLabel(self.pg_cadastrar_fornecedores)
         self.lbl_hora_data_cadastrar_fornecedores.setGeometry(QtCore.QRect(830, 150, 181, 21))
-        self.lbl_hora_data_cadastrar_fornecedores.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_cadastrar_fornecedores.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_cadastrar_fornecedores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_cadastrar_fornecedores.setWordWrap(False)
         self.lbl_hora_data_cadastrar_fornecedores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -468,7 +782,32 @@ class Ui_FrmAdmin(object):
         self.pg_clientes.setObjectName("pg_clientes")
         self.tabela_clientes = QtWidgets.QTableWidget(self.pg_clientes)
         self.tabela_clientes.setGeometry(QtCore.QRect(20, 150, 771, 401))
-        self.tabela_clientes.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_clientes.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_clientes.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_clientes.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_clientes.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -488,42 +827,95 @@ class Ui_FrmAdmin(object):
         self.tabela_clientes.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tabela_clientes.setHorizontalHeaderItem(3, item)
+        self.tabela_clientes.horizontalHeader().setStretchLastSection(True)
         self.tabela_clientes.verticalHeader().setVisible(False)
         self.tabela_clientes.verticalHeader().setSortIndicatorShown(False)
         self.tabela_clientes.verticalHeader().setStretchLastSection(False)
         self.line_search_Bar_clientes = QtWidgets.QLineEdit(self.pg_clientes)
         self.line_search_Bar_clientes.setGeometry(QtCore.QRect(70, 90, 291, 41))
-        self.line_search_Bar_clientes.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_clientes.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_clientes.setCursorPosition(0)
         self.line_search_Bar_clientes.setClearButtonEnabled(True)
         self.line_search_Bar_clientes.setObjectName("line_search_Bar_clientes")
         self.btn_pesquisar_clientes = QtWidgets.QPushButton(self.pg_clientes)
         self.btn_pesquisar_clientes.setGeometry(QtCore.QRect(20, 90, 51, 41))
-        self.btn_pesquisar_clientes.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_clientes.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_clientes.setText("")
         self.btn_pesquisar_clientes.setIcon(icon10)
         self.btn_pesquisar_clientes.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_clientes.setObjectName("btn_pesquisar_clientes")
         self.btn_cadastrar_clientes = QtWidgets.QPushButton(self.pg_clientes)
         self.btn_cadastrar_clientes.setGeometry(QtCore.QRect(810, 260, 201, 41))
-        self.btn_cadastrar_clientes.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_cadastrar_clientes.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_cadastrar_clientes.setObjectName("btn_cadastrar_clientes")
         self.btn_alterar_clientes = QtWidgets.QPushButton(self.pg_clientes)
         self.btn_alterar_clientes.setGeometry(QtCore.QRect(810, 320, 201, 41))
-        self.btn_alterar_clientes.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_alterar_clientes.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_alterar_clientes.setObjectName("btn_alterar_clientes")
         self.btn_exclui_fornecedores = QtWidgets.QPushButton(self.pg_clientes)
         self.btn_exclui_fornecedores.setGeometry(QtCore.QRect(810, 380, 201, 41))
-        self.btn_exclui_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(255, 17, 49);\n""}\n""")
+        self.btn_exclui_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 17, 49);\n"
+"}\n"
+"")
         self.btn_exclui_fornecedores.setObjectName("btn_exclui_fornecedores")
         self.lbl_titulo_clientes = QtWidgets.QLabel(self.pg_clientes)
         self.lbl_titulo_clientes.setGeometry(QtCore.QRect(20, 30, 371, 41))
-        self.lbl_titulo_clientes.setStyleSheet("color: #9f3ffa;\n""font: 20pt \"Montserrat\";")
+        self.lbl_titulo_clientes.setStyleSheet("color: #9f3ffa;\n"
+"font: 20pt \"Montserrat\";")
         self.lbl_titulo_clientes.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_titulo_clientes.setObjectName("lbl_titulo_clientes")
         self.lbl_hora_data_clientes = QtWidgets.QLabel(self.pg_clientes)
         self.lbl_hora_data_clientes.setGeometry(QtCore.QRect(830, 520, 181, 21))
-        self.lbl_hora_data_clientes.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_clientes.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_clientes.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_clientes.setWordWrap(False)
         self.lbl_hora_data_clientes.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -533,33 +925,83 @@ class Ui_FrmAdmin(object):
         self.pg_alterar_clientes.setObjectName("pg_alterar_clientes")
         self.line_alterar_nome_cliente = QtWidgets.QLineEdit(self.pg_alterar_clientes)
         self.line_alterar_nome_cliente.setGeometry(QtCore.QRect(20, 140, 161, 31))
-        self.line_alterar_nome_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_alterar_nome_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_alterar_nome_cliente.setText("")
         self.line_alterar_nome_cliente.setClearButtonEnabled(True)
         self.line_alterar_nome_cliente.setObjectName("line_alterar_nome_cliente")
         self.line_alterar_cpf_cliente = QtWidgets.QLineEdit(self.pg_alterar_clientes)
         self.line_alterar_cpf_cliente.setGeometry(QtCore.QRect(380, 90, 161, 31))
-        self.line_alterar_cpf_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_alterar_cpf_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_alterar_cpf_cliente.setText("")
         self.line_alterar_cpf_cliente.setClearButtonEnabled(True)
         self.line_alterar_cpf_cliente.setObjectName("line_alterar_cpf_cliente")
         self.line_search_Bar_alterar_clientes = QtWidgets.QLineEdit(self.pg_alterar_clientes)
         self.line_search_Bar_alterar_clientes.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_Bar_alterar_clientes.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_alterar_clientes.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_alterar_clientes.setText("")
         self.line_search_Bar_alterar_clientes.setCursorPosition(0)
         self.line_search_Bar_alterar_clientes.setClearButtonEnabled(True)
         self.line_search_Bar_alterar_clientes.setObjectName("line_search_Bar_alterar_clientes")
         self.btn_filtrar_clientes = QtWidgets.QPushButton(self.pg_alterar_clientes)
         self.btn_filtrar_clientes.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_filtrar_clientes.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_filtrar_clientes.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_filtrar_clientes.setText("")
         self.btn_filtrar_clientes.setIcon(icon10)
         self.btn_filtrar_clientes.setIconSize(QtCore.QSize(25, 25))
         self.btn_filtrar_clientes.setObjectName("btn_filtrar_clientes")
         self.tabela_alterar_clientes = QtWidgets.QTableWidget(self.pg_alterar_clientes)
         self.tabela_alterar_clientes.setGeometry(QtCore.QRect(20, 190, 991, 361))
-        self.tabela_alterar_clientes.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_alterar_clientes.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_alterar_clientes.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_alterar_clientes.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_alterar_clientes.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -579,33 +1021,61 @@ class Ui_FrmAdmin(object):
         self.tabela_alterar_clientes.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tabela_alterar_clientes.setHorizontalHeaderItem(3, item)
+        self.tabela_alterar_clientes.horizontalHeader().setStretchLastSection(True)
         self.tabela_alterar_clientes.verticalHeader().setVisible(False)
         self.tabela_alterar_clientes.verticalHeader().setSortIndicatorShown(False)
         self.tabela_alterar_clientes.verticalHeader().setStretchLastSection(False)
         self.btn_finalizar_alteracao_fornecedores = QtWidgets.QPushButton(self.pg_alterar_clientes)
         self.btn_finalizar_alteracao_fornecedores.setGeometry(QtCore.QRect(560, 140, 161, 31))
-        self.btn_finalizar_alteracao_fornecedores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_finalizar_alteracao_fornecedores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_finalizar_alteracao_fornecedores.setObjectName("btn_finalizar_alteracao_fornecedores")
         self.line_alterar_contato_cliente = QtWidgets.QLineEdit(self.pg_alterar_clientes)
         self.line_alterar_contato_cliente.setGeometry(QtCore.QRect(380, 140, 161, 31))
-        self.line_alterar_contato_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_alterar_contato_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_alterar_contato_cliente.setText("")
         self.line_alterar_contato_cliente.setClearButtonEnabled(True)
         self.line_alterar_contato_cliente.setObjectName("line_alterar_contato_cliente")
         self.lbl_titulo_alterar_clientes = QtWidgets.QLabel(self.pg_alterar_clientes)
         self.lbl_titulo_alterar_clientes.setGeometry(QtCore.QRect(20, 20, 371, 41))
-        self.lbl_titulo_alterar_clientes.setStyleSheet("color: #9f3ffa;\n""font: 20pt \"Montserrat\";")
+        self.lbl_titulo_alterar_clientes.setStyleSheet("color: #9f3ffa;\n"
+"font: 20pt \"Montserrat\";")
         self.lbl_titulo_alterar_clientes.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_titulo_alterar_clientes.setObjectName("lbl_titulo_alterar_clientes")
         self.line_alterar_endereco_cliente = QtWidgets.QLineEdit(self.pg_alterar_clientes)
         self.line_alterar_endereco_cliente.setGeometry(QtCore.QRect(200, 140, 161, 31))
-        self.line_alterar_endereco_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_alterar_endereco_cliente.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_alterar_endereco_cliente.setText("")
         self.line_alterar_endereco_cliente.setClearButtonEnabled(True)
         self.line_alterar_endereco_cliente.setObjectName("line_alterar_endereco_cliente")
         self.lbl_hora_data_alterar_clientes = QtWidgets.QLabel(self.pg_alterar_clientes)
         self.lbl_hora_data_alterar_clientes.setGeometry(QtCore.QRect(830, 150, 181, 21))
-        self.lbl_hora_data_alterar_clientes.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_alterar_clientes.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_alterar_clientes.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_alterar_clientes.setWordWrap(False)
         self.lbl_hora_data_alterar_clientes.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -615,7 +1085,32 @@ class Ui_FrmAdmin(object):
         self.pg_cadastrar_clientes.setObjectName("pg_cadastrar_clientes")
         self.tabela_cadastrar_clientes = QtWidgets.QTableWidget(self.pg_cadastrar_clientes)
         self.tabela_cadastrar_clientes.setGeometry(QtCore.QRect(20, 190, 991, 361))
-        self.tabela_cadastrar_clientes.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_cadastrar_clientes.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_cadastrar_clientes.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_cadastrar_clientes.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_cadastrar_clientes.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -635,59 +1130,112 @@ class Ui_FrmAdmin(object):
         self.tabela_cadastrar_clientes.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tabela_cadastrar_clientes.setHorizontalHeaderItem(3, item)
+        self.tabela_cadastrar_clientes.horizontalHeader().setStretchLastSection(True)
         self.tabela_cadastrar_clientes.verticalHeader().setVisible(False)
         self.tabela_cadastrar_clientes.verticalHeader().setSortIndicatorShown(False)
         self.tabela_cadastrar_clientes.verticalHeader().setStretchLastSection(False)
         self.btn_finalizar_cadastro_clientes = QtWidgets.QPushButton(self.pg_cadastrar_clientes)
         self.btn_finalizar_cadastro_clientes.setGeometry(QtCore.QRect(560, 140, 161, 31))
-        self.btn_finalizar_cadastro_clientes.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_finalizar_cadastro_clientes.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_finalizar_cadastro_clientes.setObjectName("btn_finalizar_cadastro_clientes")
         self.btn_pesquisar_produto_8 = QtWidgets.QPushButton(self.pg_cadastrar_clientes)
         self.btn_pesquisar_produto_8.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_pesquisar_produto_8.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_produto_8.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_produto_8.setText("")
         self.btn_pesquisar_produto_8.setIcon(icon10)
         self.btn_pesquisar_produto_8.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_produto_8.setObjectName("btn_pesquisar_produto_8")
         self.line_nome_cadastrar_clientes = QtWidgets.QLineEdit(self.pg_cadastrar_clientes)
         self.line_nome_cadastrar_clientes.setGeometry(QtCore.QRect(20, 140, 161, 31))
-        self.line_nome_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_nome_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_nome_cadastrar_clientes.setText("")
         self.line_nome_cadastrar_clientes.setClearButtonEnabled(True)
         self.line_nome_cadastrar_clientes.setObjectName("line_nome_cadastrar_clientes")
         self.line_cpf_cadastrar_clientes = QtWidgets.QLineEdit(self.pg_cadastrar_clientes)
         self.line_cpf_cadastrar_clientes.setGeometry(QtCore.QRect(380, 90, 161, 31))
-        self.line_cpf_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_cpf_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_cpf_cadastrar_clientes.setText("")
         self.line_cpf_cadastrar_clientes.setClearButtonEnabled(True)
         self.line_cpf_cadastrar_clientes.setObjectName("line_cpf_cadastrar_clientes")
         self.line_endereco_cadastrar_clientes = QtWidgets.QLineEdit(self.pg_cadastrar_clientes)
         self.line_endereco_cadastrar_clientes.setGeometry(QtCore.QRect(200, 140, 161, 31))
-        self.line_endereco_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_endereco_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_endereco_cadastrar_clientes.setText("")
         self.line_endereco_cadastrar_clientes.setClearButtonEnabled(True)
         self.line_endereco_cadastrar_clientes.setObjectName("line_endereco_cadastrar_clientes")
         self.line_search_Bar_cadastrar_clientes = QtWidgets.QLineEdit(self.pg_cadastrar_clientes)
         self.line_search_Bar_cadastrar_clientes.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_Bar_cadastrar_clientes.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_cadastrar_clientes.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_cadastrar_clientes.setText("")
         self.line_search_Bar_cadastrar_clientes.setCursorPosition(0)
         self.line_search_Bar_cadastrar_clientes.setClearButtonEnabled(True)
         self.line_search_Bar_cadastrar_clientes.setObjectName("line_search_Bar_cadastrar_clientes")
         self.lbl_titulo_cadastrar_clientes = QtWidgets.QLabel(self.pg_cadastrar_clientes)
         self.lbl_titulo_cadastrar_clientes.setGeometry(QtCore.QRect(20, 20, 371, 41))
-        self.lbl_titulo_cadastrar_clientes.setStyleSheet("color: #9f3ffa;\n""font: 20pt \"Montserrat\";")
+        self.lbl_titulo_cadastrar_clientes.setStyleSheet("color: #9f3ffa;\n"
+"font: 20pt \"Montserrat\";")
         self.lbl_titulo_cadastrar_clientes.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_titulo_cadastrar_clientes.setObjectName("lbl_titulo_cadastrar_clientes")
         self.line_contato_cadastrar_clientes = QtWidgets.QLineEdit(self.pg_cadastrar_clientes)
         self.line_contato_cadastrar_clientes.setGeometry(QtCore.QRect(380, 140, 161, 31))
-        self.line_contato_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_contato_cadastrar_clientes.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_contato_cadastrar_clientes.setText("")
         self.line_contato_cadastrar_clientes.setClearButtonEnabled(True)
         self.line_contato_cadastrar_clientes.setObjectName("line_contato_cadastrar_clientes")
         self.lbl_hora_data_cadastrar_clientes = QtWidgets.QLabel(self.pg_cadastrar_clientes)
         self.lbl_hora_data_cadastrar_clientes.setGeometry(QtCore.QRect(830, 150, 181, 21))
-        self.lbl_hora_data_cadastrar_clientes.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_cadastrar_clientes.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_cadastrar_clientes.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_cadastrar_clientes.setWordWrap(False)
         self.lbl_hora_data_cadastrar_clientes.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -697,7 +1245,9 @@ class Ui_FrmAdmin(object):
         self.pg_cadastro_colaboradores.setObjectName("pg_cadastro_colaboradores")
         self.lbl_titulo_cadastrar_colaboradores = QtWidgets.QLabel(self.pg_cadastro_colaboradores)
         self.lbl_titulo_cadastrar_colaboradores.setGeometry(QtCore.QRect(250, 40, 551, 41))
-        self.lbl_titulo_cadastrar_colaboradores.setStyleSheet("font: 30pt \"Impact\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_cadastrar_colaboradores.setStyleSheet("font: 30pt \"Impact\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_cadastrar_colaboradores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_cadastrar_colaboradores.setWordWrap(False)
         self.lbl_titulo_cadastrar_colaboradores.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
@@ -712,21 +1262,51 @@ class Ui_FrmAdmin(object):
         self.radio_colaborador.setObjectName("radio_colaborador")
         self.line_nome = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
         self.line_nome.setGeometry(QtCore.QRect(640, 160, 271, 51))
-        self.line_nome.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgb(159, 63, 250);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""border-radius: 12px;\n""font: 10pt \"Montserrat\";\n""padding-left:10px;")
+        self.line_nome.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgb(159, 63, 250);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 12px;\n"
+"font: 10pt \"Montserrat\";\n"
+"padding-left:10px;")
         self.line_nome.setObjectName("line_nome")
         self.line_login = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
         self.line_login.setGeometry(QtCore.QRect(640, 230, 271, 51))
-        self.line_login.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgb(159, 63, 250);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""border-radius: 12px;\n""font: 10pt \"Montserrat\";\n""padding-left:10px;")
+        self.line_login.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgb(159, 63, 250);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 12px;\n"
+"font: 10pt \"Montserrat\";\n"
+"padding-left:10px;")
         self.line_login.setText("")
         self.line_login.setObjectName("line_login")
         self.line_senha = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
         self.line_senha.setGeometry(QtCore.QRect(640, 300, 271, 51))
-        self.line_senha.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgb(159, 63, 250);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""border-radius: 12px;\n""font: 10pt \"Montserrat\";\n""padding-left:10px;")
+        self.line_senha.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgb(159, 63, 250);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 12px;\n"
+"font: 10pt \"Montserrat\";\n"
+"padding-left:10px;")
         self.line_senha.setEchoMode(QtWidgets.QLineEdit.Password)
         self.line_senha.setObjectName("line_senha")
         self.btn_cadastro = QtWidgets.QPushButton(self.pg_cadastro_colaboradores)
         self.btn_cadastro.setGeometry(QtCore.QRect(640, 400, 271, 41))
-        self.btn_cadastro.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_cadastro.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_cadastro.setObjectName("btn_cadastro")
         self.lbl_imagem = QtWidgets.QLabel(self.pg_cadastro_colaboradores)
         self.lbl_imagem.setGeometry(QtCore.QRect(50, 110, 531, 401))
@@ -736,7 +1316,15 @@ class Ui_FrmAdmin(object):
         self.lbl_imagem.setObjectName("lbl_imagem")
         self.btn_ver_senha = QtWidgets.QPushButton(self.pg_cadastro_colaboradores)
         self.btn_ver_senha.setGeometry(QtCore.QRect(870, 310, 30, 31))
-        self.btn_ver_senha.setStyleSheet("QPushButton {\n""background-image: url(:/icones/ver senha.png);\n""border: 0px;\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-image: url(:/icones/ver senha hover.png);\n""}")
+        self.btn_ver_senha.setStyleSheet("QPushButton {\n"
+"    background-image: url(:/icones/ver senha.png);\n"
+"    border: 0px;\n"
+"    outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-image: url(:/icones/ver senha hover.png);\n"
+"}")
         self.btn_ver_senha.setText("")
         self.btn_ver_senha.setObjectName("btn_ver_senha")
         self.lbl_imagem.raise_()
@@ -753,7 +1341,32 @@ class Ui_FrmAdmin(object):
         self.alterar_colaboradores.setObjectName("alterar_colaboradores")
         self.tabela_alterar_colaboradores = QtWidgets.QTableWidget(self.alterar_colaboradores)
         self.tabela_alterar_colaboradores.setGeometry(QtCore.QRect(20, 190, 991, 351))
-        self.tabela_alterar_colaboradores.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_alterar_colaboradores.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_alterar_colaboradores.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_alterar_colaboradores.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_alterar_colaboradores.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -778,51 +1391,106 @@ class Ui_FrmAdmin(object):
         self.tabela_alterar_colaboradores.verticalHeader().setStretchLastSection(False)
         self.line_search_bar_buscar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
         self.line_search_bar_buscar_colaboradores.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_bar_buscar_colaboradores.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_bar_buscar_colaboradores.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_bar_buscar_colaboradores.setCursorPosition(0)
         self.line_search_bar_buscar_colaboradores.setClearButtonEnabled(True)
         self.line_search_bar_buscar_colaboradores.setObjectName("line_search_bar_buscar_colaboradores")
         self.btn_pesquisar_alterar_colaboradores = QtWidgets.QPushButton(self.alterar_colaboradores)
         self.btn_pesquisar_alterar_colaboradores.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_pesquisar_alterar_colaboradores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_alterar_colaboradores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_alterar_colaboradores.setText("")
         self.btn_pesquisar_alterar_colaboradores.setIcon(icon10)
         self.btn_pesquisar_alterar_colaboradores.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_alterar_colaboradores.setObjectName("btn_pesquisar_alterar_colaboradores")
         self.lbl_titulo_alterar_colaboradores = QtWidgets.QLabel(self.alterar_colaboradores)
         self.lbl_titulo_alterar_colaboradores.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_alterar_colaboradores.setStyleSheet("font: 16pt \"Impact\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_alterar_colaboradores.setStyleSheet("font: 16pt \"Impact\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_alterar_colaboradores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_alterar_colaboradores.setWordWrap(False)
         self.lbl_titulo_alterar_colaboradores.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_alterar_colaboradores.setObjectName("lbl_titulo_alterar_colaboradores")
         self.line_nome_alterar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
         self.line_nome_alterar_colaboradores.setGeometry(QtCore.QRect(20, 140, 161, 31))
-        self.line_nome_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_nome_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_nome_alterar_colaboradores.setClearButtonEnabled(True)
         self.line_nome_alterar_colaboradores.setObjectName("line_nome_alterar_colaboradores")
         self.line_login_alterar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
         self.line_login_alterar_colaboradores.setGeometry(QtCore.QRect(200, 140, 161, 31))
-        self.line_login_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_login_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_login_alterar_colaboradores.setClearButtonEnabled(True)
         self.line_login_alterar_colaboradores.setObjectName("line_login_alterar_colaboradores")
         self.line_senha_alterar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
         self.line_senha_alterar_colaboradores.setGeometry(QtCore.QRect(380, 140, 161, 31))
-        self.line_senha_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_senha_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_senha_alterar_colaboradores.setClearButtonEnabled(True)
         self.line_senha_alterar_colaboradores.setObjectName("line_senha_alterar_colaboradores")
         self.btn_ver_senha_alterar = QtWidgets.QPushButton(self.alterar_colaboradores)
         self.btn_ver_senha_alterar.setGeometry(QtCore.QRect(510, 140, 30, 31))
-        self.btn_ver_senha_alterar.setStyleSheet("QPushButton {\n""background-image: url(:/icones/ver senha.png);\n""border: 0px;\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-image: url(:/icones/ver senha hover.png);\n""}")
+        self.btn_ver_senha_alterar.setStyleSheet("QPushButton {\n"
+"    background-image: url(:/icones/ver senha.png);\n"
+"    border: 0px;\n"
+"    outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-image: url(:/icones/ver senha hover.png);\n"
+"}")
         self.btn_ver_senha_alterar.setText("")
         self.btn_ver_senha_alterar.setObjectName("btn_ver_senha_alterar")
         self.btn_finalizar_alterar_colaboradores = QtWidgets.QPushButton(self.alterar_colaboradores)
         self.btn_finalizar_alterar_colaboradores.setGeometry(QtCore.QRect(380, 90, 161, 31))
-        self.btn_finalizar_alterar_colaboradores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_finalizar_alterar_colaboradores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_finalizar_alterar_colaboradores.setObjectName("btn_finalizar_alterar_colaboradores")
         self.lbl_hora_data_alterar_colaboradores = QtWidgets.QLabel(self.alterar_colaboradores)
         self.lbl_hora_data_alterar_colaboradores.setGeometry(QtCore.QRect(830, 150, 181, 21))
-        self.lbl_hora_data_alterar_colaboradores.setStyleSheet("font: 13pt \"Impact\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_alterar_colaboradores.setStyleSheet("font: 13pt \"Impact\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_alterar_colaboradores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_alterar_colaboradores.setWordWrap(False)
         self.lbl_hora_data_alterar_colaboradores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -842,7 +1510,32 @@ class Ui_FrmAdmin(object):
         self.pg_colaboradores.setObjectName("pg_colaboradores")
         self.tabela_colaboradores = QtWidgets.QTableWidget(self.pg_colaboradores)
         self.tabela_colaboradores.setGeometry(QtCore.QRect(20, 140, 781, 401))
-        self.tabela_colaboradores.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_colaboradores.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_colaboradores.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_colaboradores.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_colaboradores.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -867,39 +1560,92 @@ class Ui_FrmAdmin(object):
         self.tabela_colaboradores.verticalHeader().setStretchLastSection(False)
         self.lbl_titulo_colaboradores = QtWidgets.QLabel(self.pg_colaboradores)
         self.lbl_titulo_colaboradores.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_colaboradores.setStyleSheet("font: 16pt \"Impact\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_colaboradores.setStyleSheet("font: 16pt \"Impact\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_colaboradores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_colaboradores.setWordWrap(False)
         self.lbl_titulo_colaboradores.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_colaboradores.setObjectName("lbl_titulo_colaboradores")
         self.btn_pesquisar_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
         self.btn_pesquisar_colaboradores.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_pesquisar_colaboradores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_colaboradores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_colaboradores.setText("")
         self.btn_pesquisar_colaboradores.setIcon(icon10)
         self.btn_pesquisar_colaboradores.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_colaboradores.setObjectName("btn_pesquisar_colaboradores")
         self.line_search_bar_colaboradores = QtWidgets.QLineEdit(self.pg_colaboradores)
         self.line_search_bar_colaboradores.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_bar_colaboradores.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_bar_colaboradores.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_bar_colaboradores.setCursorPosition(0)
         self.line_search_bar_colaboradores.setClearButtonEnabled(True)
         self.line_search_bar_colaboradores.setObjectName("line_search_bar_colaboradores")
         self.btn_exluir_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
         self.btn_exluir_colaboradores.setGeometry(QtCore.QRect(820, 390, 191, 41))
-        self.btn_exluir_colaboradores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(255, 17, 49);\n""}\n""")
+        self.btn_exluir_colaboradores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 17, 49);\n"
+"}\n"
+"")
         self.btn_exluir_colaboradores.setObjectName("btn_exluir_colaboradores")
         self.btn_alterar_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
         self.btn_alterar_colaboradores.setGeometry(QtCore.QRect(820, 330, 191, 41))
-        self.btn_alterar_colaboradores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_alterar_colaboradores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_alterar_colaboradores.setObjectName("btn_alterar_colaboradores")
         self.btn_cadastrar_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
         self.btn_cadastrar_colaboradores.setGeometry(QtCore.QRect(820, 270, 191, 41))
-        self.btn_cadastrar_colaboradores.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_cadastrar_colaboradores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_cadastrar_colaboradores.setObjectName("btn_cadastrar_colaboradores")
         self.lbl_hora_data_colaboradores = QtWidgets.QLabel(self.pg_colaboradores)
         self.lbl_hora_data_colaboradores.setGeometry(QtCore.QRect(830, 520, 181, 21))
-        self.lbl_hora_data_colaboradores.setStyleSheet("font: 14pt \"Impact\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_colaboradores.setStyleSheet("font: 14pt \"Impact\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_colaboradores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_colaboradores.setWordWrap(False)
         self.lbl_hora_data_colaboradores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -909,27 +1655,66 @@ class Ui_FrmAdmin(object):
         self.monitoramento.setObjectName("monitoramento")
         self.lbl_titulo_monitoramento = QtWidgets.QLabel(self.monitoramento)
         self.lbl_titulo_monitoramento.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_monitoramento.setStyleSheet("color: #9f3ffa;\n""font: 24pt \"Impact\";")
+        self.lbl_titulo_monitoramento.setStyleSheet("color: #9f3ffa;\n"
+"font: 24pt \"Impact\";")
         self.lbl_titulo_monitoramento.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_monitoramento.setWordWrap(False)
         self.lbl_titulo_monitoramento.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_monitoramento.setObjectName("lbl_titulo_monitoramento")
         self.btn_filtrar_monitoramento = QtWidgets.QPushButton(self.monitoramento)
         self.btn_filtrar_monitoramento.setGeometry(QtCore.QRect(20, 70, 51, 41))
-        self.btn_filtrar_monitoramento.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_filtrar_monitoramento.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_filtrar_monitoramento.setText("")
         self.btn_filtrar_monitoramento.setIcon(icon10)
         self.btn_filtrar_monitoramento.setIconSize(QtCore.QSize(25, 25))
         self.btn_filtrar_monitoramento.setObjectName("btn_filtrar_monitoramento")
         self.line_search_bar_monitoramentoto = QtWidgets.QLineEdit(self.monitoramento)
         self.line_search_bar_monitoramentoto.setGeometry(QtCore.QRect(70, 70, 291, 41))
-        self.line_search_bar_monitoramentoto.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_bar_monitoramentoto.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_bar_monitoramentoto.setCursorPosition(0)
         self.line_search_bar_monitoramentoto.setClearButtonEnabled(True)
         self.line_search_bar_monitoramentoto.setObjectName("line_search_bar_monitoramentoto")
         self.tabela_monitoramento = QtWidgets.QTableWidget(self.monitoramento)
         self.tabela_monitoramento.setGeometry(QtCore.QRect(20, 130, 781, 411))
-        self.tabela_monitoramento.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_monitoramento.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_monitoramento.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_monitoramento.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_monitoramento.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -964,32 +1749,85 @@ class Ui_FrmAdmin(object):
         font.setItalic(False)
         font.setWeight(50)
         self.lbl_hora_data_monitoramento.setFont(font)
-        self.lbl_hora_data_monitoramento.setStyleSheet("font: 14pt \"Impact\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_monitoramento.setStyleSheet("font: 14pt \"Impact\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_monitoramento.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_monitoramento.setWordWrap(False)
         self.lbl_hora_data_monitoramento.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
         self.lbl_hora_data_monitoramento.setObjectName("lbl_hora_data_monitoramento")
         self.btn_limpar_tabela = QtWidgets.QPushButton(self.monitoramento)
         self.btn_limpar_tabela.setGeometry(QtCore.QRect(820, 270, 191, 41))
-        self.btn_limpar_tabela.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_limpar_tabela.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_limpar_tabela.setObjectName("btn_limpar_tabela")
         self.btn_gerar_pdf = QtWidgets.QPushButton(self.monitoramento)
         self.btn_gerar_pdf.setGeometry(QtCore.QRect(820, 330, 191, 41))
-        self.btn_gerar_pdf.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_gerar_pdf.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_gerar_pdf.setObjectName("btn_gerar_pdf")
         self.Telas_do_menu.addWidget(self.monitoramento)
         self.pg_vendas = QtWidgets.QWidget()
         self.pg_vendas.setObjectName("pg_vendas")
         self.lbl_titulo_vendas = QtWidgets.QLabel(self.pg_vendas)
         self.lbl_titulo_vendas.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_vendas.setStyleSheet("font: 16pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_vendas.setStyleSheet("font: 16pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_vendas.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_vendas.setWordWrap(False)
         self.lbl_titulo_vendas.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_vendas.setObjectName("lbl_titulo_vendas")
         self.tabela_vendas = QtWidgets.QTableWidget(self.pg_vendas)
         self.tabela_vendas.setGeometry(QtCore.QRect(20, 190, 791, 351))
-        self.tabela_vendas.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_vendas.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_vendas.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_vendas.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_vendas.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -1019,81 +1857,199 @@ class Ui_FrmAdmin(object):
         self.tabela_vendas.verticalHeader().setStretchLastSection(False)
         self.line_codigo_vendas = QtWidgets.QLineEdit(self.pg_vendas)
         self.line_codigo_vendas.setGeometry(QtCore.QRect(20, 140, 201, 31))
-        self.line_codigo_vendas.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_codigo_vendas.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_codigo_vendas.setClearButtonEnabled(True)
         self.line_codigo_vendas.setObjectName("line_codigo_vendas")
         self.line_quantidade_vendas = QtWidgets.QLineEdit(self.pg_vendas)
         self.line_quantidade_vendas.setGeometry(QtCore.QRect(250, 140, 151, 31))
-        self.line_quantidade_vendas.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_quantidade_vendas.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_quantidade_vendas.setClearButtonEnabled(True)
         self.line_quantidade_vendas.setObjectName("line_quantidade_vendas")
         self.btn_pesquisar = QtWidgets.QPushButton(self.pg_vendas)
         self.btn_pesquisar.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_pesquisar.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar.setText("")
         self.btn_pesquisar.setIcon(icon10)
         self.btn_pesquisar.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar.setObjectName("btn_pesquisar")
         self.line_search_bar_vendas = QtWidgets.QLineEdit(self.pg_vendas)
         self.line_search_bar_vendas.setGeometry(QtCore.QRect(70, 80, 150, 41))
-        self.line_search_bar_vendas.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_bar_vendas.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_bar_vendas.setCursorPosition(0)
         self.line_search_bar_vendas.setClearButtonEnabled(True)
         self.line_search_bar_vendas.setObjectName("line_search_bar_vendas")
         self.lbl_total_venda = QtWidgets.QLabel(self.pg_vendas)
         self.lbl_total_venda.setGeometry(QtCore.QRect(430, 80, 251, 41))
-        self.lbl_total_venda.setStyleSheet("font: 18pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_total_venda.setStyleSheet("font: 18pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_total_venda.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_total_venda.setWordWrap(False)
         self.lbl_total_venda.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_total_venda.setObjectName("lbl_total_venda")
         self.lbl_total_valor = QtWidgets.QLabel(self.pg_vendas)
         self.lbl_total_valor.setGeometry(QtCore.QRect(660, 80, 131, 41))
-        self.lbl_total_valor.setStyleSheet("font: 18pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_total_valor.setStyleSheet("font: 18pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_total_valor.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_total_valor.setWordWrap(False)
         self.lbl_total_valor.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_total_valor.setObjectName("lbl_total_valor")
         self.btn_adicionar_compra = QtWidgets.QPushButton(self.pg_vendas)
         self.btn_adicionar_compra.setGeometry(QtCore.QRect(250, 90, 151, 31))
-        self.btn_adicionar_compra.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_adicionar_compra.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_adicionar_compra.setObjectName("btn_adicionar_compra")
         self.btn_excluir_item = QtWidgets.QPushButton(self.pg_vendas)
         self.btn_excluir_item.setGeometry(QtCore.QRect(830, 360, 181, 41))
-        self.btn_excluir_item.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(255, 17, 49);\n""}\n""")
+        self.btn_excluir_item.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 17, 49);\n"
+"}\n"
+"")
         self.btn_excluir_item.setObjectName("btn_excluir_item")
         self.btn_finalizar_compra = QtWidgets.QPushButton(self.pg_vendas)
         self.btn_finalizar_compra.setGeometry(QtCore.QRect(830, 300, 181, 41))
-        self.btn_finalizar_compra.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_finalizar_compra.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_finalizar_compra.setObjectName("btn_finalizar_compra")
         self.btn_confirmar_cliente = QtWidgets.QPushButton(self.pg_vendas)
         self.btn_confirmar_cliente.setGeometry(QtCore.QRect(830, 410, 101, 31))
-        self.btn_confirmar_cliente.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_confirmar_cliente.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_confirmar_cliente.setObjectName("btn_confirmar_cliente")
         self.lbl_hora_data = QtWidgets.QLabel(self.pg_vendas)
         self.lbl_hora_data.setGeometry(QtCore.QRect(830, 520, 181, 21))
-        self.lbl_hora_data.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data.setWordWrap(False)
         self.lbl_hora_data.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
         self.lbl_hora_data.setObjectName("lbl_hora_data")
         self.btn_confirmar_troco = QtWidgets.QPushButton(self.pg_vendas)
         self.btn_confirmar_troco.setGeometry(QtCore.QRect(430, 140, 111, 31))
-        self.btn_confirmar_troco.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_confirmar_troco.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_confirmar_troco.setObjectName("btn_confirmar_troco")
         self.Telas_do_menu.addWidget(self.pg_vendas)
         self.pg_produtos = QtWidgets.QWidget()
         self.pg_produtos.setObjectName("pg_produtos")
         self.lbl_titulo_produtos = QtWidgets.QLabel(self.pg_produtos)
         self.lbl_titulo_produtos.setGeometry(QtCore.QRect(20, 20, 241, 41))
-        self.lbl_titulo_produtos.setStyleSheet("font: 16pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_produtos.setStyleSheet("font: 16pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_produtos.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_produtos.setWordWrap(False)
         self.lbl_titulo_produtos.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_produtos.setObjectName("lbl_titulo_produtos")
         self.tabela_produto = QtWidgets.QTableWidget(self.pg_produtos)
         self.tabela_produto.setGeometry(QtCore.QRect(20, 190, 791, 351))
-        self.tabela_produto.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_produto.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_produto.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_produto.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_produto.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -1123,41 +2079,110 @@ class Ui_FrmAdmin(object):
         self.tabela_produto.verticalHeader().setStretchLastSection(False)
         self.btn_cadastrar_produto = QtWidgets.QPushButton(self.pg_produtos)
         self.btn_cadastrar_produto.setGeometry(QtCore.QRect(830, 270, 181, 41))
-        self.btn_cadastrar_produto.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_cadastrar_produto.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_cadastrar_produto.setObjectName("btn_cadastrar_produto")
         self.btn_alterar_produto = QtWidgets.QPushButton(self.pg_produtos)
         self.btn_alterar_produto.setGeometry(QtCore.QRect(830, 330, 181, 41))
-        self.btn_alterar_produto.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_alterar_produto.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_alterar_produto.setObjectName("btn_alterar_produto")
         self.btn_excluir_produto = QtWidgets.QPushButton(self.pg_produtos)
         self.btn_excluir_produto.setGeometry(QtCore.QRect(830, 390, 181, 41))
-        self.btn_excluir_produto.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(255, 17, 49);\n""}\n""")
+        self.btn_excluir_produto.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 17, 49);\n"
+"}\n"
+"")
         self.btn_excluir_produto.setObjectName("btn_excluir_produto")
         self.line_search_Bar_produtos = QtWidgets.QLineEdit(self.pg_produtos)
         self.line_search_Bar_produtos.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_Bar_produtos.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_produtos.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_produtos.setCursorPosition(0)
         self.line_search_Bar_produtos.setClearButtonEnabled(True)
         self.line_search_Bar_produtos.setObjectName("line_search_Bar_produtos")
         self.btn_pesquisar_produto = QtWidgets.QPushButton(self.pg_produtos)
         self.btn_pesquisar_produto.setGeometry(QtCore.QRect(20, 80, 51, 41))
-        self.btn_pesquisar_produto.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_produto.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_produto.setText("")
         self.btn_pesquisar_produto.setIcon(icon10)
         self.btn_pesquisar_produto.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_produto.setObjectName("btn_pesquisar_produto")
         self.line_codigo_produto = QtWidgets.QLineEdit(self.pg_produtos)
         self.line_codigo_produto.setGeometry(QtCore.QRect(20, 140, 161, 31))
-        self.line_codigo_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_codigo_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_codigo_produto.setClearButtonEnabled(True)
         self.line_codigo_produto.setObjectName("line_codigo_produto")
         self.btn_confirmar_codigo = QtWidgets.QPushButton(self.pg_produtos)
         self.btn_confirmar_codigo.setGeometry(QtCore.QRect(200, 140, 101, 31))
-        self.btn_confirmar_codigo.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_confirmar_codigo.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_confirmar_codigo.setObjectName("btn_confirmar_codigo")
         self.lbl_hora_data_produtos = QtWidgets.QLabel(self.pg_produtos)
         self.lbl_hora_data_produtos.setGeometry(QtCore.QRect(830, 520, 181, 21))
-        self.lbl_hora_data_produtos.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_produtos.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_produtos.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_produtos.setWordWrap(False)
         self.lbl_hora_data_produtos.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -1167,14 +2192,41 @@ class Ui_FrmAdmin(object):
         self.pg_cadastar_produtos.setObjectName("pg_cadastar_produtos")
         self.lbl_titulo_cadastrar_produto = QtWidgets.QLabel(self.pg_cadastar_produtos)
         self.lbl_titulo_cadastrar_produto.setGeometry(QtCore.QRect(20, 30, 241, 41))
-        self.lbl_titulo_cadastrar_produto.setStyleSheet("font: 16pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_cadastrar_produto.setStyleSheet("font: 16pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_cadastrar_produto.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_cadastrar_produto.setWordWrap(False)
         self.lbl_titulo_cadastrar_produto.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_cadastrar_produto.setObjectName("lbl_titulo_cadastrar_produto")
         self.tabela_cadastro = QtWidgets.QTableWidget(self.pg_cadastar_produtos)
         self.tabela_cadastro.setGeometry(QtCore.QRect(20, 200, 991, 351))
-        self.tabela_cadastro.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_cadastro.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_cadastro.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_cadastro.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_cadastro.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -1205,50 +2257,107 @@ class Ui_FrmAdmin(object):
         self.tabela_cadastro.verticalHeader().setStretchLastSection(False)
         self.line_codigo_produto_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
         self.line_codigo_produto_cadastrar.setGeometry(QtCore.QRect(230, 100, 161, 31))
-        self.line_codigo_produto_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_codigo_produto_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_codigo_produto_cadastrar.setClearButtonEnabled(True)
         self.line_codigo_produto_cadastrar.setObjectName("line_codigo_produto_cadastrar")
         self.line_descricao_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
         self.line_descricao_cadastrar.setGeometry(QtCore.QRect(410, 100, 161, 31))
-        self.line_descricao_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_descricao_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_descricao_cadastrar.setClearButtonEnabled(True)
         self.line_descricao_cadastrar.setObjectName("line_descricao_cadastrar")
         self.line_valor_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
         self.line_valor_cadastrar.setGeometry(QtCore.QRect(20, 150, 191, 31))
-        self.line_valor_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_valor_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_valor_cadastrar.setText("")
         self.line_valor_cadastrar.setClearButtonEnabled(True)
         self.line_valor_cadastrar.setObjectName("line_valor_cadastrar")
         self.line_qtde_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
         self.line_qtde_cadastrar.setGeometry(QtCore.QRect(230, 150, 161, 31))
-        self.line_qtde_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_qtde_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_qtde_cadastrar.setClearButtonEnabled(True)
         self.line_qtde_cadastrar.setObjectName("line_qtde_cadastrar")
         self.line_fornecedor_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
         self.line_fornecedor_cadastrar.setGeometry(QtCore.QRect(410, 150, 161, 31))
-        self.line_fornecedor_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_fornecedor_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_fornecedor_cadastrar.setClearButtonEnabled(True)
         self.line_fornecedor_cadastrar.setObjectName("line_fornecedor_cadastrar")
         self.btn_finalizar_cadastro = QtWidgets.QPushButton(self.pg_cadastar_produtos)
         self.btn_finalizar_cadastro.setGeometry(QtCore.QRect(610, 150, 161, 31))
-        self.btn_finalizar_cadastro.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_finalizar_cadastro.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_finalizar_cadastro.setObjectName("btn_finalizar_cadastro")
         self.btn_pesquisar_cadastrar_produto = QtWidgets.QPushButton(self.pg_cadastar_produtos)
         self.btn_pesquisar_cadastrar_produto.setGeometry(QtCore.QRect(20, 90, 51, 41))
-        self.btn_pesquisar_cadastrar_produto.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_cadastrar_produto.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_cadastrar_produto.setText("")
         self.btn_pesquisar_cadastrar_produto.setIcon(icon10)
         self.btn_pesquisar_cadastrar_produto.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_cadastrar_produto.setObjectName("btn_pesquisar_cadastrar_produto")
         self.line_search_Bar_cadastrar_produto = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
         self.line_search_Bar_cadastrar_produto.setGeometry(QtCore.QRect(70, 90, 151, 41))
-        self.line_search_Bar_cadastrar_produto.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_cadastrar_produto.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_cadastrar_produto.setCursorPosition(0)
         self.line_search_Bar_cadastrar_produto.setClearButtonEnabled(True)
         self.line_search_Bar_cadastrar_produto.setObjectName("line_search_Bar_cadastrar_produto")
         self.lbl_hora_data_cadastrar_produto = QtWidgets.QLabel(self.pg_cadastar_produtos)
         self.lbl_hora_data_cadastrar_produto.setGeometry(QtCore.QRect(830, 160, 181, 21))
-        self.lbl_hora_data_cadastrar_produto.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_cadastrar_produto.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_cadastrar_produto.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_cadastrar_produto.setWordWrap(False)
         self.lbl_hora_data_cadastrar_produto.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
@@ -1258,16 +2367,59 @@ class Ui_FrmAdmin(object):
         self.pg_alterar_produtos.setObjectName("pg_alterar_produtos")
         self.btn_finalizar_alterar = QtWidgets.QPushButton(self.pg_alterar_produtos)
         self.btn_finalizar_alterar.setGeometry(QtCore.QRect(610, 150, 161, 31))
-        self.btn_finalizar_alterar.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""border-radius: 5px;\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_finalizar_alterar.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_finalizar_alterar.setObjectName("btn_finalizar_alterar")
         self.line_fornecedor_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
         self.line_fornecedor_alterar_produto.setGeometry(QtCore.QRect(410, 150, 161, 31))
-        self.line_fornecedor_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_fornecedor_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_fornecedor_alterar_produto.setClearButtonEnabled(True)
         self.line_fornecedor_alterar_produto.setObjectName("line_fornecedor_alterar_produto")
         self.tabela_alterar_produto = QtWidgets.QTableWidget(self.pg_alterar_produtos)
         self.tabela_alterar_produto.setGeometry(QtCore.QRect(20, 200, 991, 351))
-        self.tabela_alterar_produto.setStyleSheet("QTableWidget {\n""gridline-color: #9f3ffa;;\n""background-color: transparent;\n""outline: 0;\n""border: 1px solid #9f3ffa;\n""border-top: 0px\n""\n""}\n""\n""QTableWidget::item:selected{\n""background-color:#9f3ffa;;\n""}\n""\n""QTableWidget::horizontalHeader {\n""background-color: #9f3ffa;\n""}\n""\n""QHeaderView::section:horizontal\n""{\n""border: 1px solid #9f3ffa;\n""background-color: transparent;\n""border-left: 0px;\n""color: black;\n""\n""}\n""")
+        self.tabela_alterar_produto.setStyleSheet("QTableWidget {\n"
+"    gridline-color: #9f3ffa;;\n"
+"    background-color: transparent;\n"
+"    outline: 0;\n"
+"    border: 1px solid #9f3ffa;\n"
+"    border-top: 0px\n"
+"    \n"
+"}\n"
+"\n"
+"QTableWidget::item:selected{\n"
+"    background-color:#9f3ffa;;\n"
+"}\n"
+"\n"
+"QTableWidget::horizontalHeader {    \n"
+"    background-color: #9f3ffa;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid #9f3ffa;\n"
+"    background-color: transparent;\n"
+"    border-left: 0px;\n"
+"    color: black;\n"
+"\n"
+"}\n"
+"")
         self.tabela_alterar_produto.setFrameShape(QtWidgets.QFrame.Panel)
         self.tabela_alterar_produto.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabela_alterar_produto.setEditTriggers(QtWidgets.QAbstractItemView.SelectedClicked)
@@ -1297,52 +2449,120 @@ class Ui_FrmAdmin(object):
         self.tabela_alterar_produto.verticalHeader().setStretchLastSection(False)
         self.lbl_titulo_alterar_produto = QtWidgets.QLabel(self.pg_alterar_produtos)
         self.lbl_titulo_alterar_produto.setGeometry(QtCore.QRect(20, 20, 241, 41))
-        self.lbl_titulo_alterar_produto.setStyleSheet("font: 16pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_titulo_alterar_produto.setStyleSheet("font: 16pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_titulo_alterar_produto.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_alterar_produto.setWordWrap(False)
         self.lbl_titulo_alterar_produto.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_alterar_produto.setObjectName("lbl_titulo_alterar_produto")
         self.line_valor_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
         self.line_valor_alterar_produto.setGeometry(QtCore.QRect(20, 150, 191, 31))
-        self.line_valor_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_valor_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_valor_alterar_produto.setClearButtonEnabled(True)
         self.line_valor_alterar_produto.setObjectName("line_valor_alterar_produto")
         self.line_qtde_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
         self.line_qtde_alterar_produto.setGeometry(QtCore.QRect(230, 150, 161, 31))
-        self.line_qtde_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_qtde_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_qtde_alterar_produto.setClearButtonEnabled(True)
         self.line_qtde_alterar_produto.setObjectName("line_qtde_alterar_produto")
         self.line_codigo_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
         self.line_codigo_alterar_produto.setGeometry(QtCore.QRect(230, 100, 161, 31))
-        self.line_codigo_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_codigo_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_codigo_alterar_produto.setClearButtonEnabled(True)
         self.line_codigo_alterar_produto.setObjectName("line_codigo_alterar_produto")
         self.line_decricao_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
         self.line_decricao_alterar_produto.setGeometry(QtCore.QRect(410, 100, 161, 31))
-        self.line_decricao_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n""border: 2px solid rgba(0,0,0,0);\n""border-bottom-color: rgb(159, 63, 250);\n""color: rgb(0,0,0);\n""padding-bottom: 8px;\n""border-radius: 0px;\n""font: 10pt \"Montserrat\";")
+        self.line_decricao_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgb(159, 63, 250);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom: 8px;\n"
+"border-radius: 0px;\n"
+"font: 10pt \"Montserrat\";")
         self.line_decricao_alterar_produto.setClearButtonEnabled(True)
         self.line_decricao_alterar_produto.setObjectName("line_decricao_alterar_produto")
         self.btn_pesquisar_alterar_produto = QtWidgets.QPushButton(self.pg_alterar_produtos)
         self.btn_pesquisar_alterar_produto.setGeometry(QtCore.QRect(20, 90, 51, 41))
-        self.btn_pesquisar_alterar_produto.setStyleSheet("QPushButton {\n""border: 2px;\n""background-color: rgb(159, 63, 250);\n""color: white;\n""\n""font: 10pt \"Montserrat\";\n""outline: 0;\n""}\n""\n""QPushButton:hover {\n""background-color: rgb(197, 62, 255);\n""}\n""")
+        self.btn_pesquisar_alterar_produto.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgb(159, 63, 250);\n"
+"color: white;\n"
+"\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(197, 62, 255);\n"
+"}\n"
+"")
         self.btn_pesquisar_alterar_produto.setText("")
         self.btn_pesquisar_alterar_produto.setIcon(icon10)
         self.btn_pesquisar_alterar_produto.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_alterar_produto.setObjectName("btn_pesquisar_alterar_produto")
         self.line_search_Bar_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
         self.line_search_Bar_alterar_produto.setGeometry(QtCore.QRect(70, 90, 151, 41))
-        self.line_search_Bar_alterar_produto.setStyleSheet("border: 2px solid #9f3ffa;\n""font: 10pt \"Montserrat\";")
+        self.line_search_Bar_alterar_produto.setStyleSheet("border: 2px solid #9f3ffa;\n"
+"font: 10pt \"Montserrat\";")
         self.line_search_Bar_alterar_produto.setCursorPosition(0)
         self.line_search_Bar_alterar_produto.setClearButtonEnabled(True)
         self.line_search_Bar_alterar_produto.setObjectName("line_search_Bar_alterar_produto")
         self.lbl_hora_data_alterar_produto = QtWidgets.QLabel(self.pg_alterar_produtos)
         self.lbl_hora_data_alterar_produto.setGeometry(QtCore.QRect(830, 150, 181, 21))
-        self.lbl_hora_data_alterar_produto.setStyleSheet("font: 13pt \"Montserrat\";\n""color: #9f3ffa;\n""")
+        self.lbl_hora_data_alterar_produto.setStyleSheet("font: 13pt \"Montserrat\";\n"
+"color: #9f3ffa;\n"
+"")
         self.lbl_hora_data_alterar_produto.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_hora_data_alterar_produto.setWordWrap(False)
         self.lbl_hora_data_alterar_produto.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
         self.lbl_hora_data_alterar_produto.setObjectName("lbl_hora_data_alterar_produto")
         self.Telas_do_menu.addWidget(self.pg_alterar_produtos)
+        self.barra_menu_topo_3 = QtWidgets.QFrame(self.Admin)
+        self.barra_menu_topo_3.setGeometry(QtCore.QRect(60, 0, 1031, 61))
+        self.barra_menu_topo_3.setAutoFillBackground(False)
+        self.barra_menu_topo_3.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.barra_menu_topo_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.barra_menu_topo_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.barra_menu_topo_3.setObjectName("barra_menu_topo_3")
+        self.barra_menu_topo_2 = QtWidgets.QFrame(self.barra_menu_topo_3)
+        self.barra_menu_topo_2.setGeometry(QtCore.QRect(0, 0, 221, 31))
+        self.barra_menu_topo_2.setStyleSheet("background-color: rgb(159, 63, 250);\n""border-top-right-radius: 14px;""border-bottom-right-radius: 14px;")
+        self.barra_menu_topo_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.barra_menu_topo_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.barra_menu_topo_2.setObjectName("barra_menu_topo_2")
+        self.Iconuser = QtWidgets.QLabel(self.barra_menu_topo_2)
+        self.Iconuser.setGeometry(QtCore.QRect(10, 1, 41, 31))
+        self.Iconuser.setStyleSheet("color: white;\n"
+"font: 12pt \"Montserrat\";")
+        self.Iconuser.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.Iconuser.setText("")
+        self.Iconuser.setPixmap(QtGui.QPixmap(":/icones/usericon.png"))
+        self.Iconuser.setScaledContents(True)
+        self.Iconuser.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
+        self.Iconuser.setObjectName("Iconuser")
+        self.lbl_seja_bem_vindo = QtWidgets.QLabel(self.barra_menu_topo_2)
+        self.lbl_seja_bem_vindo.setGeometry(QtCore.QRect(50, 0, 101, 31))
+        self.lbl_seja_bem_vindo.setStyleSheet("font: 12pt \"Montserrat\";")
+        self.lbl_seja_bem_vindo.setObjectName("lbl_seja_bem_vindo")
         self.TelasPrincipais.addWidget(self.Admin)
         self.Colaborador = QtWidgets.QWidget()
         self.Colaborador.setObjectName("Colaborador")
@@ -1351,7 +2571,7 @@ class Ui_FrmAdmin(object):
 
         self.retranslateUi(FrmAdmin)
         self.TelasPrincipais.setCurrentIndex(0)
-        self.Telas_do_menu.setCurrentIndex(15)
+        self.Telas_do_menu.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(FrmAdmin)
 
     def retranslateUi(self, FrmAdmin):
@@ -1364,12 +2584,14 @@ class Ui_FrmAdmin(object):
         self.btn_colaboradores.setToolTip(_translate("FrmAdmin", "Colaboradores"))
         self.btn_clientes.setToolTip(_translate("FrmAdmin", "Clientes"))
         self.btn_vendas_2.setToolTip(_translate("FrmAdmin", "Monitoramento Vendas"))
-        self.lbl_seja_bem_vindo.setText(_translate("FrmAdmin", "Seja bem-vindo(a)"))
         self.lbl_titulo.setText(_translate("FrmAdmin", "Últimas Notícias"))
-        self.lbl_noticia3.setText(_translate("FrmAdmin", "Tem alguma sugestão do que podemos melhorar?\n""Se sim, deixe sua sugestão com o rh."))
-        self.lbl_noticia1.setText(_translate("FrmAdmin", "Não recebeu seu passe? Entre em contato com o rh\n""via e-mail ou faça um chamado."))
+        self.lbl_noticia3.setText(_translate("FrmAdmin", "Tem alguma sugestão do que podemos melhorar?\n"
+"Se sim, deixe sua sugestão com o rh."))
+        self.lbl_noticia1.setText(_translate("FrmAdmin", "Não recebeu seu passe? Entre em contato com o rh\n"
+"via e-mail ou faça um chamado."))
         self.lbl_noticia2.setText(_translate("FrmAdmin", "Use a vontade nossos ambientes de descontração!"))
-        self.label_3.setText(_translate("FrmAdmin", "PBstock - A melhor forma\n""de gerenciar estoque!"))
+        self.label_3.setText(_translate("FrmAdmin", "PBstock - A melhor forma\n"
+"de gerenciar estoque!"))
         self.checkBox_finalizar_app.setText(_translate("FrmAdmin", "Finalizar aplicação após 20 minutos"))
         self.lbl_titulo_configuracoes.setText(_translate("FrmAdmin", "Configurações"))
         self.btn_salvar.setText(_translate("FrmAdmin", "Salvar Alterações"))
@@ -1381,8 +2603,12 @@ class Ui_FrmAdmin(object):
         item = self.tabela_fornecedores.horizontalHeaderItem(0)
         item.setText(_translate("FrmAdmin", "Fornecedor"))
         item = self.tabela_fornecedores.horizontalHeaderItem(1)
-        item.setText(_translate("FrmAdmin", "Endereço"))
+        item.setText(_translate("FrmAdmin", "Preenche"))
         item = self.tabela_fornecedores.horizontalHeaderItem(2)
+        item.setText(_translate("FrmAdmin", "Tem de Preencher"))
+        item = self.tabela_fornecedores.horizontalHeaderItem(3)
+        item.setText(_translate("FrmAdmin", "Endereço"))
+        item = self.tabela_fornecedores.horizontalHeaderItem(4)
         item.setText(_translate("FrmAdmin", "Contato"))
         self.btn_adicionar_forncedores.setText(_translate("FrmAdmin", "Adicionar"))
         self.line_search_Bar_fornecedores.setPlaceholderText(_translate("FrmAdmin", "Filtrar Fornecedores"))
@@ -1604,5 +2830,16 @@ class Ui_FrmAdmin(object):
         self.line_decricao_alterar_produto.setPlaceholderText(_translate("FrmAdmin", "Descrição"))
         self.line_search_Bar_alterar_produto.setPlaceholderText(_translate("FrmAdmin", "Filtrar Produtos"))
         self.lbl_hora_data_alterar_produto.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
-        
+        self.lbl_seja_bem_vindo.setText(_translate("FrmAdmin", "TextLabel"))
 from view.QRC import file_principal_rc
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    FrmAdmin = QtWidgets.QMainWindow()
+    ui = Ui_FrmAdmin()
+    ui.setupUi(FrmAdmin)
+    FrmAdmin.show()
+    sys.exit(app.exec_())
+
+

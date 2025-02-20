@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icones">
+    <file>usericon.png</file>
+    <file>configicon.png</file>
     <file>monitoramento.png</file>
     <file>nv_clientes.png</file>
     <file>nv_produtos.jpg-1.png</file>
@@ -9,8 +11,6 @@
     <file>btn_produtos.png</file>
     <file>lupa.png</file>
     <file>btn_produtos.png</file>
-    <file>P em png.png</file>
-    <file>logo_branco.png</file>
     <file>sugestões.png</file>
     <file>ambiente.png</file>
     <file>onibus.png</file>
@@ -29,7 +29,6 @@
     <file>engrenagem_ico.png</file>
     <file>Emoji-Seta-PNG-1024x1024.png</file>
     <file>home.png</file>
-    <file>P.png</file>
     <file>sign-out.png</file>
     <file>Estresse, hábitos parafuncionais (2).png</file>
     <file>logo.png</file>
