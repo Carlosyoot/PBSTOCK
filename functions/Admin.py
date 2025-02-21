@@ -17,7 +17,7 @@ class FrmAdmin(QMainWindow):
         self.ui.lbl_seja_bem_vindo_primary.setText(f'Olá, {user_name}')
         self.ui.lbl_seja_bem_vindo.setText('Seja Bem-Vindo')
         self.ui.lbl_seja_bem_vindo.setFixedWidth(500)
-        
+
         # Conectar eventos
         conectar_eventos(self.ui)
         self.iniciar_tempo()
@@ -41,3 +41,4 @@ class WindowManager:
         if cls.SecondWindow is None or not cls.SecondWindow.isVisible():
             cls.SecondWindow = FrmAdmin(user_name)
             cls.SecondWindow.show()
+

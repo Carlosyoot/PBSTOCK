@@ -305,7 +305,7 @@ class Ui_FrmAdmin(object):
         self.lbl_seja_bem_vindo_primary.setObjectName("lbl_seja_bem_vindo_primary")
         self.listView = QtWidgets.QListView(self.Quadro_noticias)
         self.listView.setGeometry(QtCore.QRect(30, 60, 301, 331))
-        self.listView.setStyleSheet('''
+        self.listView.setStyleSheet("""
     QListView {
         background-color: rgb(255, 255, 255);
         padding: 5px;
@@ -316,11 +316,16 @@ class Ui_FrmAdmin(object):
     }
     QListView::item:selected {
         background-color: #66ccff;
-        color: white;
-        border-radius: 14px;
-        outline: none;  /* Remove o foco (pontilhado ao redor do texto) */
+         color: white !important;
+        border-radius: 14px !important;
+        outline: none !important;
+        border: none !important;
     }
-''')
+    QListView::item:focus {
+        outline: none;  /* Remove a borda pontilhada */
+        border: none;   /* Remove a borda */
+    }
+""")
         self.listView.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.listView.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.listView.setObjectName("listView")
