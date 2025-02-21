@@ -13,10 +13,7 @@ def HoraData(ui):
         ui.lbl_hora_data_colaboradores, ui.lbl_hora_data_alterar_colaboradores,
         ui.lbl_hora_data_monitoramento, ui.lbl_hora_data,
         ui.lbl_hora_data_produtos, ui.lbl_hora_data_alterar_produto,
-        ui.lbl_hora_data_cadastrar_produto, ui.lbl_hora_data_fornecedores,
-        ui.lbl_hora_data_alterar_fornecedores, ui.lbl_hora_data_cadastrar_fornecedores,
-        ui.lbl_hora_data_clientes, ui.lbl_hora_data_cadastrar_clientes,
-        ui.lbl_hora_data_alterar_clientes
+        ui.lbl_hora_data_cadastrar_produto,
     ]
 
     for label in labels:
@@ -27,6 +24,6 @@ def Sair(ui, futuroTexto):
     tempoAtual = QTime.currentTime()
     tempoTexto = tempoAtual.toString('hh:mm:ss')
 
-    if ui.checkBox_finalizar_app.isChecked():
+    if ui.checkBox_finalizar_app_3.isChecked():
         if tempoTexto == futuroTexto:
             sys.exit()

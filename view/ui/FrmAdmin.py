@@ -273,7 +273,7 @@ class Ui_FrmAdmin(object):
         self.lbl_seja_bem_vindo = QtWidgets.QLabel(self.Quadro_noticias)
         self.lbl_seja_bem_vindo.setGeometry(QtCore.QRect(170, 20, 81, 31))
         self.lbl_seja_bem_vindo.setStyleSheet("font: 12pt \"Impact\";\n"
-"color: rgb(0, 0, 0);")
+"color: rgb(255, 255, 255);")
         self.lbl_seja_bem_vindo.setObjectName("lbl_seja_bem_vindo")
         self.antes_btn = QtWidgets.QPushButton(self.Quadro_noticias)
         self.antes_btn.setGeometry(QtCore.QRect(30, 400, 92, 32))
@@ -305,22 +305,20 @@ class Ui_FrmAdmin(object):
         self.lbl_seja_bem_vindo_primary.setObjectName("lbl_seja_bem_vindo_primary")
         self.listView = QtWidgets.QListView(self.Quadro_noticias)
         self.listView.setGeometry(QtCore.QRect(30, 60, 301, 331))
-        self.listView.setStyleSheet('''
-    QListView {
-        background-color: rgb(255, 255, 255);
-        padding: 5px;
-    }
-    QListView::item {
-        padding: 10px;
-        border-radius: 14px;
-    }
-    QListView::item:selected {
-        background-color: #66ccff;
-        color: white;
-        border-radius: 14px;
-        outline: none;  /* Remove o foco (pontilhado ao redor do texto) */
-    }
-''')
+        self.listView.setStyleSheet("QListView {\n"
+"\n"
+"                     \n"
+"    background-color: rgb(255, 255, 255);\n"
+"                        padding: 5px;\n"
+"}\n"
+"QListView::item {\n"
+"                        border-bottom: 1px solid #ccc;\n"
+"                        padding: 10px;\n"
+"                        }\n"
+" QListView::item:selected {\n"
+"                        background-color: #66ccff;\n"
+"                        color: white;\n"
+"                        };")
         self.listView.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.listView.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.listView.setObjectName("listView")
@@ -1905,13 +1903,4 @@ class Ui_FrmAdmin(object):
         self.line_decricao_alterar_produto.setPlaceholderText(_translate("FrmAdmin", "Descrição"))
         self.line_search_Bar_alterar_produto.setPlaceholderText(_translate("FrmAdmin", "Filtrar Produtos"))
         self.lbl_hora_data_alterar_produto.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
-from view.QRC import file_principal_rc
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    FrmAdmin = QtWidgets.QMainWindow()
-    ui = Ui_FrmAdmin()
-    ui.setupUi(FrmAdmin)
-    FrmAdmin.show()
-    sys.exit(app.exec_())
+import file_principal_rc_rc

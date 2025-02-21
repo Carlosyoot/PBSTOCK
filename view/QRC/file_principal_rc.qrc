@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="icones">
+    <file>Untitled (1).png</file>
+    <file>homeicon.png</file>
+    <file>colaboradores.icon.png</file>
+    <file>monitoramentoicon.png</file>
+    <file>produtosicon.png</file>
+    <file>vendasicon.png</file>
     <file>usericon.png</file>
     <file>configicon.png</file>
     <file>monitoramento.png</file>
@@ -31,6 +37,8 @@
     <file>home.png</file>
     <file>sign-out.png</file>
     <file>Estresse, hábitos parafuncionais (2).png</file>
+    <file>logo.png</file>
+    <file>logo.png</file>
     <file>logo.png</file>
   </qresource>
 </RCC>
