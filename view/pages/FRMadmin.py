@@ -24,238 +24,11 @@ class Ui_FrmAdmin(object):
         FrmAdmin.setWindowIcon(icon)
         FrmAdmin.setToolTipDuration(-3)
         FrmAdmin.setIconSize(QtCore.QSize(50, 50))
+        FrmAdmin.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.centralwidget = QtWidgets.QWidget(FrmAdmin)
         self.centralwidget.setObjectName("centralwidget")
-        self.TelasPrincipais = QtWidgets.QStackedWidget(self.centralwidget)
-        self.TelasPrincipais.setGeometry(QtCore.QRect(0, 0, 1091, 611))
-        self.TelasPrincipais.setMinimumSize(QtCore.QSize(1091, 611))
-        self.TelasPrincipais.setMaximumSize(QtCore.QSize(1091, 611))
-        self.TelasPrincipais.setObjectName("TelasPrincipais")
-        self.Admin = QtWidgets.QWidget()
-        self.Admin.setObjectName("Admin")
-        self.widget = QtWidgets.QWidget(self.Admin)
-        self.widget.setGeometry(QtCore.QRect(0, 0, 1041, 621))
-        self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.widget.setObjectName("widget")
-        self.bara_menu_esquerda = QtWidgets.QFrame(self.widget)
-        self.bara_menu_esquerda.setGeometry(QtCore.QRect(0, 0, 200, 620))
-        self.bara_menu_esquerda.setStyleSheet("background-color: rgb(253, 188, 55);")
-        self.bara_menu_esquerda.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.bara_menu_esquerda.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.bara_menu_esquerda.setObjectName("bara_menu_esquerda")
-        self.btn_voltar = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_voltar.setEnabled(True)
-        self.btn_voltar.setGeometry(QtCore.QRect(10, 560, 181, 32))
-        self.btn_voltar.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.btn_voltar.setAutoFillBackground(False)
-        self.btn_voltar.setStyleSheet("QPushButton{\n"
-"\n"
-"background-color: rgb(255, 255, 255); \n"
-"border-radius:12px;\n"
-"font: 75 italic 10pt \"Sitka Subheading\";\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"}\n"
-"\n"
-"QPushButton:Hover{\n"
-"    background-color: rgb(230, 5, 5);}\n"
-"\n"
-"")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icones/sign-out.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_voltar.setIcon(icon1)
-        self.btn_voltar.setIconSize(QtCore.QSize(20, 20))
-        self.btn_voltar.setCheckable(False)
-        self.btn_voltar.setAutoRepeat(False)
-        self.btn_voltar.setAutoDefault(False)
-        self.btn_voltar.setDefault(False)
-        self.btn_voltar.setFlat(False)
-        self.btn_voltar.setObjectName("btn_voltar")
-        self.btn_configs = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_configs.setEnabled(True)
-        self.btn_configs.setGeometry(QtCore.QRect(10, 370, 181, 32))
-        self.btn_configs.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.btn_configs.setAutoFillBackground(False)
-        self.btn_configs.setStyleSheet("QPushButton{\n"
-"background-color: rgb(255, 255, 255); \n"
-"border-radius:12px;\n"
-"font: 75 italic 10pt \"Sitka Subheading\";\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"}\n"
-"\n"
-"QPushButton:Hover{\n"
-"background-color: rgb(222, 222, 222);\n"
-"}\n"
-"\n"
-"")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/icones/configicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_configs.setIcon(icon2)
-        self.btn_configs.setIconSize(QtCore.QSize(20, 20))
-        self.btn_configs.setCheckable(False)
-        self.btn_configs.setAutoRepeat(False)
-        self.btn_configs.setAutoDefault(False)
-        self.btn_configs.setDefault(False)
-        self.btn_configs.setFlat(False)
-        self.btn_configs.setObjectName("btn_configs")
-        self.btn_colaboradores = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_colaboradores.setEnabled(True)
-        self.btn_colaboradores.setGeometry(QtCore.QRect(10, 330, 181, 32))
-        self.btn_colaboradores.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.btn_colaboradores.setAutoFillBackground(False)
-        self.btn_colaboradores.setStyleSheet("QPushButton{\n"
-"background-color: rgb(255, 255, 255); \n"
-"border-radius:12px;\n"
-"font: 75 italic 10pt \"Sitka Subheading\";\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"}\n"
-"\n"
-"QPushButton:Hover{\n"
-"background-color: rgb(222, 222, 222);\n"
-"}\n"
-"\n"
-"")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/icones/colaboradores.icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_colaboradores.setIcon(icon3)
-        self.btn_colaboradores.setIconSize(QtCore.QSize(20, 20))
-        self.btn_colaboradores.setCheckable(False)
-        self.btn_colaboradores.setAutoRepeat(False)
-        self.btn_colaboradores.setAutoDefault(False)
-        self.btn_colaboradores.setDefault(False)
-        self.btn_colaboradores.setFlat(False)
-        self.btn_colaboradores.setObjectName("btn_colaboradores")
-        self.btn_produtos = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_produtos.setEnabled(True)
-        self.btn_produtos.setGeometry(QtCore.QRect(10, 210, 181, 32))
-        self.btn_produtos.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.btn_produtos.setAutoFillBackground(False)
-        self.btn_produtos.setStyleSheet("QPushButton{\n"
-"background-color: rgb(255, 255, 255); \n"
-"border-radius:12px;\n"
-"font: 75 italic 10pt \"Sitka Subheading\";\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"}\n"
-"\n"
-"QPushButton:Hover{\n"
-"background-color: rgb(222, 222, 222);\n"
-"}\n"
-"\n"
-"")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icones/produtosicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_produtos.setIcon(icon4)
-        self.btn_produtos.setIconSize(QtCore.QSize(20, 20))
-        self.btn_produtos.setCheckable(False)
-        self.btn_produtos.setAutoRepeat(False)
-        self.btn_produtos.setAutoDefault(False)
-        self.btn_produtos.setDefault(False)
-        self.btn_produtos.setFlat(False)
-        self.btn_produtos.setObjectName("btn_produtos")
-        self.btn_monitoramento = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_monitoramento.setEnabled(True)
-        self.btn_monitoramento.setGeometry(QtCore.QRect(10, 290, 181, 32))
-        self.btn_monitoramento.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.btn_monitoramento.setAutoFillBackground(False)
-        self.btn_monitoramento.setStyleSheet("QPushButton{\n"
-"background-color: rgb(255, 255, 255); \n"
-"border-radius:12px;\n"
-"font: 75 italic 10pt \"Sitka Subheading\";\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"}\n"
-"\n"
-"QPushButton:Hover{\n"
-"background-color: rgb(222, 222, 222);\n"
-"}\n"
-"\n"
-"")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/icones/monitoramentoicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_monitoramento.setIcon(icon5)
-        self.btn_monitoramento.setIconSize(QtCore.QSize(20, 20))
-        self.btn_monitoramento.setCheckable(False)
-        self.btn_monitoramento.setAutoRepeat(False)
-        self.btn_monitoramento.setAutoDefault(False)
-        self.btn_monitoramento.setDefault(False)
-        self.btn_monitoramento.setFlat(False)
-        self.btn_monitoramento.setObjectName("btn_monitoramento")
-        self.btn_home = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_home.setEnabled(True)
-        self.btn_home.setGeometry(QtCore.QRect(10, 170, 181, 32))
-        self.btn_home.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.btn_home.setAutoFillBackground(False)
-        self.btn_home.setStyleSheet("QPushButton{\n"
-"background-color: rgb(255, 255, 255); \n"
-"border-radius:12px;\n"
-"font: 75 italic 10pt \"Sitka Subheading\";\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"}\n"
-"\n"
-"QPushButton:Hover{\n"
-"background-color: rgb(222, 222, 222);\n"
-"}\n"
-"\n"
-"")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/icones/homeicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_home.setIcon(icon6)
-        self.btn_home.setIconSize(QtCore.QSize(20, 20))
-        self.btn_home.setCheckable(False)
-        self.btn_home.setAutoRepeat(False)
-        self.btn_home.setAutoDefault(False)
-        self.btn_home.setDefault(False)
-        self.btn_home.setFlat(False)
-        self.btn_home.setObjectName("btn_home")
-        self.btn_vendas = QtWidgets.QPushButton(self.bara_menu_esquerda)
-        self.btn_vendas.setEnabled(True)
-        self.btn_vendas.setGeometry(QtCore.QRect(10, 250, 181, 32))
-        self.btn_vendas.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.btn_vendas.setAutoFillBackground(False)
-        self.btn_vendas.setStyleSheet("QPushButton{\n"
-"background-color: rgb(255, 255, 255); \n"
-"border-radius:12px;\n"
-"font: 75 italic 10pt \"Sitka Subheading\";\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"}\n"
-"\n"
-"QPushButton:Hover{\n"
-"background-color: rgb(222, 222, 222);\n"
-"}\n"
-"\n"
-"")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/icones/vendasicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_vendas.setIcon(icon7)
-        self.btn_vendas.setIconSize(QtCore.QSize(20, 20))
-        self.btn_vendas.setCheckable(False)
-        self.btn_vendas.setAutoRepeat(False)
-        self.btn_vendas.setAutoDefault(False)
-        self.btn_vendas.setDefault(False)
-        self.btn_vendas.setFlat(False)
-        self.btn_vendas.setObjectName("btn_vendas")
-        self.label_3 = QtWidgets.QLabel(self.bara_menu_esquerda)
-        self.label_3.setGeometry(QtCore.QRect(30, 120, 141, 51))
-        self.label_3.setStyleSheet("font: 16pt \"Impact\";\n"
-"text-align:center;\n"
-"")
-        self.label_3.setObjectName("label_3")
-        self.label = QtWidgets.QLabel(self.bara_menu_esquerda)
-        self.label.setGeometry(QtCore.QRect(20, 0, 151, 121))
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/icones/Untitled (1).png"))
-        self.label.setScaledContents(True)
-        self.label.setObjectName("label")
-        self.label_3.raise_()
-        self.btn_voltar.raise_()
-        self.btn_configs.raise_()
-        self.btn_colaboradores.raise_()
-        self.btn_produtos.raise_()
-        self.btn_monitoramento.raise_()
-        self.btn_home.raise_()
-        self.btn_vendas.raise_()
-        self.label.raise_()
-        self.TelasPrincipais.addWidget(self.Admin)
         self.Telas_do_menu = QtWidgets.QStackedWidget(self.centralwidget)
-        self.Telas_do_menu.setGeometry(QtCore.QRect(200, 50, 1081, 561))
+        self.Telas_do_menu.setGeometry(QtCore.QRect(200, 0, 1081, 611))
         self.Telas_do_menu.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.Telas_do_menu.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.Telas_do_menu.setFrameShadow(QtWidgets.QFrame.Sunken)
@@ -264,33 +37,43 @@ class Ui_FrmAdmin(object):
         self.pg_home.setObjectName("pg_home")
         self.Quadro_noticias = QtWidgets.QFrame(self.pg_home)
         self.Quadro_noticias.setEnabled(True)
-        self.Quadro_noticias.setGeometry(QtCore.QRect(660, 40, 361, 441))
-        self.Quadro_noticias.setStyleSheet("background-color: rgb(253, 188, 55);\n"
+        self.Quadro_noticias.setGeometry(QtCore.QRect(640, 90, 361, 441))
+        self.Quadro_noticias.setStyleSheet("background-color:rgba(247,173,52,255);\n"
 "border-radius:30px;")
         self.Quadro_noticias.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.Quadro_noticias.setFrameShadow(QtWidgets.QFrame.Raised)
         self.Quadro_noticias.setObjectName("Quadro_noticias")
         self.lbl_seja_bem_vindo = QtWidgets.QLabel(self.Quadro_noticias)
-        self.lbl_seja_bem_vindo.setGeometry(QtCore.QRect(170, 20, 81, 31))
+        self.lbl_seja_bem_vindo.setGeometry(QtCore.QRect(180, 20, 91, 31))
         self.lbl_seja_bem_vindo.setStyleSheet("font: 12pt \"Impact\";\n"
-"color: rgb(0, 0, 0);")
+"color: rgb(255, 255, 255);")
         self.lbl_seja_bem_vindo.setObjectName("lbl_seja_bem_vindo")
         self.antes_btn = QtWidgets.QPushButton(self.Quadro_noticias)
-        self.antes_btn.setGeometry(QtCore.QRect(30, 400, 92, 32))
-        self.antes_btn.setStyleSheet("background-color: rgb(44, 44, 44);\n"
-"\n"
-"color: rgb(255, 170, 0);\n"
-"border-radius:14px;")
+        self.antes_btn.setGeometry(QtCore.QRect(30, 385, 92, 32))
+        self.antes_btn.setStyleSheet("QPushButton{\n"
+"border-radius:14px;\n"
+"font: 75 12pt \"Georgia\";\n"
+"color: rgb(44, 44, 44);\n"
+"}\n"
+"QPushButton:Hover{\n"
+"color: rgb(255, 255, 255);\n"
+"    image: url(:/icones/left-chevron.png);\n"
+"}")
         self.antes_btn.setObjectName("antes_btn")
         self.depois_btn = QtWidgets.QPushButton(self.Quadro_noticias)
-        self.depois_btn.setGeometry(QtCore.QRect(240, 400, 92, 32))
-        self.depois_btn.setStyleSheet("background-color: rgb(44, 44, 44);\n"
-"\n"
-"color: rgb(255, 170, 0);\n"
-"border-radius:14px;")
+        self.depois_btn.setGeometry(QtCore.QRect(240, 385, 92, 32))
+        self.depois_btn.setStyleSheet("QPushButton{\n"
+"border-radius:14px;\n"
+"font: 75 12pt \"Georgia\";\n"
+"color: rgb(44, 44, 44);\n"
+"}\n"
+"QPushButton:Hover{\n"
+"color: rgb(255, 255, 255);\n"
+"    image: url(:/icones/chevron.png);\n"
+"}")
         self.depois_btn.setObjectName("depois_btn")
         self.lbl_pagina = QtWidgets.QPushButton(self.Quadro_noticias)
-        self.lbl_pagina.setGeometry(QtCore.QRect(170, 404, 22, 24))
+        self.lbl_pagina.setGeometry(QtCore.QRect(170, 400, 22, 24))
         self.lbl_pagina.setStyleSheet(" font: 63 14pt \"Bahnschrift SemiBold\";\n"
 "        background-color: rgb(44, 44, 44);\n"
 "        border-radius: 6px;\n"
@@ -300,32 +83,28 @@ class Ui_FrmAdmin(object):
         self.lbl_seja_bem_vindo_primary = QtWidgets.QLabel(self.Quadro_noticias)
         self.lbl_seja_bem_vindo_primary.setGeometry(QtCore.QRect(90, 20, 81, 31))
         self.lbl_seja_bem_vindo_primary.setStyleSheet("font: 12pt \"Impact\";\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(0, 0, 0);")
         self.lbl_seja_bem_vindo_primary.setText("")
         self.lbl_seja_bem_vindo_primary.setObjectName("lbl_seja_bem_vindo_primary")
         self.listView = QtWidgets.QListView(self.Quadro_noticias)
-        self.listView.setGeometry(QtCore.QRect(30, 60, 301, 331))
-        self.listView.setStyleSheet("""
-    QListView {
-        background-color: rgb(255, 255, 255);
-        padding: 5px;
-    }
-    QListView::item {
-        padding: 10px;
-        border-radius: 14px;
-    }
-    QListView::item:selected {
-        background-color: #66ccff;
-         color: white !important;
-        border-radius: 14px !important;
-        outline: none !important;
-        border: none !important;
-    }
-    QListView::item:focus {
-        outline: none;  /* Remove a borda pontilhada */
-        border: none;   /* Remove a borda */
-    }
-""")
+        self.listView.setGeometry(QtCore.QRect(30, 60, 301, 311))
+        self.listView.setStyleSheet("QListView {\n"
+"    border-radius:0px;        \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"QListView::item {\n"
+"                        border-bottom: 1px solid black;\n"
+"                        padding: 20px;\n"
+"                        border-radius:0px;\n"
+"\n"
+"                        }\n"
+" QListView::item:selected {\n"
+"    \n"
+"    background-color: rgb(230, 230, 230);\n"
+"                        color: white;\n"
+"    border-radius:0px;\n"
+"\n"
+"                        }")
         self.listView.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.listView.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.listView.setObjectName("listView")
@@ -336,7 +115,7 @@ class Ui_FrmAdmin(object):
         self.lbl_seja_bem_vindo_primary.raise_()
         self.listView.raise_()
         self.iconuser = QtWidgets.QLabel(self.pg_home)
-        self.iconuser.setGeometry(QtCore.QRect(940, 0, 81, 81))
+        self.iconuser.setGeometry(QtCore.QRect(940, 50, 81, 81))
         self.iconuser.setStyleSheet("\n"
 "    background-color: rgb(255, 255, 255);\n"
 "    border-radius: 40px;\n"
@@ -345,23 +124,6 @@ class Ui_FrmAdmin(object):
         self.iconuser.setPixmap(QtGui.QPixmap(":/icones/usericon.png"))
         self.iconuser.setScaledContents(True)
         self.iconuser.setObjectName("iconuser")
-        self.frame = QtWidgets.QFrame(self.pg_home)
-        self.frame.setEnabled(False)
-        self.frame.setGeometry(QtCore.QRect(270, 110, 301, 331))
-        self.frame.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: 2px;\n"
-"border-top: 15px;\n"
-"\n"
-"")
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame.setObjectName("frame")
-        self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(-20, 310, 321, 21))
-        self.frame_2.setStyleSheet("background-color: rgb(253, 188, 55);")
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
         self.Telas_do_menu.addWidget(self.pg_home)
         self.pg_configuracoes = QtWidgets.QWidget()
         self.pg_configuracoes.setObjectName("pg_configuracoes")
@@ -406,18 +168,19 @@ class Ui_FrmAdmin(object):
         self.monitoramento = QtWidgets.QWidget()
         self.monitoramento.setObjectName("monitoramento")
         self.lbl_titulo_monitoramento = QtWidgets.QLabel(self.monitoramento)
-        self.lbl_titulo_monitoramento.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_monitoramento.setStyleSheet("color: #9f3ffa;\n"
-"font: 24pt \"Impact\";")
+        self.lbl_titulo_monitoramento.setGeometry(QtCore.QRect(30, 50, 551, 41))
+        self.lbl_titulo_monitoramento.setStyleSheet("color: black;\n"
+"font: 16pt \"Arial Black\";")
         self.lbl_titulo_monitoramento.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_monitoramento.setWordWrap(False)
         self.lbl_titulo_monitoramento.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_monitoramento.setObjectName("lbl_titulo_monitoramento")
         self.btn_filtrar_monitoramento = QtWidgets.QPushButton(self.monitoramento)
-        self.btn_filtrar_monitoramento.setGeometry(QtCore.QRect(20, 70, 51, 41))
+        self.btn_filtrar_monitoramento.setGeometry(QtCore.QRect(720, 60, 51, 41))
         self.btn_filtrar_monitoramento.setStyleSheet("QPushButton {\n"
-"border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"border: 1px solid black;\n"
+"border-right:0px;\n"
+"background-color:rgba(247,173,52,255);\n"
 "color: white;\n"
 "\n"
 "font: 10pt \"Montserrat\";\n"
@@ -429,25 +192,25 @@ class Ui_FrmAdmin(object):
 "}\n"
 "")
         self.btn_filtrar_monitoramento.setText("")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/icones/lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_filtrar_monitoramento.setIcon(icon8)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icones/lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_filtrar_monitoramento.setIcon(icon1)
         self.btn_filtrar_monitoramento.setIconSize(QtCore.QSize(25, 25))
         self.btn_filtrar_monitoramento.setObjectName("btn_filtrar_monitoramento")
         self.line_search_bar_monitoramentoto = QtWidgets.QLineEdit(self.monitoramento)
-        self.line_search_bar_monitoramentoto.setGeometry(QtCore.QRect(70, 70, 291, 41))
-        self.line_search_bar_monitoramentoto.setStyleSheet("border: 2px solid #9f3ffa;\n"
+        self.line_search_bar_monitoramentoto.setGeometry(QtCore.QRect(770, 60, 291, 41))
+        self.line_search_bar_monitoramentoto.setStyleSheet("border: 1px solid rgb(66, 66, 66);\n"
 "font: 10pt \"Montserrat\";")
         self.line_search_bar_monitoramentoto.setCursorPosition(0)
         self.line_search_bar_monitoramentoto.setClearButtonEnabled(True)
         self.line_search_bar_monitoramentoto.setObjectName("line_search_bar_monitoramentoto")
         self.tabela_monitoramento = QtWidgets.QTableWidget(self.monitoramento)
-        self.tabela_monitoramento.setGeometry(QtCore.QRect(20, 130, 821, 391))
+        self.tabela_monitoramento.setGeometry(QtCore.QRect(20, 130, 821, 411))
         self.tabela_monitoramento.setStyleSheet("QTableWidget {\n"
 "    gridline-color: #9f3ffa;;\n"
 "    background-color: transparent;\n"
 "    outline: 0;\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    border-top: 0px\n"
 "    \n"
 "}\n"
@@ -462,10 +225,10 @@ class Ui_FrmAdmin(object):
 "\n"
 "QHeaderView::section:horizontal\n"
 "{\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    background-color: transparent;\n"
-"    border-left: 0px;\n"
 "    color: black;\n"
+"    border-left: 0px;\n"
 "\n"
 "}\n"
 "")
@@ -497,7 +260,7 @@ class Ui_FrmAdmin(object):
         self.tabela_monitoramento.verticalHeader().setSortIndicatorShown(False)
         self.tabela_monitoramento.verticalHeader().setStretchLastSection(False)
         self.lbl_hora_data_monitoramento = QtWidgets.QLabel(self.monitoramento)
-        self.lbl_hora_data_monitoramento.setGeometry(QtCore.QRect(890, 500, 151, 21))
+        self.lbl_hora_data_monitoramento.setGeometry(QtCore.QRect(700, 560, 151, 21))
         font = QtGui.QFont()
         font.setFamily("Impact")
         font.setPointSize(14)
@@ -513,10 +276,10 @@ class Ui_FrmAdmin(object):
         self.lbl_hora_data_monitoramento.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
         self.lbl_hora_data_monitoramento.setObjectName("lbl_hora_data_monitoramento")
         self.btn_limpar_tabela = QtWidgets.QPushButton(self.monitoramento)
-        self.btn_limpar_tabela.setGeometry(QtCore.QRect(870, 240, 191, 41))
+        self.btn_limpar_tabela.setGeometry(QtCore.QRect(870, 500, 191, 41))
         self.btn_limpar_tabela.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"    background-color: rgb(255, 101, 70);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -524,15 +287,16 @@ class Ui_FrmAdmin(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(197, 62, 255);\n"
+"background-color: rgb(83, 167, 250);\n"
 "}\n"
 "")
         self.btn_limpar_tabela.setObjectName("btn_limpar_tabela")
         self.btn_gerar_pdf = QtWidgets.QPushButton(self.monitoramento)
-        self.btn_gerar_pdf.setGeometry(QtCore.QRect(870, 290, 191, 41))
+        self.btn_gerar_pdf.setGeometry(QtCore.QRect(870, 440, 191, 41))
         self.btn_gerar_pdf.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"\n"
+"background-color: rgb(116, 170, 74);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -540,29 +304,33 @@ class Ui_FrmAdmin(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(197, 62, 255);\n"
+"background-color: rgb(83, 167, 250);\n"
 "}\n"
 "")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icones/61045dfc9cd69c000418c11a.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_gerar_pdf.setIcon(icon2)
+        self.btn_gerar_pdf.setIconSize(QtCore.QSize(40, 40))
         self.btn_gerar_pdf.setObjectName("btn_gerar_pdf")
         self.Telas_do_menu.addWidget(self.monitoramento)
         self.pg_vendas = QtWidgets.QWidget()
         self.pg_vendas.setObjectName("pg_vendas")
         self.lbl_titulo_vendas = QtWidgets.QLabel(self.pg_vendas)
         self.lbl_titulo_vendas.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_vendas.setStyleSheet("font: 16pt \"Impact\";\n"
-"color: #9f3ffa;\n"
+        self.lbl_titulo_vendas.setStyleSheet("color:rgb(0, 0, 0);\n"
+"font: 87 16pt \"Arial Black\";\n"
 "")
         self.lbl_titulo_vendas.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_vendas.setWordWrap(False)
         self.lbl_titulo_vendas.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_vendas.setObjectName("lbl_titulo_vendas")
         self.tabela_vendas = QtWidgets.QTableWidget(self.pg_vendas)
-        self.tabela_vendas.setGeometry(QtCore.QRect(20, 140, 851, 401))
+        self.tabela_vendas.setGeometry(QtCore.QRect(20, 130, 821, 391))
         self.tabela_vendas.setStyleSheet("QTableWidget {\n"
 "    gridline-color: #9f3ffa;;\n"
 "    background-color: transparent;\n"
 "    outline: 0;\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    border-top: 0px\n"
 "    \n"
 "}\n"
@@ -577,10 +345,10 @@ class Ui_FrmAdmin(object):
 "\n"
 "QHeaderView::section:horizontal\n"
 "{\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    background-color: transparent;\n"
-"    border-left: 0px;\n"
 "    color: black;\n"
+"    border-left: 0px;\n"
 "\n"
 "}\n"
 "")
@@ -596,48 +364,53 @@ class Ui_FrmAdmin(object):
         self.tabela_vendas.setColumnCount(6)
         self.tabela_vendas.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tabela_vendas.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tabela_vendas.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tabela_vendas.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tabela_vendas.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tabela_vendas.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tabela_vendas.setHorizontalHeaderItem(5, item)
         self.tabela_vendas.horizontalHeader().setStretchLastSection(True)
         self.tabela_vendas.verticalHeader().setVisible(False)
         self.tabela_vendas.verticalHeader().setSortIndicatorShown(False)
         self.tabela_vendas.verticalHeader().setStretchLastSection(False)
         self.line_codigo_vendas = QtWidgets.QLineEdit(self.pg_vendas)
-        self.line_codigo_vendas.setGeometry(QtCore.QRect(240, 89, 201, 31))
+        self.line_codigo_vendas.setGeometry(QtCore.QRect(240, 70, 201, 41))
         self.line_codigo_vendas.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid  rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
-"font: 10pt \"Montserrat\";")
+"font: 10pt \"Montserrat\";\n"
+"")
+        self.line_codigo_vendas.setText("")
         self.line_codigo_vendas.setClearButtonEnabled(True)
         self.line_codigo_vendas.setObjectName("line_codigo_vendas")
         self.line_quantidade_vendas = QtWidgets.QLineEdit(self.pg_vendas)
-        self.line_quantidade_vendas.setGeometry(QtCore.QRect(470, 89, 151, 31))
+        self.line_quantidade_vendas.setGeometry(QtCore.QRect(460, 70, 201, 40))
         self.line_quantidade_vendas.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_quantidade_vendas.setClearButtonEnabled(True)
         self.line_quantidade_vendas.setObjectName("line_quantidade_vendas")
         self.btn_pesquisar = QtWidgets.QPushButton(self.pg_vendas)
-        self.btn_pesquisar.setGeometry(QtCore.QRect(20, 80, 51, 41))
+        self.btn_pesquisar.setGeometry(QtCore.QRect(20, 70, 51, 41))
         self.btn_pesquisar.setStyleSheet("QPushButton {\n"
-"border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"border: 1px solid black;\n"
+"border-right:0px;\n"
+"background-color:rgba(247,173,52,255);\n"
 "color: white;\n"
 "\n"
 "font: 10pt \"Montserrat\";\n"
@@ -649,13 +422,15 @@ class Ui_FrmAdmin(object):
 "}\n"
 "")
         self.btn_pesquisar.setText("")
-        self.btn_pesquisar.setIcon(icon8)
+        self.btn_pesquisar.setIcon(icon1)
         self.btn_pesquisar.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar.setObjectName("btn_pesquisar")
         self.line_search_bar_vendas = QtWidgets.QLineEdit(self.pg_vendas)
-        self.line_search_bar_vendas.setGeometry(QtCore.QRect(70, 80, 150, 41))
-        self.line_search_bar_vendas.setStyleSheet("border: 2px solid #9f3ffa;\n"
-"font: 10pt \"Montserrat\";")
+        self.line_search_bar_vendas.setGeometry(QtCore.QRect(70, 70, 150, 41))
+        self.line_search_bar_vendas.setStyleSheet("border: 1px solid  rgb(66, 66, 66);\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0px;\n"
+"")
         self.line_search_bar_vendas.setCursorPosition(0)
         self.line_search_bar_vendas.setClearButtonEnabled(True)
         self.line_search_bar_vendas.setObjectName("line_search_bar_vendas")
@@ -779,28 +554,26 @@ class Ui_FrmAdmin(object):
         self.lbl_titulo_cadastrar_colaboradores.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_cadastrar_colaboradores.setObjectName("lbl_titulo_cadastrar_colaboradores")
         self.radio_admin = QtWidgets.QRadioButton(self.pg_cadastro_colaboradores)
-        self.radio_admin.setGeometry(QtCore.QRect(810, 458, 82, 17))
+        self.radio_admin.setGeometry(QtCore.QRect(880, 70, 82, 17))
         self.radio_admin.setStyleSheet("outline: 0;")
         self.radio_admin.setObjectName("radio_admin")
         self.radio_colaborador = QtWidgets.QRadioButton(self.pg_cadastro_colaboradores)
-        self.radio_colaborador.setGeometry(QtCore.QRect(700, 458, 82, 17))
+        self.radio_colaborador.setGeometry(QtCore.QRect(780, 80, 82, 17))
         self.radio_colaborador.setStyleSheet("outline: 0;")
         self.radio_colaborador.setObjectName("radio_colaborador")
         self.line_nome = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
-        self.line_nome.setGeometry(QtCore.QRect(700, 110, 271, 51))
+        self.line_nome.setGeometry(QtCore.QRect(740, 100, 271, 51))
         self.line_nome.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgb(159, 63, 250);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 2px solid  rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
 "border-radius: 12px;\n"
 "font: 10pt \"Montserrat\";\n"
 "padding-left:10px;")
         self.line_nome.setObjectName("line_nome")
         self.line_login = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
-        self.line_login.setGeometry(QtCore.QRect(700, 180, 271, 51))
+        self.line_login.setGeometry(QtCore.QRect(740, 170, 271, 51))
         self.line_login.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgb(159, 63, 250);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 2px solid  rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
 "border-radius: 12px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -808,10 +581,10 @@ class Ui_FrmAdmin(object):
         self.line_login.setText("")
         self.line_login.setObjectName("line_login")
         self.line_senha = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
-        self.line_senha.setGeometry(QtCore.QRect(700, 390, 271, 51))
+        self.line_senha.setGeometry(QtCore.QRect(740, 380, 271, 51))
         self.line_senha.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgb(159, 63, 250);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 2px solid  rgb(66, 66, 66);\n"
+"\n"
 "color: rgb(0,0,0);\n"
 "border-radius: 12px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -819,7 +592,7 @@ class Ui_FrmAdmin(object):
         self.line_senha.setEchoMode(QtWidgets.QLineEdit.Password)
         self.line_senha.setObjectName("line_senha")
         self.btn_cadastro = QtWidgets.QPushButton(self.pg_cadastro_colaboradores)
-        self.btn_cadastro.setGeometry(QtCore.QRect(700, 490, 271, 41))
+        self.btn_cadastro.setGeometry(QtCore.QRect(740, 510, 271, 41))
         self.btn_cadastro.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
 "background-color: rgb(159, 63, 250);\n"
@@ -835,13 +608,13 @@ class Ui_FrmAdmin(object):
 "")
         self.btn_cadastro.setObjectName("btn_cadastro")
         self.lbl_imagem = QtWidgets.QLabel(self.pg_cadastro_colaboradores)
-        self.lbl_imagem.setGeometry(QtCore.QRect(50, 110, 611, 401))
+        self.lbl_imagem.setGeometry(QtCore.QRect(50, 190, 611, 351))
         self.lbl_imagem.setText("")
         self.lbl_imagem.setPixmap(QtGui.QPixmap(":/icones/undraw_secure_login_pdn4.png"))
         self.lbl_imagem.setScaledContents(True)
         self.lbl_imagem.setObjectName("lbl_imagem")
         self.btn_ver_senha = QtWidgets.QPushButton(self.pg_cadastro_colaboradores)
-        self.btn_ver_senha.setGeometry(QtCore.QRect(870, 400, 30, 31))
+        self.btn_ver_senha.setGeometry(QtCore.QRect(970, 390, 30, 31))
         self.btn_ver_senha.setStyleSheet("QPushButton {\n"
 "    background-image: url(:/icones/ver senha.png);\n"
 "    border: 0px;\n"
@@ -854,10 +627,9 @@ class Ui_FrmAdmin(object):
         self.btn_ver_senha.setText("")
         self.btn_ver_senha.setObjectName("btn_ver_senha")
         self.line_cpf = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
-        self.line_cpf.setGeometry(QtCore.QRect(700, 250, 271, 51))
+        self.line_cpf.setGeometry(QtCore.QRect(740, 240, 271, 51))
         self.line_cpf.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgb(159, 63, 250);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 2px solid  rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
 "border-radius: 12px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -865,16 +637,96 @@ class Ui_FrmAdmin(object):
         self.line_cpf.setText("")
         self.line_cpf.setObjectName("line_cpf")
         self.line_data_nascimento = QtWidgets.QLineEdit(self.pg_cadastro_colaboradores)
-        self.line_data_nascimento.setGeometry(QtCore.QRect(700, 320, 271, 51))
+        self.line_data_nascimento.setGeometry(QtCore.QRect(740, 310, 271, 51))
         self.line_data_nascimento.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgb(159, 63, 250);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 2px solid  rgb(66, 66, 66);\n"
+"\n"
 "color: rgb(0,0,0);\n"
 "border-radius: 12px;\n"
 "font: 10pt \"Montserrat\";\n"
 "padding-left:10px;")
         self.line_data_nascimento.setText("")
         self.line_data_nascimento.setObjectName("line_data_nascimento")
+        self.admin_button = QtWidgets.QPushButton(self.pg_cadastro_colaboradores)
+        self.admin_button.setGeometry(QtCore.QRect(740, 450, 131, 41))
+        self.admin_button.setStyleSheet('''QPushButton {
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 5px;
+    font: 10pt "Montserrat";
+    outline: 0;
+}
+
+QPushButton:hover {
+    background-color: rgb(83, 167, 250);
+}
+
+QPushButton:pressed {
+    background-color: rgb(83, 167, 183); /* Mudar para outra cor quando pressionado */
+    color: white;
+}
+
+QPushButton:checked {
+    background-color: rgb(83, 167, 183); /* Mesma cor do estado pressionado */
+    color: white; /* Altere a cor do texto para branco quando pressionado */
+    border-color: black; /* Caso queira mudar a borda quando estiver pressionado */
+}
+''')
+
+        self.admin_button.setObjectName("admin_button")
+        self.colaborador_button = QtWidgets.QPushButton(self.pg_cadastro_colaboradores)
+        self.colaborador_button.setGeometry(QtCore.QRect(870, 450, 141, 41))
+        self.colaborador_button.setStyleSheet('''QPushButton {
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 5px;
+    font: 10pt "Montserrat";
+    outline: 0;
+}
+
+QPushButton:hover {
+    background-color: rgb(83, 167, 250);
+}
+
+QPushButton:pressed {
+    background-color: rgb(83, 167, 183); /* Mudar para outra cor quando pressionado */
+    color: white;
+}
+
+QPushButton:checked {
+    background-color: rgb(83, 167, 183); /* Mesma cor do estado pressionado */
+    color: white; /* Altere a cor do texto para branco quando pressionado */
+    border-color: black; /* Caso queira mudar a borda quando estiver pressionado */
+}
+''')
+        self.colaborador_button.setObjectName("colaborador_button")
+        self.line = QtWidgets.QFrame(self.pg_cadastro_colaboradores)
+        self.line.setGeometry(QtCore.QRect(860, 450, 31, 41))
+        self.line.setStyleSheet("border: 2px solid black;")
+        self.line.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.btn_voltar_cadastro_colaborador = QtWidgets.QPushButton(self.pg_cadastro_colaboradores)
+        self.btn_voltar_cadastro_colaborador.setGeometry(QtCore.QRect(40, 100, 81, 20))
+        self.btn_voltar_cadastro_colaborador.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgba(247,173,52,255);\n"
+"color: white;\n"
+"text-align:left;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: rgb(83, 167, 250);}\n"
+"")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icones/left-chevron.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_voltar_cadastro_colaborador.setIcon(icon3)
+        self.btn_voltar_cadastro_colaborador.setObjectName("btn_voltar_cadastro_colaborador")
         self.lbl_imagem.raise_()
         self.lbl_titulo_cadastrar_colaboradores.raise_()
         self.radio_admin.raise_()
@@ -886,16 +738,20 @@ class Ui_FrmAdmin(object):
         self.btn_ver_senha.raise_()
         self.line_cpf.raise_()
         self.line_data_nascimento.raise_()
+        self.admin_button.raise_()
+        self.colaborador_button.raise_()
+        self.line.raise_()
+        self.btn_voltar_cadastro_colaborador.raise_()
         self.Telas_do_menu.addWidget(self.pg_cadastro_colaboradores)
         self.alterar_colaboradores = QtWidgets.QWidget()
         self.alterar_colaboradores.setObjectName("alterar_colaboradores")
         self.tabela_alterar_colaboradores = QtWidgets.QTableWidget(self.alterar_colaboradores)
-        self.tabela_alterar_colaboradores.setGeometry(QtCore.QRect(20, 190, 801, 351))
+        self.tabela_alterar_colaboradores.setGeometry(QtCore.QRect(20, 200, 1031, 341))
         self.tabela_alterar_colaboradores.setStyleSheet("QTableWidget {\n"
 "    gridline-color: #9f3ffa;;\n"
 "    background-color: transparent;\n"
 "    outline: 0;\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    border-top: 0px\n"
 "    \n"
 "}\n"
@@ -910,10 +766,10 @@ class Ui_FrmAdmin(object):
 "\n"
 "QHeaderView::section:horizontal\n"
 "{\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    background-color: transparent;\n"
-"    border-left: 0px;\n"
 "    color: black;\n"
+"    border-left: 0px;\n"
 "\n"
 "}\n"
 "")
@@ -944,17 +800,18 @@ class Ui_FrmAdmin(object):
         self.tabela_alterar_colaboradores.verticalHeader().setSortIndicatorShown(False)
         self.tabela_alterar_colaboradores.verticalHeader().setStretchLastSection(False)
         self.line_search_bar_buscar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
-        self.line_search_bar_buscar_colaboradores.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_bar_buscar_colaboradores.setStyleSheet("border: 2px solid #9f3ffa;\n"
+        self.line_search_bar_buscar_colaboradores.setGeometry(QtCore.QRect(790, 70, 261, 41))
+        self.line_search_bar_buscar_colaboradores.setStyleSheet("border: 1px solid  rgb(66, 66, 66);\n"
+"border-left: 1px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_search_bar_buscar_colaboradores.setCursorPosition(0)
         self.line_search_bar_buscar_colaboradores.setClearButtonEnabled(True)
         self.line_search_bar_buscar_colaboradores.setObjectName("line_search_bar_buscar_colaboradores")
         self.btn_pesquisar_alterar_colaboradores = QtWidgets.QPushButton(self.alterar_colaboradores)
-        self.btn_pesquisar_alterar_colaboradores.setGeometry(QtCore.QRect(20, 80, 51, 41))
+        self.btn_pesquisar_alterar_colaboradores.setGeometry(QtCore.QRect(740, 70, 51, 41))
         self.btn_pesquisar_alterar_colaboradores.setStyleSheet("QPushButton {\n"
-"border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"border: 1px solid  rgb(66, 66, 66);\n"
+"background-color: rgba(247,173,52,255);\n"
 "color: white;\n"
 "\n"
 "font: 10pt \"Montserrat\";\n"
@@ -966,53 +823,37 @@ class Ui_FrmAdmin(object):
 "}\n"
 "")
         self.btn_pesquisar_alterar_colaboradores.setText("")
-        self.btn_pesquisar_alterar_colaboradores.setIcon(icon8)
+        self.btn_pesquisar_alterar_colaboradores.setIcon(icon1)
         self.btn_pesquisar_alterar_colaboradores.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_alterar_colaboradores.setObjectName("btn_pesquisar_alterar_colaboradores")
         self.lbl_titulo_alterar_colaboradores = QtWidgets.QLabel(self.alterar_colaboradores)
-        self.lbl_titulo_alterar_colaboradores.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_alterar_colaboradores.setStyleSheet("font: 16pt \"Impact\";\n"
-"color: #9f3ffa;\n"
-"")
+        self.lbl_titulo_alterar_colaboradores.setGeometry(QtCore.QRect(20, 0, 551, 41))
+        self.lbl_titulo_alterar_colaboradores.setStyleSheet("font: 87 16pt \"Arial Black\";\n"
+"color: rgb(0, 0, 0);")
         self.lbl_titulo_alterar_colaboradores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_alterar_colaboradores.setWordWrap(False)
         self.lbl_titulo_alterar_colaboradores.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_alterar_colaboradores.setObjectName("lbl_titulo_alterar_colaboradores")
         self.line_nome_alterar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
-        self.line_nome_alterar_colaboradores.setGeometry(QtCore.QRect(20, 140, 161, 31))
-        self.line_nome_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
-"color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
-"border-radius: 0px;\n"
+        self.line_nome_alterar_colaboradores.setGeometry(QtCore.QRect(20, 140, 311, 41))
+        self.line_nome_alterar_colaboradores.setStyleSheet("border: 1px solid  rgb(66, 66, 66);\n"
 "font: 10pt \"Montserrat\";")
         self.line_nome_alterar_colaboradores.setClearButtonEnabled(True)
         self.line_nome_alterar_colaboradores.setObjectName("line_nome_alterar_colaboradores")
         self.line_login_alterar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
-        self.line_login_alterar_colaboradores.setGeometry(QtCore.QRect(200, 140, 161, 31))
-        self.line_login_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
-"color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
-"border-radius: 0px;\n"
+        self.line_login_alterar_colaboradores.setGeometry(QtCore.QRect(590, 140, 221, 41))
+        self.line_login_alterar_colaboradores.setStyleSheet("border: 1px solid  rgb(66, 66, 66);\n"
 "font: 10pt \"Montserrat\";")
         self.line_login_alterar_colaboradores.setClearButtonEnabled(True)
         self.line_login_alterar_colaboradores.setObjectName("line_login_alterar_colaboradores")
         self.line_senha_alterar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
-        self.line_senha_alterar_colaboradores.setGeometry(QtCore.QRect(380, 140, 161, 31))
-        self.line_senha_alterar_colaboradores.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
-"color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
-"border-radius: 0px;\n"
+        self.line_senha_alterar_colaboradores.setGeometry(QtCore.QRect(850, 140, 201, 41))
+        self.line_senha_alterar_colaboradores.setStyleSheet("border: 1px solid  rgb(66, 66, 66);\n"
 "font: 10pt \"Montserrat\";")
         self.line_senha_alterar_colaboradores.setClearButtonEnabled(True)
         self.line_senha_alterar_colaboradores.setObjectName("line_senha_alterar_colaboradores")
         self.btn_ver_senha_alterar = QtWidgets.QPushButton(self.alterar_colaboradores)
-        self.btn_ver_senha_alterar.setGeometry(QtCore.QRect(510, 140, 30, 31))
+        self.btn_ver_senha_alterar.setGeometry(QtCore.QRect(1010, 145, 30, 31))
         self.btn_ver_senha_alterar.setStyleSheet("QPushButton {\n"
 "    background-image: url(:/icones/ver senha.png);\n"
 "    border: 0px;\n"
@@ -1025,7 +866,7 @@ class Ui_FrmAdmin(object):
         self.btn_ver_senha_alterar.setText("")
         self.btn_ver_senha_alterar.setObjectName("btn_ver_senha_alterar")
         self.btn_finalizar_alterar_colaboradores = QtWidgets.QPushButton(self.alterar_colaboradores)
-        self.btn_finalizar_alterar_colaboradores.setGeometry(QtCore.QRect(880, 190, 161, 31))
+        self.btn_finalizar_alterar_colaboradores.setGeometry(QtCore.QRect(890, 560, 161, 31))
         self.btn_finalizar_alterar_colaboradores.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
 "background-color: rgb(159, 63, 250);\n"
@@ -1041,7 +882,7 @@ class Ui_FrmAdmin(object):
 "")
         self.btn_finalizar_alterar_colaboradores.setObjectName("btn_finalizar_alterar_colaboradores")
         self.lbl_hora_data_alterar_colaboradores = QtWidgets.QLabel(self.alterar_colaboradores)
-        self.lbl_hora_data_alterar_colaboradores.setGeometry(QtCore.QRect(890, 520, 181, 21))
+        self.lbl_hora_data_alterar_colaboradores.setGeometry(QtCore.QRect(700, 560, 181, 21))
         self.lbl_hora_data_alterar_colaboradores.setStyleSheet("font: 13pt \"Impact\";\n"
 "color: #9f3ffa;\n"
 "")
@@ -1049,26 +890,51 @@ class Ui_FrmAdmin(object):
         self.lbl_hora_data_alterar_colaboradores.setWordWrap(False)
         self.lbl_hora_data_alterar_colaboradores.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
         self.lbl_hora_data_alterar_colaboradores.setObjectName("lbl_hora_data_alterar_colaboradores")
-        self.btn_ver_senha_alterar.raise_()
+        self.line_datanasc_alterar_colaboradores = QtWidgets.QLineEdit(self.alterar_colaboradores)
+        self.line_datanasc_alterar_colaboradores.setGeometry(QtCore.QRect(350, 140, 211, 41))
+        self.line_datanasc_alterar_colaboradores.setStyleSheet("border: 1px solid  rgb(66, 66, 66);\n"
+"font: 10pt \"Montserrat\";")
+        self.line_datanasc_alterar_colaboradores.setClearButtonEnabled(True)
+        self.line_datanasc_alterar_colaboradores.setObjectName("line_datanasc_alterar_colaboradores")
+        self.btn_voltar_alterar_colaboradores = QtWidgets.QPushButton(self.alterar_colaboradores)
+        self.btn_voltar_alterar_colaboradores.setGeometry(QtCore.QRect(20, 70, 81, 20))
+        self.btn_voltar_alterar_colaboradores.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgba(247,173,52,255);\n"
+"color: white;\n"
+"text-align:left;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: rgb(83, 167, 250);}\n"
+"")
+        self.btn_voltar_alterar_colaboradores.setIcon(icon3)
+        self.btn_voltar_alterar_colaboradores.setObjectName("btn_voltar_alterar_colaboradores")
         self.tabela_alterar_colaboradores.raise_()
         self.line_search_bar_buscar_colaboradores.raise_()
         self.btn_pesquisar_alterar_colaboradores.raise_()
         self.lbl_titulo_alterar_colaboradores.raise_()
         self.line_nome_alterar_colaboradores.raise_()
         self.line_login_alterar_colaboradores.raise_()
-        self.line_senha_alterar_colaboradores.raise_()
         self.btn_finalizar_alterar_colaboradores.raise_()
         self.lbl_hora_data_alterar_colaboradores.raise_()
+        self.line_senha_alterar_colaboradores.raise_()
+        self.btn_ver_senha_alterar.raise_()
+        self.line_datanasc_alterar_colaboradores.raise_()
+        self.btn_voltar_alterar_colaboradores.raise_()
         self.Telas_do_menu.addWidget(self.alterar_colaboradores)
         self.pg_colaboradores = QtWidgets.QWidget()
         self.pg_colaboradores.setObjectName("pg_colaboradores")
         self.tabela_colaboradores = QtWidgets.QTableWidget(self.pg_colaboradores)
-        self.tabela_colaboradores.setGeometry(QtCore.QRect(20, 140, 781, 401))
+        self.tabela_colaboradores.setGeometry(QtCore.QRect(20, 140, 821, 401))
         self.tabela_colaboradores.setStyleSheet("QTableWidget {\n"
 "    gridline-color: #9f3ffa;;\n"
 "    background-color: transparent;\n"
 "    outline: 0;\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    border-top: 0px\n"
 "    \n"
 "}\n"
@@ -1083,10 +949,10 @@ class Ui_FrmAdmin(object):
 "\n"
 "QHeaderView::section:horizontal\n"
 "{\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    background-color: transparent;\n"
-"    border-left: 0px;\n"
 "    color: black;\n"
+"    border-left: 0px;\n"
 "\n"
 "}\n"
 "")
@@ -1113,19 +979,19 @@ class Ui_FrmAdmin(object):
         self.tabela_colaboradores.verticalHeader().setSortIndicatorShown(False)
         self.tabela_colaboradores.verticalHeader().setStretchLastSection(False)
         self.lbl_titulo_colaboradores = QtWidgets.QLabel(self.pg_colaboradores)
-        self.lbl_titulo_colaboradores.setGeometry(QtCore.QRect(20, 20, 551, 41))
-        self.lbl_titulo_colaboradores.setStyleSheet("font: 16pt \"Impact\";\n"
-"color: #9f3ffa;\n"
+        self.lbl_titulo_colaboradores.setGeometry(QtCore.QRect(30, 30, 551, 41))
+        self.lbl_titulo_colaboradores.setStyleSheet("font: 16pt \"Arial Black\";\n"
+"color: black;\n"
 "")
         self.lbl_titulo_colaboradores.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_colaboradores.setWordWrap(False)
         self.lbl_titulo_colaboradores.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_colaboradores.setObjectName("lbl_titulo_colaboradores")
         self.btn_pesquisar_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
-        self.btn_pesquisar_colaboradores.setGeometry(QtCore.QRect(20, 80, 51, 41))
+        self.btn_pesquisar_colaboradores.setGeometry(QtCore.QRect(720, 80, 51, 41))
         self.btn_pesquisar_colaboradores.setStyleSheet("QPushButton {\n"
-"border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"border: 1px solid black;\n"
+"background-color:rgba(247,173,52,255);\n"
 "color: white;\n"
 "\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1137,21 +1003,21 @@ class Ui_FrmAdmin(object):
 "}\n"
 "")
         self.btn_pesquisar_colaboradores.setText("")
-        self.btn_pesquisar_colaboradores.setIcon(icon8)
+        self.btn_pesquisar_colaboradores.setIcon(icon1)
         self.btn_pesquisar_colaboradores.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_colaboradores.setObjectName("btn_pesquisar_colaboradores")
         self.line_search_bar_colaboradores = QtWidgets.QLineEdit(self.pg_colaboradores)
-        self.line_search_bar_colaboradores.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_bar_colaboradores.setStyleSheet("border: 2px solid #9f3ffa;\n"
+        self.line_search_bar_colaboradores.setGeometry(QtCore.QRect(770, 80, 291, 41))
+        self.line_search_bar_colaboradores.setStyleSheet("border: 1px solid black;\n"
 "font: 10pt \"Montserrat\";")
         self.line_search_bar_colaboradores.setCursorPosition(0)
         self.line_search_bar_colaboradores.setClearButtonEnabled(True)
         self.line_search_bar_colaboradores.setObjectName("line_search_bar_colaboradores")
         self.btn_exluir_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
-        self.btn_exluir_colaboradores.setGeometry(QtCore.QRect(610, 20, 191, 41))
+        self.btn_exluir_colaboradores.setGeometry(QtCore.QRect(870, 500, 191, 41))
         self.btn_exluir_colaboradores.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"    background-color: rgb(255, 101, 70);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1159,15 +1025,15 @@ class Ui_FrmAdmin(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(255, 17, 49);\n"
+"background-color: rgb(83, 167, 250);\n"
 "}\n"
 "")
         self.btn_exluir_colaboradores.setObjectName("btn_exluir_colaboradores")
         self.btn_alterar_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
-        self.btn_alterar_colaboradores.setGeometry(QtCore.QRect(610, 80, 191, 41))
+        self.btn_alterar_colaboradores.setGeometry(QtCore.QRect(870, 430, 191, 41))
         self.btn_alterar_colaboradores.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"background-color: rgb(253, 188, 55);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1175,15 +1041,15 @@ class Ui_FrmAdmin(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(197, 62, 255);\n"
+"background-color: rgb(83, 167, 250);\n"
 "}\n"
 "")
         self.btn_alterar_colaboradores.setObjectName("btn_alterar_colaboradores")
         self.btn_cadastrar_colaboradores = QtWidgets.QPushButton(self.pg_colaboradores)
-        self.btn_cadastrar_colaboradores.setGeometry(QtCore.QRect(380, 80, 191, 41))
+        self.btn_cadastrar_colaboradores.setGeometry(QtCore.QRect(870, 360, 191, 41))
         self.btn_cadastrar_colaboradores.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"background-color: rgb(116, 170, 74);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1196,7 +1062,7 @@ class Ui_FrmAdmin(object):
 "")
         self.btn_cadastrar_colaboradores.setObjectName("btn_cadastrar_colaboradores")
         self.lbl_hora_data_colaboradores = QtWidgets.QLabel(self.pg_colaboradores)
-        self.lbl_hora_data_colaboradores.setGeometry(QtCore.QRect(850, 90, 181, 21))
+        self.lbl_hora_data_colaboradores.setGeometry(QtCore.QRect(700, 570, 181, 21))
         self.lbl_hora_data_colaboradores.setStyleSheet("font: 14pt \"Impact\";\n"
 "color: #9f3ffa;\n"
 "")
@@ -1209,20 +1075,20 @@ class Ui_FrmAdmin(object):
         self.pg_produtos.setObjectName("pg_produtos")
         self.lbl_titulo_produtos = QtWidgets.QLabel(self.pg_produtos)
         self.lbl_titulo_produtos.setGeometry(QtCore.QRect(20, 20, 241, 41))
-        self.lbl_titulo_produtos.setStyleSheet("font: 16pt \"Montserrat\";\n"
-"color: #9f3ffa;\n"
+        self.lbl_titulo_produtos.setStyleSheet("font: 16pt \"Arial Black\";\n"
+"color: black;\n"
 "")
         self.lbl_titulo_produtos.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_produtos.setWordWrap(False)
         self.lbl_titulo_produtos.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_produtos.setObjectName("lbl_titulo_produtos")
         self.tabela_produto = QtWidgets.QTableWidget(self.pg_produtos)
-        self.tabela_produto.setGeometry(QtCore.QRect(20, 190, 851, 351))
+        self.tabela_produto.setGeometry(QtCore.QRect(20, 140, 821, 401))
         self.tabela_produto.setStyleSheet("QTableWidget {\n"
 "    gridline-color: #9f3ffa;;\n"
 "    background-color: transparent;\n"
 "    outline: 0;\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    border-top: 0px\n"
 "    \n"
 "}\n"
@@ -1237,10 +1103,10 @@ class Ui_FrmAdmin(object):
 "\n"
 "QHeaderView::section:horizontal\n"
 "{\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    background-color: transparent;\n"
-"    border-left: 0px;\n"
 "    color: black;\n"
+"    border-left: 0px;\n"
 "\n"
 "}\n"
 "")
@@ -1272,10 +1138,10 @@ class Ui_FrmAdmin(object):
         self.tabela_produto.verticalHeader().setSortIndicatorShown(False)
         self.tabela_produto.verticalHeader().setStretchLastSection(False)
         self.btn_cadastrar_produto = QtWidgets.QPushButton(self.pg_produtos)
-        self.btn_cadastrar_produto.setGeometry(QtCore.QRect(20, 140, 181, 41))
+        self.btn_cadastrar_produto.setGeometry(QtCore.QRect(860, 360, 191, 41))
         self.btn_cadastrar_produto.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"background-color: rgb(116, 170, 74);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1288,10 +1154,10 @@ class Ui_FrmAdmin(object):
 "")
         self.btn_cadastrar_produto.setObjectName("btn_cadastrar_produto")
         self.btn_alterar_produto = QtWidgets.QPushButton(self.pg_produtos)
-        self.btn_alterar_produto.setGeometry(QtCore.QRect(220, 140, 181, 41))
+        self.btn_alterar_produto.setGeometry(QtCore.QRect(860, 430, 191, 41))
         self.btn_alterar_produto.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"background-color: rgb(253, 188, 55);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1299,15 +1165,15 @@ class Ui_FrmAdmin(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(197, 62, 255);\n"
+"background-color: rgb(83, 167, 250);\n"
 "}\n"
 "")
         self.btn_alterar_produto.setObjectName("btn_alterar_produto")
         self.btn_excluir_produto = QtWidgets.QPushButton(self.pg_produtos)
-        self.btn_excluir_produto.setGeometry(QtCore.QRect(410, 140, 181, 41))
+        self.btn_excluir_produto.setGeometry(QtCore.QRect(860, 500, 191, 41))
         self.btn_excluir_produto.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"    background-color: rgb(255, 101, 70);\n"
 "color: white;\n"
 "border-radius: 5px;\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1315,22 +1181,22 @@ class Ui_FrmAdmin(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(255, 17, 49);\n"
+"background-color: rgb(83, 167, 250);\n"
 "}\n"
 "")
         self.btn_excluir_produto.setObjectName("btn_excluir_produto")
         self.line_search_Bar_produtos = QtWidgets.QLineEdit(self.pg_produtos)
-        self.line_search_Bar_produtos.setGeometry(QtCore.QRect(70, 80, 291, 41))
-        self.line_search_Bar_produtos.setStyleSheet("border: 2px solid #9f3ffa;\n"
+        self.line_search_Bar_produtos.setGeometry(QtCore.QRect(770, 80, 291, 41))
+        self.line_search_Bar_produtos.setStyleSheet("border: 1px solid black;\n"
 "font: 10pt \"Montserrat\";")
         self.line_search_Bar_produtos.setCursorPosition(0)
         self.line_search_Bar_produtos.setClearButtonEnabled(True)
         self.line_search_Bar_produtos.setObjectName("line_search_Bar_produtos")
         self.btn_pesquisar_produto = QtWidgets.QPushButton(self.pg_produtos)
-        self.btn_pesquisar_produto.setGeometry(QtCore.QRect(20, 80, 51, 41))
+        self.btn_pesquisar_produto.setGeometry(QtCore.QRect(720, 80, 51, 41))
         self.btn_pesquisar_produto.setStyleSheet("QPushButton {\n"
-"border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"border: 1px solid black;\n"
+"background-color:rgba(247,173,52,255);\n"
 "color: white;\n"
 "\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1342,16 +1208,14 @@ class Ui_FrmAdmin(object):
 "}\n"
 "")
         self.btn_pesquisar_produto.setText("")
-        self.btn_pesquisar_produto.setIcon(icon8)
+        self.btn_pesquisar_produto.setIcon(icon1)
         self.btn_pesquisar_produto.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_produto.setObjectName("btn_pesquisar_produto")
         self.line_codigo_produto = QtWidgets.QLineEdit(self.pg_produtos)
         self.line_codigo_produto.setGeometry(QtCore.QRect(370, 89, 161, 31))
         self.line_codigo_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 2px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_codigo_produto.setClearButtonEnabled(True)
@@ -1373,7 +1237,7 @@ class Ui_FrmAdmin(object):
 "")
         self.btn_confirmar_codigo.setObjectName("btn_confirmar_codigo")
         self.lbl_hora_data_produtos = QtWidgets.QLabel(self.pg_produtos)
-        self.lbl_hora_data_produtos.setGeometry(QtCore.QRect(620, 150, 181, 21))
+        self.lbl_hora_data_produtos.setGeometry(QtCore.QRect(710, 560, 181, 21))
         self.lbl_hora_data_produtos.setStyleSheet("font: 13pt \"Impact\";\n"
 "color: #9f3ffa;\n"
 "")
@@ -1385,21 +1249,21 @@ class Ui_FrmAdmin(object):
         self.pg_cadastar_produtos = QtWidgets.QWidget()
         self.pg_cadastar_produtos.setObjectName("pg_cadastar_produtos")
         self.lbl_titulo_cadastrar_produto = QtWidgets.QLabel(self.pg_cadastar_produtos)
-        self.lbl_titulo_cadastrar_produto.setGeometry(QtCore.QRect(20, 30, 241, 41))
-        self.lbl_titulo_cadastrar_produto.setStyleSheet("font: 16pt \"Montserrat\";\n"
-"color: #9f3ffa;\n"
+        self.lbl_titulo_cadastrar_produto.setGeometry(QtCore.QRect(20, 30, 341, 41))
+        self.lbl_titulo_cadastrar_produto.setStyleSheet("font: 16pt \"Arial Black\";\n"
+"color: black;\n"
 "")
         self.lbl_titulo_cadastrar_produto.setTextFormat(QtCore.Qt.AutoText)
         self.lbl_titulo_cadastrar_produto.setWordWrap(False)
         self.lbl_titulo_cadastrar_produto.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_cadastrar_produto.setObjectName("lbl_titulo_cadastrar_produto")
         self.tabela_cadastro = QtWidgets.QTableWidget(self.pg_cadastar_produtos)
-        self.tabela_cadastro.setGeometry(QtCore.QRect(20, 200, 861, 351))
+        self.tabela_cadastro.setGeometry(QtCore.QRect(20, 210, 1041, 321))
         self.tabela_cadastro.setStyleSheet("QTableWidget {\n"
 "    gridline-color: #9f3ffa;;\n"
 "    background-color: transparent;\n"
 "    outline: 0;\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    border-top: 0px\n"
 "    \n"
 "}\n"
@@ -1414,10 +1278,10 @@ class Ui_FrmAdmin(object):
 "\n"
 "QHeaderView::section:horizontal\n"
 "{\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    background-color: transparent;\n"
-"    border-left: 0px;\n"
 "    color: black;\n"
+"    border-left: 0px;\n"
 "\n"
 "}\n"
 "")
@@ -1450,63 +1314,53 @@ class Ui_FrmAdmin(object):
         self.tabela_cadastro.verticalHeader().setSortIndicatorShown(False)
         self.tabela_cadastro.verticalHeader().setStretchLastSection(False)
         self.line_codigo_produto_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
-        self.line_codigo_produto_cadastrar.setGeometry(QtCore.QRect(230, 100, 161, 31))
+        self.line_codigo_produto_cadastrar.setGeometry(QtCore.QRect(20, 150, 141, 41))
         self.line_codigo_produto_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_codigo_produto_cadastrar.setClearButtonEnabled(True)
         self.line_codigo_produto_cadastrar.setObjectName("line_codigo_produto_cadastrar")
         self.line_descricao_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
-        self.line_descricao_cadastrar.setGeometry(QtCore.QRect(410, 100, 161, 31))
+        self.line_descricao_cadastrar.setGeometry(QtCore.QRect(180, 150, 141, 41))
         self.line_descricao_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_descricao_cadastrar.setClearButtonEnabled(True)
         self.line_descricao_cadastrar.setObjectName("line_descricao_cadastrar")
         self.line_valor_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
-        self.line_valor_cadastrar.setGeometry(QtCore.QRect(20, 150, 191, 31))
+        self.line_valor_cadastrar.setGeometry(QtCore.QRect(650, 150, 411, 41))
         self.line_valor_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_valor_cadastrar.setText("")
         self.line_valor_cadastrar.setClearButtonEnabled(True)
         self.line_valor_cadastrar.setObjectName("line_valor_cadastrar")
         self.line_qtde_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
-        self.line_qtde_cadastrar.setGeometry(QtCore.QRect(230, 150, 161, 31))
+        self.line_qtde_cadastrar.setGeometry(QtCore.QRect(340, 150, 171, 41))
         self.line_qtde_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_qtde_cadastrar.setClearButtonEnabled(True)
         self.line_qtde_cadastrar.setObjectName("line_qtde_cadastrar")
         self.line_fornecedor_cadastrar = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
-        self.line_fornecedor_cadastrar.setGeometry(QtCore.QRect(410, 150, 161, 31))
+        self.line_fornecedor_cadastrar.setGeometry(QtCore.QRect(530, 150, 101, 41))
         self.line_fornecedor_cadastrar.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_fornecedor_cadastrar.setClearButtonEnabled(True)
         self.line_fornecedor_cadastrar.setObjectName("line_fornecedor_cadastrar")
         self.btn_finalizar_cadastro = QtWidgets.QPushButton(self.pg_cadastar_produtos)
-        self.btn_finalizar_cadastro.setGeometry(QtCore.QRect(610, 150, 161, 31))
+        self.btn_finalizar_cadastro.setGeometry(QtCore.QRect(900, 550, 161, 31))
         self.btn_finalizar_cadastro.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
 "background-color: rgb(159, 63, 250);\n"
@@ -1522,10 +1376,10 @@ class Ui_FrmAdmin(object):
 "")
         self.btn_finalizar_cadastro.setObjectName("btn_finalizar_cadastro")
         self.btn_pesquisar_cadastrar_produto = QtWidgets.QPushButton(self.pg_cadastar_produtos)
-        self.btn_pesquisar_cadastrar_produto.setGeometry(QtCore.QRect(20, 90, 51, 41))
+        self.btn_pesquisar_cadastrar_produto.setGeometry(QtCore.QRect(650, 90, 51, 41))
         self.btn_pesquisar_cadastrar_produto.setStyleSheet("QPushButton {\n"
-"border: 2px;\n"
-"background-color: rgb(159, 63, 250);\n"
+"border: 1px solid black;\n"
+"background-color:rgba(247,173,52,255);\n"
 "color: white;\n"
 "\n"
 "font: 10pt \"Montserrat\";\n"
@@ -1537,18 +1391,19 @@ class Ui_FrmAdmin(object):
 "}\n"
 "")
         self.btn_pesquisar_cadastrar_produto.setText("")
-        self.btn_pesquisar_cadastrar_produto.setIcon(icon8)
+        self.btn_pesquisar_cadastrar_produto.setIcon(icon1)
         self.btn_pesquisar_cadastrar_produto.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_cadastrar_produto.setObjectName("btn_pesquisar_cadastrar_produto")
         self.line_search_Bar_cadastrar_produto = QtWidgets.QLineEdit(self.pg_cadastar_produtos)
-        self.line_search_Bar_cadastrar_produto.setGeometry(QtCore.QRect(70, 90, 151, 41))
-        self.line_search_Bar_cadastrar_produto.setStyleSheet("border: 2px solid #9f3ffa;\n"
+        self.line_search_Bar_cadastrar_produto.setGeometry(QtCore.QRect(700, 90, 361, 41))
+        self.line_search_Bar_cadastrar_produto.setStyleSheet("border: 1px solid black;\n"
 "font: 10pt \"Montserrat\";")
+        self.line_search_Bar_cadastrar_produto.setText("")
         self.line_search_Bar_cadastrar_produto.setCursorPosition(0)
         self.line_search_Bar_cadastrar_produto.setClearButtonEnabled(True)
         self.line_search_Bar_cadastrar_produto.setObjectName("line_search_Bar_cadastrar_produto")
         self.lbl_hora_data_cadastrar_produto = QtWidgets.QLabel(self.pg_cadastar_produtos)
-        self.lbl_hora_data_cadastrar_produto.setGeometry(QtCore.QRect(890, 520, 181, 21))
+        self.lbl_hora_data_cadastrar_produto.setGeometry(QtCore.QRect(710, 560, 181, 21))
         self.lbl_hora_data_cadastrar_produto.setStyleSheet("font: 13pt \"Montserrat\";\n"
 "color: #9f3ffa;\n"
 "")
@@ -1556,11 +1411,28 @@ class Ui_FrmAdmin(object):
         self.lbl_hora_data_cadastrar_produto.setWordWrap(False)
         self.lbl_hora_data_cadastrar_produto.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
         self.lbl_hora_data_cadastrar_produto.setObjectName("lbl_hora_data_cadastrar_produto")
+        self.btn_voltar_cadastro = QtWidgets.QPushButton(self.pg_cadastar_produtos)
+        self.btn_voltar_cadastro.setGeometry(QtCore.QRect(20, 90, 81, 20))
+        self.btn_voltar_cadastro.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgba(247,173,52,255);\n"
+"color: white;\n"
+"text-align:left;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: rgb(83, 167, 250);}\n"
+"")
+        self.btn_voltar_cadastro.setIcon(icon3)
+        self.btn_voltar_cadastro.setObjectName("btn_voltar_cadastro")
         self.Telas_do_menu.addWidget(self.pg_cadastar_produtos)
         self.pg_alterar_produtos = QtWidgets.QWidget()
         self.pg_alterar_produtos.setObjectName("pg_alterar_produtos")
         self.btn_finalizar_alterar = QtWidgets.QPushButton(self.pg_alterar_produtos)
-        self.btn_finalizar_alterar.setGeometry(QtCore.QRect(590, 150, 161, 31))
+        self.btn_finalizar_alterar.setGeometry(QtCore.QRect(900, 560, 161, 31))
         self.btn_finalizar_alterar.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
 "background-color: rgb(159, 63, 250);\n"
@@ -1576,23 +1448,21 @@ class Ui_FrmAdmin(object):
 "")
         self.btn_finalizar_alterar.setObjectName("btn_finalizar_alterar")
         self.line_fornecedor_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
-        self.line_fornecedor_alterar_produto.setGeometry(QtCore.QRect(410, 150, 161, 31))
+        self.line_fornecedor_alterar_produto.setGeometry(QtCore.QRect(540, 150, 191, 41))
         self.line_fornecedor_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_fornecedor_alterar_produto.setClearButtonEnabled(True)
         self.line_fornecedor_alterar_produto.setObjectName("line_fornecedor_alterar_produto")
         self.tabela_alterar_produto_2 = QtWidgets.QTableWidget(self.pg_alterar_produtos)
-        self.tabela_alterar_produto_2.setGeometry(QtCore.QRect(20, 200, 861, 351))
+        self.tabela_alterar_produto_2.setGeometry(QtCore.QRect(20, 210, 1041, 331))
         self.tabela_alterar_produto_2.setStyleSheet("QTableWidget {\n"
 "    gridline-color: #9f3ffa;;\n"
 "    background-color: transparent;\n"
 "    outline: 0;\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    border-top: 0px\n"
 "    \n"
 "}\n"
@@ -1607,10 +1477,10 @@ class Ui_FrmAdmin(object):
 "\n"
 "QHeaderView::section:horizontal\n"
 "{\n"
-"    border: 1px solid #9f3ffa;\n"
+"    border: 1px solid rgb(124, 124, 124);\n"
 "    background-color: transparent;\n"
-"    border-left: 0px;\n"
 "    color: black;\n"
+"    border-left: 0px;\n"
 "\n"
 "}\n"
 "")
@@ -1651,51 +1521,43 @@ class Ui_FrmAdmin(object):
         self.lbl_titulo_alterar_produto.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.lbl_titulo_alterar_produto.setObjectName("lbl_titulo_alterar_produto")
         self.line_valor_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
-        self.line_valor_alterar_produto.setGeometry(QtCore.QRect(20, 150, 191, 31))
+        self.line_valor_alterar_produto.setGeometry(QtCore.QRect(180, 150, 141, 41))
         self.line_valor_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_valor_alterar_produto.setClearButtonEnabled(True)
         self.line_valor_alterar_produto.setObjectName("line_valor_alterar_produto")
         self.line_qtde_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
-        self.line_qtde_alterar_produto.setGeometry(QtCore.QRect(230, 150, 161, 31))
+        self.line_qtde_alterar_produto.setGeometry(QtCore.QRect(340, 150, 181, 41))
         self.line_qtde_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_qtde_alterar_produto.setClearButtonEnabled(True)
         self.line_qtde_alterar_produto.setObjectName("line_qtde_alterar_produto")
         self.line_codigo_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
-        self.line_codigo_alterar_produto.setGeometry(QtCore.QRect(230, 100, 161, 31))
+        self.line_codigo_alterar_produto.setGeometry(QtCore.QRect(20, 150, 141, 41))
         self.line_codigo_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_codigo_alterar_produto.setClearButtonEnabled(True)
         self.line_codigo_alterar_produto.setObjectName("line_codigo_alterar_produto")
         self.line_decricao_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
-        self.line_decricao_alterar_produto.setGeometry(QtCore.QRect(410, 100, 161, 31))
+        self.line_decricao_alterar_produto.setGeometry(QtCore.QRect(750, 150, 311, 41))
         self.line_decricao_alterar_produto.setStyleSheet("background-color: rgba(0, 0 , 0, 0);\n"
-"border: 2px solid rgba(0,0,0,0);\n"
-"border-bottom-color: rgb(159, 63, 250);\n"
+"border: 1px solid   rgb(66, 66, 66);\n"
 "color: rgb(0,0,0);\n"
-"padding-bottom: 8px;\n"
 "border-radius: 0px;\n"
 "font: 10pt \"Montserrat\";")
         self.line_decricao_alterar_produto.setClearButtonEnabled(True)
         self.line_decricao_alterar_produto.setObjectName("line_decricao_alterar_produto")
         self.btn_pesquisar_alterar_produto = QtWidgets.QPushButton(self.pg_alterar_produtos)
-        self.btn_pesquisar_alterar_produto.setGeometry(QtCore.QRect(20, 90, 51, 41))
+        self.btn_pesquisar_alterar_produto.setGeometry(QtCore.QRect(650, 90, 51, 41))
         self.btn_pesquisar_alterar_produto.setStyleSheet("QPushButton {\n"
 "border: 2px;\n"
 "background-color: rgb(159, 63, 250);\n"
@@ -1710,18 +1572,18 @@ class Ui_FrmAdmin(object):
 "}\n"
 "")
         self.btn_pesquisar_alterar_produto.setText("")
-        self.btn_pesquisar_alterar_produto.setIcon(icon8)
+        self.btn_pesquisar_alterar_produto.setIcon(icon1)
         self.btn_pesquisar_alterar_produto.setIconSize(QtCore.QSize(25, 25))
         self.btn_pesquisar_alterar_produto.setObjectName("btn_pesquisar_alterar_produto")
         self.line_search_Bar_alterar_produto = QtWidgets.QLineEdit(self.pg_alterar_produtos)
-        self.line_search_Bar_alterar_produto.setGeometry(QtCore.QRect(70, 90, 151, 41))
+        self.line_search_Bar_alterar_produto.setGeometry(QtCore.QRect(700, 90, 361, 41))
         self.line_search_Bar_alterar_produto.setStyleSheet("border: 2px solid #9f3ffa;\n"
 "font: 10pt \"Montserrat\";")
         self.line_search_Bar_alterar_produto.setCursorPosition(0)
         self.line_search_Bar_alterar_produto.setClearButtonEnabled(True)
         self.line_search_Bar_alterar_produto.setObjectName("line_search_Bar_alterar_produto")
         self.lbl_hora_data_alterar_produto = QtWidgets.QLabel(self.pg_alterar_produtos)
-        self.lbl_hora_data_alterar_produto.setGeometry(QtCore.QRect(900, 520, 141, 21))
+        self.lbl_hora_data_alterar_produto.setGeometry(QtCore.QRect(730, 570, 141, 21))
         self.lbl_hora_data_alterar_produto.setStyleSheet("font: 13pt \"Impact\";\n"
 "color: #9f3ffa;\n"
 "")
@@ -1729,40 +1591,348 @@ class Ui_FrmAdmin(object):
         self.lbl_hora_data_alterar_produto.setWordWrap(False)
         self.lbl_hora_data_alterar_produto.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse)
         self.lbl_hora_data_alterar_produto.setObjectName("lbl_hora_data_alterar_produto")
+        self.btn_voltar_alterar_produto = QtWidgets.QPushButton(self.pg_alterar_produtos)
+        self.btn_voltar_alterar_produto.setGeometry(QtCore.QRect(20, 90, 81, 20))
+        self.btn_voltar_alterar_produto.setStyleSheet("QPushButton {\n"
+"border: 2px;\n"
+"background-color: rgba(247,173,52,255);\n"
+"color: white;\n"
+"text-align:left;\n"
+"border-radius: 5px;\n"
+"font: 10pt \"Montserrat\";\n"
+"outline: 0;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: rgb(83, 167, 250);}\n"
+"")
+        self.btn_voltar_alterar_produto.setIcon(icon3)
+        self.btn_voltar_alterar_produto.setObjectName("btn_voltar_alterar_produto")
         self.Telas_do_menu.addWidget(self.pg_alterar_produtos)
-        self.frame_3 = QtWidgets.QFrame(self.centralwidget)
-        self.frame_3.setGeometry(QtCore.QRect(930, -30, 351, 80))
-        self.frame_3.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
+        self.bara_menu_esquerda = QtWidgets.QFrame(self.centralwidget)
+        self.bara_menu_esquerda.setGeometry(QtCore.QRect(0, 0, 200, 620))
+        self.bara_menu_esquerda.setStyleSheet("background-color:rgba(247,173,52,255);")
+        self.bara_menu_esquerda.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.bara_menu_esquerda.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.bara_menu_esquerda.setObjectName("bara_menu_esquerda")
+        self.btn_voltar = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_voltar.setEnabled(True)
+        self.btn_voltar.setGeometry(QtCore.QRect(10, 560, 181, 32))
+        self.btn_voltar.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btn_voltar.setAutoFillBackground(False)
+        self.btn_voltar.setStyleSheet("QPushButton{\n"
+"\n"
+"background-color: rgb(255, 255, 255); \n"
+"border-radius:12px;\n"
+"font: 75 italic 10pt \"Sitka Subheading\";\n"
+"font: 10pt \"MS Shell Dlg 2\";\n"
+"text-align: left;\n"
+"padding-left: 12px;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:Hover{\n"
+"    background-color: rgb(230, 5, 5);}\n"
+"\n"
+"")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("view/ui\\../../../../../Downloads/logat.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_voltar.setIcon(icon4)
+        self.btn_voltar.setIconSize(QtCore.QSize(20, 20))
+        self.btn_voltar.setCheckable(False)
+        self.btn_voltar.setAutoRepeat(False)
+        self.btn_voltar.setAutoDefault(False)
+        self.btn_voltar.setDefault(False)
+        self.btn_voltar.setFlat(False)
+        self.btn_voltar.setObjectName("btn_voltar")
+        self.btn_configs = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_configs.setEnabled(True)
+        self.btn_configs.setGeometry(QtCore.QRect(10, 370, 181, 32))
+        self.btn_configs.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btn_configs.setAutoFillBackground(False)
+        self.btn_configs.setStyleSheet("QPushButton{\n"
+"background-color: rgb(255, 255, 255); \n"
+"border-radius:12px;\n"
+"font: 75 italic 10pt \"Sitka Subheading\";\n"
+"font: 10pt \"MS Shell Dlg 2\";\n"
+"text-align: left;\n"
+"padding-left: 12px;\n"
+"}\n"
+"\n"
+"QPushButton:Hover{\n"
+"background-color: rgb(222, 222, 222);\n"
+"}\n"
+"\n"
+"")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/icones/configfaticon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_configs.setIcon(icon5)
+        self.btn_configs.setIconSize(QtCore.QSize(20, 20))
+        self.btn_configs.setCheckable(False)
+        self.btn_configs.setAutoRepeat(False)
+        self.btn_configs.setAutoDefault(False)
+        self.btn_configs.setDefault(False)
+        self.btn_configs.setFlat(False)
+        self.btn_configs.setObjectName("btn_configs")
+        self.btn_colaboradores = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_colaboradores.setEnabled(True)
+        self.btn_colaboradores.setGeometry(QtCore.QRect(10, 330, 181, 32))
+        self.btn_colaboradores.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btn_colaboradores.setAutoFillBackground(False)
+        self.btn_colaboradores.setStyleSheet("QPushButton{\n"
+"background-color: rgb(255, 255, 255); \n"
+"border-radius:12px;\n"
+"font: 75 italic 10pt \"Sitka Subheading\";\n"
+"font: 10pt \"MS Shell Dlg 2\";\n"
+"text-align: left;\n"
+"padding-left: 12px;\n"
+"}\n"
+"\n"
+"QPushButton:Hover{\n"
+"background-color: rgb(222, 222, 222);\n"
+"}\n"
+"\n"
+"")
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/icones/groupicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_colaboradores.setIcon(icon6)
+        self.btn_colaboradores.setIconSize(QtCore.QSize(20, 20))
+        self.btn_colaboradores.setCheckable(False)
+        self.btn_colaboradores.setAutoRepeat(False)
+        self.btn_colaboradores.setAutoDefault(False)
+        self.btn_colaboradores.setDefault(False)
+        self.btn_colaboradores.setFlat(False)
+        self.btn_colaboradores.setObjectName("btn_colaboradores")
+        self.btn_produtos = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_produtos.setEnabled(True)
+        self.btn_produtos.setGeometry(QtCore.QRect(10, 210, 181, 32))
+        self.btn_produtos.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btn_produtos.setAutoFillBackground(False)
+        self.btn_produtos.setStyleSheet("QPushButton{\n"
+"background-color: rgb(255, 255, 255); \n"
+"border-radius:12px;\n"
+"font: 75 italic 10pt \"Sitka Subheading\";\n"
+"font: 10pt \"MS Shell Dlg 2\";\n"
+"text-align: left;\n"
+"padding-left: 12px;\n"
+"}\n"
+"\n"
+"QPushButton:Hover{\n"
+"background-color: rgb(222, 222, 222);\n"
+"}\n"
+"\n"
+"")
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/icones/box.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_produtos.setIcon(icon7)
+        self.btn_produtos.setIconSize(QtCore.QSize(20, 20))
+        self.btn_produtos.setCheckable(False)
+        self.btn_produtos.setAutoRepeat(False)
+        self.btn_produtos.setAutoDefault(False)
+        self.btn_produtos.setDefault(False)
+        self.btn_produtos.setFlat(False)
+        self.btn_produtos.setObjectName("btn_produtos")
+        self.btn_monitoramento = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_monitoramento.setEnabled(True)
+        self.btn_monitoramento.setGeometry(QtCore.QRect(10, 290, 181, 32))
+        self.btn_monitoramento.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btn_monitoramento.setAutoFillBackground(False)
+        self.btn_monitoramento.setStyleSheet("QPushButton{\n"
+"background-color: rgb(255, 255, 255); \n"
+"border-radius:12px;\n"
+"font: 75 italic 10pt \"Sitka Subheading\";\n"
+"font: 10pt \"MS Shell Dlg 2\";\n"
+"text-align: left;\n"
+"padding-left: 12px;\n"
+"}\n"
+"\n"
+"QPushButton:Hover{\n"
+"background-color: rgb(222, 222, 222);\n"
+"}\n"
+"\n"
+"")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(":/icones/mointoramentoicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_monitoramento.setIcon(icon8)
+        self.btn_monitoramento.setIconSize(QtCore.QSize(20, 20))
+        self.btn_monitoramento.setCheckable(False)
+        self.btn_monitoramento.setAutoRepeat(False)
+        self.btn_monitoramento.setAutoDefault(False)
+        self.btn_monitoramento.setDefault(False)
+        self.btn_monitoramento.setFlat(False)
+        self.btn_monitoramento.setObjectName("btn_monitoramento")
+        self.btn_home = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_home.setEnabled(True)
+        self.btn_home.setGeometry(QtCore.QRect(10, 170, 181, 32))
+        self.btn_home.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btn_home.setAutoFillBackground(False)
+        self.btn_home.setStyleSheet("QPushButton{\n"
+"background-color: rgb(255, 255, 255); \n"
+"border-radius:12px;\n"
+"font: 75 italic 10pt \"Sitka Subheading\";\n"
+"font: 10pt \"MS Shell Dlg 2\";\n"
+"text-align: left;\n"
+"padding-left: 12px;\n"
+"}\n"
+"\n"
+"QPushButton:Hover{\n"
+"background-color: rgb(222, 222, 222);\n"
+"}\n"
+"\n"
+"")
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/icones/homefaticon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_home.setIcon(icon9)
+        self.btn_home.setIconSize(QtCore.QSize(20, 20))
+        self.btn_home.setCheckable(False)
+        self.btn_home.setAutoRepeat(False)
+        self.btn_home.setAutoDefault(False)
+        self.btn_home.setDefault(False)
+        self.btn_home.setFlat(False)
+        self.btn_home.setObjectName("btn_home")
+        self.btn_vendas = QtWidgets.QPushButton(self.bara_menu_esquerda)
+        self.btn_vendas.setEnabled(True)
+        self.btn_vendas.setGeometry(QtCore.QRect(10, 250, 181, 32))
+        self.btn_vendas.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btn_vendas.setAutoFillBackground(False)
+        self.btn_vendas.setStyleSheet("QPushButton{\n"
+"background-color: rgb(255, 255, 255); \n"
+"border-radius:12px;\n"
+"font: 75 italic 10pt \"Sitka Subheading\";\n"
+"font: 10pt \"MS Shell Dlg 2\";\n"
+"text-align: left;\n"
+"padding-left: 12px;\n"
+"}\n"
+"\n"
+"QPushButton:Hover{\n"
+"background-color: rgb(222, 222, 222);\n"
+"}\n"
+"\n"
+"")
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/icones/sellfaticon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_vendas.setIcon(icon10)
+        self.btn_vendas.setIconSize(QtCore.QSize(20, 20))
+        self.btn_vendas.setCheckable(False)
+        self.btn_vendas.setAutoRepeat(False)
+        self.btn_vendas.setAutoDefault(False)
+        self.btn_vendas.setDefault(False)
+        self.btn_vendas.setFlat(False)
+        self.btn_vendas.setObjectName("btn_vendas")
+        self.label_3 = QtWidgets.QLabel(self.bara_menu_esquerda)
+        self.label_3.setGeometry(QtCore.QRect(30, 120, 141, 51))
+        self.label_3.setStyleSheet("font: 75 12pt \"Georgia\";")
+        self.label_3.setObjectName("label_3")
+        self.label = QtWidgets.QLabel(self.bara_menu_esquerda)
+        self.label.setGeometry(QtCore.QRect(20, 0, 151, 121))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap(":/icones/Untitled (1).png"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
+        self.label_3.raise_()
+        self.btn_voltar.raise_()
+        self.btn_configs.raise_()
+        self.btn_colaboradores.raise_()
+        self.btn_produtos.raise_()
+        self.btn_monitoramento.raise_()
+        self.btn_home.raise_()
+        self.btn_vendas.raise_()
+        self.label.raise_()
         FrmAdmin.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(FrmAdmin)
-        self.TelasPrincipais.setCurrentIndex(0)
         self.Telas_do_menu.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(FrmAdmin)
+        FrmAdmin.setTabOrder(self.btn_home, self.btn_produtos)
+        FrmAdmin.setTabOrder(self.btn_produtos, self.btn_vendas)
+        FrmAdmin.setTabOrder(self.btn_vendas, self.btn_monitoramento)
+        FrmAdmin.setTabOrder(self.btn_monitoramento, self.btn_colaboradores)
+        FrmAdmin.setTabOrder(self.btn_colaboradores, self.btn_configs)
+        FrmAdmin.setTabOrder(self.btn_configs, self.btn_voltar)
+        FrmAdmin.setTabOrder(self.btn_voltar, self.antes_btn)
+        FrmAdmin.setTabOrder(self.antes_btn, self.depois_btn)
+        FrmAdmin.setTabOrder(self.depois_btn, self.lbl_pagina)
+        FrmAdmin.setTabOrder(self.lbl_pagina, self.listView)
+        FrmAdmin.setTabOrder(self.listView, self.checkBox_finalizar_app_3)
+        FrmAdmin.setTabOrder(self.checkBox_finalizar_app_3, self.btn_salvar)
+        FrmAdmin.setTabOrder(self.btn_salvar, self.checkBox_finalizar_app_4)
+        FrmAdmin.setTabOrder(self.checkBox_finalizar_app_4, self.btn_filtrar_monitoramento)
+        FrmAdmin.setTabOrder(self.btn_filtrar_monitoramento, self.line_search_bar_monitoramentoto)
+        FrmAdmin.setTabOrder(self.line_search_bar_monitoramentoto, self.tabela_monitoramento)
+        FrmAdmin.setTabOrder(self.tabela_monitoramento, self.btn_limpar_tabela)
+        FrmAdmin.setTabOrder(self.btn_limpar_tabela, self.btn_gerar_pdf)
+        FrmAdmin.setTabOrder(self.btn_gerar_pdf, self.tabela_vendas)
+        FrmAdmin.setTabOrder(self.tabela_vendas, self.line_codigo_vendas)
+        FrmAdmin.setTabOrder(self.line_codigo_vendas, self.line_quantidade_vendas)
+        FrmAdmin.setTabOrder(self.line_quantidade_vendas, self.btn_pesquisar)
+        FrmAdmin.setTabOrder(self.btn_pesquisar, self.line_search_bar_vendas)
+        FrmAdmin.setTabOrder(self.line_search_bar_vendas, self.btn_adicionar_compra)
+        FrmAdmin.setTabOrder(self.btn_adicionar_compra, self.btn_excluir_item)
+        FrmAdmin.setTabOrder(self.btn_excluir_item, self.btn_finalizar_compra)
+        FrmAdmin.setTabOrder(self.btn_finalizar_compra, self.btn_confirmar_cliente)
+        FrmAdmin.setTabOrder(self.btn_confirmar_cliente, self.btn_confirmar_troco)
+        FrmAdmin.setTabOrder(self.btn_confirmar_troco, self.radio_admin)
+        FrmAdmin.setTabOrder(self.radio_admin, self.radio_colaborador)
+        FrmAdmin.setTabOrder(self.radio_colaborador, self.line_nome)
+        FrmAdmin.setTabOrder(self.line_nome, self.line_login)
+        FrmAdmin.setTabOrder(self.line_login, self.line_senha)
+        FrmAdmin.setTabOrder(self.line_senha, self.btn_cadastro)
+        FrmAdmin.setTabOrder(self.btn_cadastro, self.btn_ver_senha)
+        FrmAdmin.setTabOrder(self.btn_ver_senha, self.line_cpf)
+        FrmAdmin.setTabOrder(self.line_cpf, self.line_data_nascimento)
+        FrmAdmin.setTabOrder(self.line_data_nascimento, self.tabela_alterar_colaboradores)
+        FrmAdmin.setTabOrder(self.tabela_alterar_colaboradores, self.line_search_bar_buscar_colaboradores)
+        FrmAdmin.setTabOrder(self.line_search_bar_buscar_colaboradores, self.btn_pesquisar_alterar_colaboradores)
+        FrmAdmin.setTabOrder(self.btn_pesquisar_alterar_colaboradores, self.line_nome_alterar_colaboradores)
+        FrmAdmin.setTabOrder(self.line_nome_alterar_colaboradores, self.line_login_alterar_colaboradores)
+        FrmAdmin.setTabOrder(self.line_login_alterar_colaboradores, self.line_senha_alterar_colaboradores)
+        FrmAdmin.setTabOrder(self.line_senha_alterar_colaboradores, self.btn_ver_senha_alterar)
+        FrmAdmin.setTabOrder(self.btn_ver_senha_alterar, self.btn_finalizar_alterar_colaboradores)
+        FrmAdmin.setTabOrder(self.btn_finalizar_alterar_colaboradores, self.tabela_colaboradores)
+        FrmAdmin.setTabOrder(self.tabela_colaboradores, self.btn_pesquisar_colaboradores)
+        FrmAdmin.setTabOrder(self.btn_pesquisar_colaboradores, self.line_search_bar_colaboradores)
+        FrmAdmin.setTabOrder(self.line_search_bar_colaboradores, self.btn_exluir_colaboradores)
+        FrmAdmin.setTabOrder(self.btn_exluir_colaboradores, self.btn_alterar_colaboradores)
+        FrmAdmin.setTabOrder(self.btn_alterar_colaboradores, self.btn_cadastrar_colaboradores)
+        FrmAdmin.setTabOrder(self.btn_cadastrar_colaboradores, self.tabela_produto)
+        FrmAdmin.setTabOrder(self.tabela_produto, self.btn_cadastrar_produto)
+        FrmAdmin.setTabOrder(self.btn_cadastrar_produto, self.btn_alterar_produto)
+        FrmAdmin.setTabOrder(self.btn_alterar_produto, self.btn_excluir_produto)
+        FrmAdmin.setTabOrder(self.btn_excluir_produto, self.line_search_Bar_produtos)
+        FrmAdmin.setTabOrder(self.line_search_Bar_produtos, self.btn_pesquisar_produto)
+        FrmAdmin.setTabOrder(self.btn_pesquisar_produto, self.line_codigo_produto)
+        FrmAdmin.setTabOrder(self.line_codigo_produto, self.btn_confirmar_codigo)
+        FrmAdmin.setTabOrder(self.btn_confirmar_codigo, self.tabela_cadastro)
+        FrmAdmin.setTabOrder(self.tabela_cadastro, self.line_codigo_produto_cadastrar)
+        FrmAdmin.setTabOrder(self.line_codigo_produto_cadastrar, self.line_descricao_cadastrar)
+        FrmAdmin.setTabOrder(self.line_descricao_cadastrar, self.line_valor_cadastrar)
+        FrmAdmin.setTabOrder(self.line_valor_cadastrar, self.line_qtde_cadastrar)
+        FrmAdmin.setTabOrder(self.line_qtde_cadastrar, self.line_fornecedor_cadastrar)
+        FrmAdmin.setTabOrder(self.line_fornecedor_cadastrar, self.btn_finalizar_cadastro)
+        FrmAdmin.setTabOrder(self.btn_finalizar_cadastro, self.btn_pesquisar_cadastrar_produto)
+        FrmAdmin.setTabOrder(self.btn_pesquisar_cadastrar_produto, self.line_search_Bar_cadastrar_produto)
+        FrmAdmin.setTabOrder(self.line_search_Bar_cadastrar_produto, self.btn_finalizar_alterar)
+        FrmAdmin.setTabOrder(self.btn_finalizar_alterar, self.line_fornecedor_alterar_produto)
+        FrmAdmin.setTabOrder(self.line_fornecedor_alterar_produto, self.tabela_alterar_produto_2)
+        FrmAdmin.setTabOrder(self.tabela_alterar_produto_2, self.line_valor_alterar_produto)
+        FrmAdmin.setTabOrder(self.line_valor_alterar_produto, self.line_qtde_alterar_produto)
+        FrmAdmin.setTabOrder(self.line_qtde_alterar_produto, self.line_codigo_alterar_produto)
+        FrmAdmin.setTabOrder(self.line_codigo_alterar_produto, self.line_decricao_alterar_produto)
+        FrmAdmin.setTabOrder(self.line_decricao_alterar_produto, self.btn_pesquisar_alterar_produto)
+        FrmAdmin.setTabOrder(self.btn_pesquisar_alterar_produto, self.line_search_Bar_alterar_produto)
 
     def retranslateUi(self, FrmAdmin):
         _translate = QtCore.QCoreApplication.translate
         FrmAdmin.setWindowTitle(_translate("FrmAdmin", "PyStock"))
-        self.btn_voltar.setText(_translate("FrmAdmin", "Deslogar"))
-        self.btn_configs.setText(_translate("FrmAdmin", "Configurações"))
-        self.btn_colaboradores.setText(_translate("FrmAdmin", "Colaboradores"))
-        self.btn_produtos.setText(_translate("FrmAdmin", "Produtos"))
-        self.btn_monitoramento.setText(_translate("FrmAdmin", "Monitoramento"))
-        self.btn_home.setText(_translate("FrmAdmin", "Início"))
-        self.btn_vendas.setText(_translate("FrmAdmin", "Vendas"))
-        self.label_3.setText(_translate("FrmAdmin", "Menu Principal"))
         self.lbl_seja_bem_vindo.setText(_translate("FrmAdmin", "Olá,"))
-        self.antes_btn.setText(_translate("FrmAdmin", "Previous"))
-        self.depois_btn.setText(_translate("FrmAdmin", "Depois"))
+        self.antes_btn.setText(_translate("FrmAdmin", "Anterior"))
+        self.depois_btn.setText(_translate("FrmAdmin", "Próxima"))
         self.lbl_pagina.setText(_translate("FrmAdmin", "1"))
         self.checkBox_finalizar_app_3.setText(_translate("FrmAdmin", "Finalizar aplicação após 20 minutos"))
         self.lbl_titulo_configuracoes.setText(_translate("FrmAdmin", "Configurações"))
         self.btn_salvar.setText(_translate("FrmAdmin", "Salvar Alterações"))
         self.checkBox_finalizar_app_4.setText(_translate("FrmAdmin", "Salvar no Excel ao Finalizar"))
-        self.lbl_titulo_monitoramento.setText(_translate("FrmAdmin", "Relatório de Vendas"))
+        self.lbl_titulo_monitoramento.setText(_translate("FrmAdmin", "RELATÓRIO DE VENDAS"))
         self.line_search_bar_monitoramentoto.setPlaceholderText(_translate("FrmAdmin", "Filtrar"))
         self.tabela_monitoramento.setSortingEnabled(True)
         item = self.tabela_monitoramento.horizontalHeaderItem(0)
@@ -1779,8 +1949,8 @@ class Ui_FrmAdmin(object):
         item.setText(_translate("FrmAdmin", "Valor total"))
         self.lbl_hora_data_monitoramento.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
         self.btn_limpar_tabela.setText(_translate("FrmAdmin", "Limpar Tabela"))
-        self.btn_gerar_pdf.setText(_translate("FrmAdmin", "Gerar PDF"))
-        self.lbl_titulo_vendas.setText(_translate("FrmAdmin", "Registrar Vendas"))
+        self.btn_gerar_pdf.setText(_translate("FrmAdmin", "Gerar Excel"))
+        self.lbl_titulo_vendas.setText(_translate("FrmAdmin", "REGISTRAR VENDA"))
         self.tabela_vendas.setSortingEnabled(True)
         item = self.tabela_vendas.horizontalHeaderItem(0)
         item.setText(_translate("FrmAdmin", "Item"))
@@ -1794,8 +1964,8 @@ class Ui_FrmAdmin(object):
         item.setText(_translate("FrmAdmin", "Qtde."))
         item = self.tabela_vendas.horizontalHeaderItem(5)
         item.setText(_translate("FrmAdmin", "Total"))
-        self.line_codigo_vendas.setPlaceholderText(_translate("FrmAdmin", "Cód produto"))
-        self.line_quantidade_vendas.setPlaceholderText(_translate("FrmAdmin", "Quantidade Vendas"))
+        self.line_codigo_vendas.setPlaceholderText(_translate("FrmAdmin", "Código do Produto"))
+        self.line_quantidade_vendas.setPlaceholderText(_translate("FrmAdmin", "Quantidade de vendas"))
         self.line_search_bar_vendas.setPlaceholderText(_translate("FrmAdmin", "Buscar Produtos"))
         self.lbl_total_venda.setText(_translate("FrmAdmin", "Total da Venda:  R$"))
         self.lbl_total_valor.setText(_translate("FrmAdmin", "0,00"))
@@ -1814,6 +1984,9 @@ class Ui_FrmAdmin(object):
         self.btn_cadastro.setText(_translate("FrmAdmin", "Efetuar Cadastro"))
         self.line_cpf.setPlaceholderText(_translate("FrmAdmin", "CPF"))
         self.line_data_nascimento.setPlaceholderText(_translate("FrmAdmin", "Nome de úsuario"))
+        self.admin_button.setText(_translate("FrmAdmin", "Administrador"))
+        self.colaborador_button.setText(_translate("FrmAdmin", "Colaborador"))
+        self.btn_voltar_cadastro_colaborador.setText(_translate("FrmAdmin", "VOLTAR"))
         self.tabela_alterar_colaboradores.setSortingEnabled(True)
         item = self.tabela_alterar_colaboradores.horizontalHeaderItem(0)
         item.setText(_translate("FrmAdmin", "Nome"))
@@ -1826,12 +1999,14 @@ class Ui_FrmAdmin(object):
         item = self.tabela_alterar_colaboradores.horizontalHeaderItem(4)
         item.setText(_translate("FrmAdmin", "Senha"))
         self.line_search_bar_buscar_colaboradores.setPlaceholderText(_translate("FrmAdmin", "Buscar Colaboradores"))
-        self.lbl_titulo_alterar_colaboradores.setText(_translate("FrmAdmin", "Alterar Colaboradores"))
+        self.lbl_titulo_alterar_colaboradores.setText(_translate("FrmAdmin", "ALTERAR COLABORADORES"))
         self.line_nome_alterar_colaboradores.setPlaceholderText(_translate("FrmAdmin", "Nome"))
         self.line_login_alterar_colaboradores.setPlaceholderText(_translate("FrmAdmin", "Login"))
         self.line_senha_alterar_colaboradores.setPlaceholderText(_translate("FrmAdmin", "Senha"))
         self.btn_finalizar_alterar_colaboradores.setText(_translate("FrmAdmin", "Efetuar Alteração"))
         self.lbl_hora_data_alterar_colaboradores.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
+        self.line_datanasc_alterar_colaboradores.setPlaceholderText(_translate("FrmAdmin", "Data de Nascimento"))
+        self.btn_voltar_alterar_colaboradores.setText(_translate("FrmAdmin", "VOLTAR"))
         self.tabela_colaboradores.setSortingEnabled(True)
         item = self.tabela_colaboradores.horizontalHeaderItem(0)
         item.setText(_translate("FrmAdmin", "Nome"))
@@ -1839,13 +2014,13 @@ class Ui_FrmAdmin(object):
         item.setText(_translate("FrmAdmin", "Login"))
         item = self.tabela_colaboradores.horizontalHeaderItem(2)
         item.setText(_translate("FrmAdmin", "Senha"))
-        self.lbl_titulo_colaboradores.setText(_translate("FrmAdmin", "Colaboradores"))
+        self.lbl_titulo_colaboradores.setText(_translate("FrmAdmin", "COLABORADORES"))
         self.line_search_bar_colaboradores.setPlaceholderText(_translate("FrmAdmin", "Buscar Colaboradores"))
         self.btn_exluir_colaboradores.setText(_translate("FrmAdmin", "Excluir"))
         self.btn_alterar_colaboradores.setText(_translate("FrmAdmin", "Alterar"))
         self.btn_cadastrar_colaboradores.setText(_translate("FrmAdmin", "Cadastrar"))
         self.lbl_hora_data_colaboradores.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
-        self.lbl_titulo_produtos.setText(_translate("FrmAdmin", "Produtos"))
+        self.lbl_titulo_produtos.setText(_translate("FrmAdmin", "PRODUTOS"))
         self.tabela_produto.setSortingEnabled(True)
         item = self.tabela_produto.horizontalHeaderItem(0)
         item.setText(_translate("FrmAdmin", "Item"))
@@ -1866,7 +2041,7 @@ class Ui_FrmAdmin(object):
         self.line_codigo_produto.setPlaceholderText(_translate("FrmAdmin", "Cód produto"))
         self.btn_confirmar_codigo.setText(_translate("FrmAdmin", "Confirmar"))
         self.lbl_hora_data_produtos.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
-        self.lbl_titulo_cadastrar_produto.setText(_translate("FrmAdmin", "Cadastrar Produtos"))
+        self.lbl_titulo_cadastrar_produto.setText(_translate("FrmAdmin", "CADASTRAR PRODUTOS"))
         self.tabela_cadastro.setSortingEnabled(True)
         item = self.tabela_cadastro.horizontalHeaderItem(0)
         item.setText(_translate("FrmAdmin", "Item"))
@@ -1884,10 +2059,11 @@ class Ui_FrmAdmin(object):
         self.line_descricao_cadastrar.setPlaceholderText(_translate("FrmAdmin", "Valor unitário"))
         self.line_valor_cadastrar.setPlaceholderText(_translate("FrmAdmin", "Descrição"))
         self.line_qtde_cadastrar.setPlaceholderText(_translate("FrmAdmin", "Quantidade Estoque"))
-        self.line_fornecedor_cadastrar.setPlaceholderText(_translate("FrmAdmin", "Custo/Insumos"))
+        self.line_fornecedor_cadastrar.setPlaceholderText(_translate("FrmAdmin", "Custo"))
         self.btn_finalizar_cadastro.setText(_translate("FrmAdmin", "Finalizar Cadastro"))
         self.line_search_Bar_cadastrar_produto.setPlaceholderText(_translate("FrmAdmin", "Filtrar Produtos"))
         self.lbl_hora_data_cadastrar_produto.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
+        self.btn_voltar_cadastro.setText(_translate("FrmAdmin", "VOLTAR"))
         self.btn_finalizar_alterar.setText(_translate("FrmAdmin", "Finalizar Alteração"))
         self.line_fornecedor_alterar_produto.setPlaceholderText(_translate("FrmAdmin", "Fornecedor"))
         self.tabela_alterar_produto_2.setSortingEnabled(True)
@@ -1910,6 +2086,15 @@ class Ui_FrmAdmin(object):
         self.line_decricao_alterar_produto.setPlaceholderText(_translate("FrmAdmin", "Descrição"))
         self.line_search_Bar_alterar_produto.setPlaceholderText(_translate("FrmAdmin", "Filtrar Produtos"))
         self.lbl_hora_data_alterar_produto.setText(_translate("FrmAdmin", "00:00 00/00/0000"))
+        self.btn_voltar_alterar_produto.setText(_translate("FrmAdmin", "VOLTAR"))
+        self.btn_voltar.setText(_translate("FrmAdmin", "Deslogar"))
+        self.btn_configs.setText(_translate("FrmAdmin", "Configurações"))
+        self.btn_colaboradores.setText(_translate("FrmAdmin", "Colaboradores"))
+        self.btn_produtos.setText(_translate("FrmAdmin", "Produtos"))
+        self.btn_monitoramento.setText(_translate("FrmAdmin", "Monitoramento"))
+        self.btn_home.setText(_translate("FrmAdmin", "Início"))
+        self.btn_vendas.setText(_translate("FrmAdmin", "Vendas"))
+        self.label_3.setText(_translate("FrmAdmin", "MENU PRINCIPAL"))
 from view.QRC import file_principal_rc
 
 if __name__ == "__main__":
@@ -1920,3 +2105,4 @@ if __name__ == "__main__":
     ui.setupUi(FrmAdmin)
     FrmAdmin.show()
     sys.exit(app.exec_())
+

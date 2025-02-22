@@ -1,5 +1,16 @@
 <RCC>
   <qresource prefix="icones">
+    <file>chevron.png</file>
+    <file>left-chevron.png</file>
+    <file>box.png</file>
+    <file>configfaticon.png</file>
+    <file>groupicon.png</file>
+    <file>mointoramentoicon.png</file>
+    <file>sellfaticon.png</file>
+    <file>boxfaticon.png</file>
+    <file>homefaticon.png</file>
+    <file>61045dfc9cd69c000418c11a.png</file>
+    <file>clearicon.png</file>
     <file>Untitled (1).png</file>
     <file>homeicon.png</file>
     <file>colaboradores.icon.png</file>

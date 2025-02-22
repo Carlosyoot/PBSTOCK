@@ -3,18 +3,6 @@ from PyQt5.QtCore import Qt, QStringListModel
 from PyQt5.QtGui import QPainter
 
 
-class ListViewDelegate(QStyledItemDelegate):
-    """Delegate personalizado para deslocar os itens do QListView para baixo."""
-    def __init__(self, parent=None):
-        super().__init__(parent)
-
-    def paint(self, painter, option, index):
-        """Renderiza o item com um deslocamento vertical."""
-        # Ajusta a posição vertical (y) para deslocar o texto para baixo
-        option.rect.adjust(0, 12, 0, 0)  # Desloca o retângulo do item em 12 pixels para baixo
-
-        # Renderiza o item normalmente
-        super().paint(painter, option, index)
 
 
 class DetalhesAvisoDialog(QDialog):
@@ -45,6 +33,7 @@ class DetalhesAvisoDialog(QDialog):
 
 class AlertManager:
     def __init__(self, ui):
+        super().__init__()
         self.ui = ui
 
         # Criar modelo para o QListView
@@ -54,11 +43,6 @@ class AlertManager:
 
         # Desativar o foco no QListView para remover a borda pontilhada
         self.ui.listView.setFocusPolicy(Qt.NoFocus)
-
-        # Aplicar o delegate personalizado
-        self.delegate = ListViewDelegate(self.ui.listView)
-        self.ui.listView.setItemDelegate(self.delegate)
-
         # Desativar a rolagem horizontal
         self.ui.listView.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.ui.listView.setEnabled(True)
@@ -84,6 +68,27 @@ class AlertManager:
         self.ui.antes_btn.clicked.connect(self.anterior)
         self.ui.depois_btn.clicked.connect(self.proximo)
         self.ui.listView.clicked.connect(self.item_clicado)
+        self.ui.antes_btn.enterEvent = self.on_hover_enter_antes
+        self.ui.antes_btn.leaveEvent = self.on_hover_leave_antes
+        self.ui.depois_btn.enterEvent = self.on_hover_enter_depois
+        self.ui.depois_btn.leaveEvent = self.on_hover_leave_depois
+    
+    
+    def on_hover_enter_antes(self, event):
+        # Quando o mouse entra no botão "antes"
+        self.ui.antes_btn.setText("")  # Define o texto como vazio
+
+    def on_hover_leave_antes(self, event):
+        # Quando o mouse sai do botão "antes"
+        self.ui.antes_btn.setText("Anterior")  # Retorna o texto original
+
+    def on_hover_enter_depois(self, event):
+        # Quando o mouse entra no botão "depois"
+        self.ui.depois_btn.setText("")  # Define o texto como vazio
+
+    def on_hover_leave_depois(self, event):
+        # Quando o mouse sai do botão "depois"
+        self.ui.depois_btn.setText("Próxima")  # Retorna o texto original
 
     def atualizar_lista(self):
         """Atualiza os itens visíveis no QListView com base na página atual"""
