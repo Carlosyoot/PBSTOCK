@@ -1,5 +1,19 @@
 <RCC>
   <qresource prefix="icones">
+    <file>20945301.jpg</file>
+    <file>moreicon.png</file>
+    <file>d7ef2275-2d28-4a39-bc9d-afb8af1e3940.png</file>
+    <file>pdfs.png</file>
+    <file>whiteexcel.png</file>
+    <file>emptyexcel.png</file>
+    <file>emptypdf.png</file>
+    <file>pdficon.png</file>
+    <file>filter.png</file>
+    <file>addicon.png</file>
+    <file>delete.png</file>
+    <file>events.png</file>
+    <file>alerticon.png</file>
+    <file>arrowdown.png</file>
     <file>chevron.png</file>
     <file>left-chevron.png</file>
     <file>box.png</file>
