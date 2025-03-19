@@ -130,3 +130,54 @@ class DetailedCompleter(QCompleter):
                 break
             
             
+
+class DetailedCompleterEvent(QCompleter):
+    def __init__(self, data_fetcher, produto_edit, parent=None):
+        super().__init__(parent)
+        self.model = QStandardItemModel()
+        self.setModel(self.model)
+        self.setCaseSensitivity(Qt.CaseInsensitive)
+        self.setFilterMode(Qt.MatchContains)
+        self.setMaxVisibleItems(5)
+
+        # Armazena o campo de "Produto"
+        self.produto_edit = produto_edit
+
+        # Conecta o sinal activated ao método fill_detailed_fields
+        self.activated.connect(self.fill_detailed_fields)
+
+        # Preenche o modelo com os dados dos produtos
+        self.populate_model(data_fetcher())
+
+    def populate_model(self, produtos):
+        # Limpa o modelo
+        self.model.clear()
+
+        # Adiciona os produtos ao modelo
+        for produto in produtos:
+            # Suponha que produto seja uma tupla: (nome, codigo, quantidade, valor, descricao)
+            nome, codigo, quantidade, valor, descricao = produto
+            item = QStandardItem(nome)
+            item.setData((nome, codigo, quantidade, valor, descricao), Qt.UserRole)  # Armazena todos os dados do produto
+            self.model.appendRow(item)
+
+    def fill_detailed_fields(self, text):
+        # Preenche os campos com base no item selecionado
+        for row in range(self.model.rowCount()):
+            item = self.model.item(row, 0)
+            if item and item.text() == text:
+                # Recupera os dados armazenados no Qt.UserRole
+                self.selected_data = item.data(Qt.UserRole)
+                break
+
+    def get_selected_data(self):
+        # Retorna os dados do produto selecionado
+        return self.selected_data
+
+    def is_valid_selection(self, text):
+        # Verifica se o texto corresponde a um item no modelo
+        for row in range(self.model.rowCount()):
+            item = self.model.item(row, 0)
+            if item and item.text() == text:
+                return True
+        return False

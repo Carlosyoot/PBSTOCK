@@ -1,7 +1,5 @@
 from decimal import Decimal
-from PyQt5.QtWidgets import QCompleter, QTableWidgetItem
-from PyQt5.QtCore import Qt
-from database.Datalogic import GetProdutoNomesCod, GetValueProduto
+from database.Datalogic import GetProdutoNomesCod, GetProdutoNomesCodAtivo, GetValueProduto
 from functions.events.searchs.CustomSugestion import CustomCompleterCód, CustomCompleterNome
 
 def AtualizaCompleterSearchProdutos(ui):
@@ -13,13 +11,14 @@ def AtualizaCompleterSearchProdutos(ui):
 
 
         
-        CustomCompt = CustomCompleterCód(GetProdutoNomesCod)
+        CustomCompt = CustomCompleterCód(GetProdutoNomesCodAtivo)
         CustomComptNome = CustomCompleterNome(GetProdutoNomesCod)
 
 
         ui.line_search_Bar_produtos.setCompleter(CustomComptNome)
         ui.line_search_Bar_alterar_produto.setCompleter(CustomComptNome)
         ui.line_codigo_vendas.setCompleter(CustomCompt)
+        
         
         # Conecta os sinais para filtrar as tabelas de acordo com a busca
         ui.line_search_Bar_produtos.returnPressed.connect(
@@ -130,21 +129,36 @@ def ProdutosTotal(ui):
     print("Texto modificado enter", Quantidade, Código)
 
     try:
-        if len(Código) == 5:  # Verifica se o código tem exatamente 5 dígitos
+        # Verifica se o código contém "EVT"
+        if "EVT" in Código:
             if Código and Quantidade:  # Se ambos os campos estiverem preenchidos
-    
                 # Busca o valor unitário do produto
                 valor_unitario = GetValueProduto(Código)
                 if valor_unitario is not None:  # Se o valor unitário foi encontrado
                     quantidade = Decimal(Quantidade)  # Converte a quantidade para Decimal
                     valor_total = valor_unitario * quantidade  # Calcula o valor total (ambos são Decimal)
-                    ui.lbl_total_valor.setText(f'R$: {float(valor_total):.2f}')  # Converte para float para exibição
+                    ui.line_total_venda.setText(f'R$: {float(valor_total):.2f}')  # Converte para float para exibição
                 else:
                     print("Produto não encontrado ou erro ao buscar valor unitário.")
             else:
                 print("Preencha ambos os campos: código e quantidade.")
         else:
-            print("Código precisa ter 5 dígitos")
+            # Verifica se o código tem exatamente 5 dígitos
+            if len(Código) == 5:
+                if Código and Quantidade:  # Se ambos os campos estiverem preenchidos
+                    # Busca o valor unitário do produto
+                    valor_unitario = GetValueProduto(Código)
+                    if valor_unitario is not None:  # Se o valor unitário foi encontrado
+                        quantidade = Decimal(Quantidade)  # Converte a quantidade para Decimal
+                        valor_total = valor_unitario * quantidade  # Calcula o valor total (ambos são Decimal)
+                        ui.line_total_venda.setText(f'R$: {float(valor_total):.2f}')  # Converte para float para exibição
+                    else:
+                        print("Produto não encontrado ou erro ao buscar valor unitário.")
+                else:
+                    print("Preencha ambos os campos: código e quantidade.")
+            else:
+                print("Código precisa ter 5 dígitos")
+                
     except Exception as e:
         print(f"Erro ao calcular o valor total: {e}")
 

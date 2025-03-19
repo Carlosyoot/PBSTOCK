@@ -20,6 +20,7 @@ def ExcluirColaboradores(ui):
     
     try:
 
+        print('excluindo', Nome, Login)
         DeleteUsers(Nome, Login)
         
         # Atualiza a tabela após exclusão
@@ -47,8 +48,6 @@ def ExcluirProdutos(ui):
 
         DeleteProduto(Produto, id_produto)
     
-        
-        # Atualiza a tabela após exclusão
         AtualizarTabelasProdutos(ui)
         AtualizaCompleterSearchProdutos(ui)
         AtualizarTablesRecent(ui)

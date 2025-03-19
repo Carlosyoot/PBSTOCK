@@ -1,6 +1,7 @@
+from functions.events.CustomsWidgets.cardInit import UpdateFrames
 from functions.events.NavEvents.navConection import conectar_eventos
 from functions.events.NavEvents.buttonConection import conect_button
-from functions.events.TimeEvents.Timer import HoraData, Sair
+from functions.events.TimeEvents.Timer import HoraData
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QLineEdit
 
@@ -9,7 +10,7 @@ class EventManager:
     @staticmethod
     def configurar_eventos(ui, parent):
         """Conecta todos os eventos da interface."""
-        conectar_eventos(ui)
+        conectar_eventos(ui, parent)
         conect_button(ui, parent)
 
         # Lista de tabelas que devem ser deselecionadas
@@ -29,8 +30,12 @@ class EventManager:
         """Inicia o timer para atualizar hora/data e verificar saída."""
         parent.tempo = QTimer(parent)
         parent.tempo.timeout.connect(lambda: HoraData(ui))
-        parent.tempo.timeout.connect(lambda: Sair(ui, "23:59:59"))
         parent.tempo.start(1000)
+        
+        parent.timer_frames = QTimer(parent)
+        parent.timer_frames.timeout.connect(lambda: UpdateFrames(ui))
+        parent.timer_frames.start(120 * 1000)  # Verifica a cada 2 segundos
+        print("Timer de frames iniciado!")  # Verifica se o timer foi iniciado
 
     @staticmethod
     def mousePressEvent(ui, event, tabelas):

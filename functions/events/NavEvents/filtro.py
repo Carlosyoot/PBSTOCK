@@ -33,22 +33,23 @@ def obter_dados_tabela(ui):
                 continue
 
             # Armazena todas as colunas da linha
-            linha = {}
-            for col in range(ui.tabela_monitoramento.columnCount()):
-                item = ui.tabela_monitoramento.item(row, col)
-                if item is not None:
-                    linha[f"col{col}"] = item.text()
-                else:
-                    linha[f"col{col}"] = ""
+            linha = {
+                "vendedor": ui.tabela_monitoramento.item(row, 0).text(),  # Coluna 0: Vendedor
+                "produto": ui.tabela_monitoramento.item(row, 1).text(),  # Coluna 1: Produto
+                "vendas": ui.tabela_monitoramento.item(row, 2).text(),  # Coluna 2: Vendas (Quantidade)
+                "valor_un": ui.tabela_monitoramento.item(row, 3).text(),  # Coluna 3: Valor Un
+                "dia": ui.tabela_monitoramento.item(row, 4).text(),  # Coluna 4: Dia
+                "hora": ui.tabela_monitoramento.item(row, 5).text(),  # Coluna 5: Hora
+                "valor_total": ui.tabela_monitoramento.item(row, 6).text(),  # Coluna 6: Valor Total
+            }
             ui.dados_tabela.append(linha)
     return ui.dados_tabela
 
 def filtrar_por_dia(dados):
     """Filtra os dados para exibir apenas os registros do dia atual."""
     hoje = datetime.now().strftime("%d/%m/%Y")  # Formato da data na tabela
-    return [registro for registro in dados if registro["col3"] == hoje]
+    return [registro for registro in dados if registro["dia"] == hoje]
 
-from datetime import datetime, timedelta
 
 def filtrar_por_semana(dados):
     """Filtra os dados para exibir apenas os registros da semana atual (começando no domingo)."""
@@ -62,10 +63,14 @@ def filtrar_por_semana(dados):
     
     # Calcula o fim da semana (sábado)
     fim_semana = inicio_semana + timedelta(days=6)
+    
+    # Ajusta o início e o fim da semana para o início do dia (00:00:00)
+    inicio_semana = inicio_semana.replace(hour=0, minute=0, second=0, microsecond=0)
+    fim_semana = fim_semana.replace(hour=23, minute=59, second=59, microsecond=999999)
 
     dados_filtrados = []
     for registro in dados:
-        dia_registro = datetime.strptime(registro["col3"], "%d/%m/%Y")  # Converte a string para datetime
+        dia_registro = datetime.strptime(registro["dia"], "%d/%m/%Y")  # Converte a string para datetime
         if inicio_semana <= dia_registro <= fim_semana:
             dados_filtrados.append(registro)
     return dados_filtrados
@@ -73,7 +78,9 @@ def filtrar_por_semana(dados):
 def filtrar_por_mes(dados):
     """Filtra os dados para exibir apenas os registros do mês atual."""
     hoje = datetime.now().strftime("%m/%Y")  # Formato do mês na tabela
-    return [registro for registro in dados if registro["col3"].endswith(hoje)]
+    return [registro for registro in dados if registro["dia"].endswith(hoje)]
+
+
 
 def atualizar_tabela(ui, dados_filtrados):
     """Atualiza a tabela_monitoramento com os dados filtrados."""
@@ -83,21 +90,24 @@ def atualizar_tabela(ui, dados_filtrados):
     for registro in dados_filtrados:
         row = ui.tabela_monitoramento.rowCount()
         ui.tabela_monitoramento.insertRow(row)
-        for col in range(ui.tabela_monitoramento.columnCount()):
-            # Cria um QTableWidgetItem ou NumericTableWidgetItem, dependendo da coluna
-            if col in {1, 2, 5}:  # Colunas numéricas: Total de Venda (1), Valor Unitário (2), Valor Total (5)
-                item = NumericTableWidgetItem(registro[f"col{col}"])
-            else:
-                item = QTableWidgetItem(registro[f"col{col}"])
-            ui.tabela_monitoramento.setItem(row, col, item)
+        
+        # Preenche as colunas da tabela
+        ui.tabela_monitoramento.setItem(row, 0, QTableWidgetItem(registro["vendedor"]))  # Vendedor
+        ui.tabela_monitoramento.setItem(row, 1, QTableWidgetItem(registro["produto"]))  # Produto
+        ui.tabela_monitoramento.setItem(row, 2, NumericTableWidgetItem(registro["vendas"]))  # Vendas (Quantidade)
+        ui.tabela_monitoramento.setItem(row, 3, NumericTableWidgetItem(registro["valor_un"]))  # Valor Un
+        ui.tabela_monitoramento.setItem(row, 4, QTableWidgetItem(registro["dia"]))  # Dia
+        ui.tabela_monitoramento.setItem(row, 5, QTableWidgetItem(registro["hora"]))  # Hora
+        ui.tabela_monitoramento.setItem(row, 6, NumericTableWidgetItem(registro["valor_total"]))  # Valor Total
 
-    ui.tabela_monitoramento.setSortingEnabled(True)  # Reativa a ordenação 
+    ui.tabela_monitoramento.setSortingEnabled(True)  # Reativa a ordenação
             
 def filtrar_por_intervalo(dados, data_inicio, data_fim):
     """Filtra os dados para exibir apenas os registros dentro do intervalo de datas."""
     dados_filtrados = []
     for registro in dados:
-        dia_registro = datetime.strptime(registro["col3"], "%d/%m/%Y")  # Converte a string para datetime
+        # Acessa a data do registro usando a chave "dia"
+        dia_registro = datetime.strptime(registro["dia"], "%d/%m/%Y")  # Converte a string para datetime
         if data_inicio <= dia_registro <= data_fim:
             dados_filtrados.append(registro)
     return dados_filtrados
@@ -136,3 +146,5 @@ def alternar_filtro_e_atualizar_botao(ui):
         ui.btn_filtro_vendas.setText('DIA')
 
     aplicar_filtro(ui)
+
+

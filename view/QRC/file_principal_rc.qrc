@@ -1,9 +1,27 @@
 <RCC>
   <qresource prefix="icones">
+    <file>ativo.png</file>
+    <file>ausente.png</file>
+    <file>esgotado.png</file>
+    <file>redefinir.png</file>
+    <file>lupa.png</file>
+    <file>out-of-stock.png</file>
+    <file>quality.png</file>
+    <file>calendar.png</file>
+    <file>planner.png</file>
+    <file>happy-face.png</file>
+    <file>price.png</file>
+    <file>nodata.png</file>
+    <file>esgotado.png</file>
+    <file>happy.png</file>
+    <file>cancel-event.png</file>
+    <file>no-sales.png</file>
+    <file>event3.png</file>
+    <file>produtovendido.png</file>
+    <file>vendidoIcon.png</file>
+    <file>removefilter2.png</file>
     <file>20945301.jpg</file>
-    <file>moreicon.png</file>
     <file>d7ef2275-2d28-4a39-bc9d-afb8af1e3940.png</file>
-    <file>pdfs.png</file>
     <file>whiteexcel.png</file>
     <file>emptyexcel.png</file>
     <file>emptypdf.png</file>
@@ -34,36 +52,10 @@
     <file>usericon.png</file>
     <file>configicon.png</file>
     <file>monitoramento.png</file>
-    <file>nv_clientes.png</file>
-    <file>nv_produtos.jpg-1.png</file>
-    <file>nv_colaboradores.png</file>
-    <file>nv_home.png</file>
-    <file>clientes.png</file>
-    <file>btn_produtos.png</file>
-    <file>lupa.png</file>
     <file>btn_produtos.png</file>
     <file>sugestões.png</file>
-    <file>ambiente.png</file>
-    <file>onibus.png</file>
-    <file>bloquear senha hover.png</file>
     <file>bloquear senha.png</file>
     <file>ver senha hover.png</file>
     <file>ver senha.png</file>
-    <file>undraw_secure_login_pdn4.png</file>
-    <file>colaboradores.png</file>
-    <file>pedidos2.png</file>
-    <file>sair.png</file>
-    <file>Produtos.png</file>
-    <file>pedidos.png</file>
-    <file>pedidos.png</file>
-    <file>add_users.png</file>
-    <file>engrenagem_ico.png</file>
-    <file>Emoji-Seta-PNG-1024x1024.png</file>
-    <file>home.png</file>
-    <file>sign-out.png</file>
-    <file>Estresse, hábitos parafuncionais (2).png</file>
-    <file>logo.png</file>
-    <file>logo.png</file>
-    <file>logo.png</file>
   </qresource>
 </RCC>

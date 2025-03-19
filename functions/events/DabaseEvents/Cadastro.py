@@ -1,14 +1,16 @@
 from datetime import datetime
 from functions.events.InterfaceError.popup import Popup, SucessPopup
 from pycpfcnpj import cpfcnpj,gen
-from functions.events.DabaseEvents.UpdateTables import AtualizaTabelasLogin, AtualizarTablesRecent
+from functions.events.DabaseEvents.UpdateTables import AtualizaTabelasLogin, AtualizarTabelaEventos, AtualizarTabelaVendas, AtualizarTablesRecent
 from functions.events.DabaseEvents.UpdateTables import AtualizarTabelasProdutos
-from database.Datalogic import AdicionarUsuario, AdicionarProduto
+from database.Datalogic import AdicionarEvento, AdicionarProdutosEvento, AdicionarUsuario, AdicionarProduto, AdicionarVenda, DecrementarEstoque, gerar_id_evento
 from PyQt5.QtWidgets import QLineEdit
 from functions.events.searchs.ColaboradorSearch import AtualizaCompleterSearchColaboradores
 from functions.events.searchs.ProdutoSearch import AtualizaCompleterSearchProdutos
 import logging
 from PyQt5.QtWidgets import QMessageBox, QPushButton
+
+from functions.events.searchs.monitoramentoSearch import AtualizaCompleterSearchMonitoramento
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -40,8 +42,9 @@ def CadastroUsuario(ui):
 
     ResultCpf = CpfValidate(Cpf)
     if ResultCpf is not True:
-        ResultCpf = gen.cpf()
-
+        Popup("CPF INVALIDO")
+        
+        
     if missing_fields:
         Popup(f'Os seguintes campos estão faltando ou são inválidos:\n{', '.join(missing_fields)}')
         return
@@ -94,6 +97,9 @@ def CadastroProduto(ui):
         Popup(f'Os seguintes campos estão faltando ou são inválidos:\n{", ".join(missing_fields)}')
         return
     
+    if len(Cód) < 5:
+        Popup(f'Tamanho mínimo de 5 Dígitos no Código')
+        return
     try:
         data = datetime.now()
         
@@ -128,6 +134,12 @@ def CadastroProduto(ui):
             ui.line_descricao_cadastrar.clear()
         else:
             msg.close()
+            ui.line_produto_cadastrar.clear()
+            ui.line_codigo_produto_cadastrar.clear()
+            ui.line_qtde_cadastrar.clear()
+            ui.line_valor_cadastrar.clear()
+            ui.line_descricao_cadastrar.clear()
+            ui.Telas_do_menu.setCurrentWidget(ui.pg_produtos)
             
 
     except Exception as e:
@@ -135,24 +147,177 @@ def CadastroProduto(ui):
         Popup(f"Erro ao conectar ao servidor: {e}. Tente novamente mais tarde.")
 
 def CadastroVenda(ui):
+    # Obtém os dados dos campos da interface
     Cód = ui.line_codigo_vendas.text().strip()
     Quantidade = ui.line_quantidade_vendas.text().strip()
     Vendedor = ui.line_colaborador_vendedor.text().strip()
     Data = ui.line_data_venda.text().strip()
-    
+    Horário = ui.line_data_horario.text().strip()
+    Total = ui.line_total_venda.text().strip()
+
+    # Remove o "R$:" do valor total
+    TotalReplaced = Total.replace("R$:", "").strip()
+
+    # Formato de data e hora
+    data_format = "%d/%m/%Y"  # Formato de data exemplo: 15/03/2025
+    hora_format = "%H:%M"      # Formato de hora exemplo: 14:30
+
+    # Verificando campos obrigatórios
     missing_fields = [
-            field for field, value in {
-                'Código': Cód,
-                '\nQuantidade': Quantidade,
-                '\nVendedor': Vendedor,
-                '\nData': Data
-            }.items() if not value
-        ]
+        field for field, value in {
+            'Código': Cód,
+            'Quantidade': Quantidade,
+            'Vendedor': Vendedor,
+            'Data': Data,
+            'Horário': Horário,
+            'Total': Total
+        }.items() if not value
+    ]
 
     if missing_fields:
-            Popup(f'Os seguintes campos estão faltando ou são inválidos:\n{"    ".join(missing_fields)}')
-            return
+        Popup(f'Os seguintes campos estão faltando ou são inválidos:\n{"    ".join(missing_fields)}')
+        return
+
+    try:
+        # Verificando se a data e o horário estão no formato correto
+        datetime.strptime(Data, data_format)
+        datetime.strptime(Horário, hora_format)
+    except ValueError:
+        Popup('A data ou Hora fornecida não está no formato correto (dd/mm/aaaa)-(HH:MM).')
+        return
+
+    # Combina data e horário em um timestamp
+    HorárioCompleto = f"{Horário}:00"
+    Timestamp = f"{Data} {HorárioCompleto}"
+
+    # Converte o valor total para float
+    try:
+        ValorTotal = float(TotalReplaced)
+    except ValueError:
+        Popup('O valor total não é um número válido.')
+        return
+
+    # Verifica se o código é de um produto de evento (começa com "EVT-")
+    if Cód.startswith("EVT"):
+        # É um produto de evento
+        ID_Produto_Evento = Cód  # Usa o código completo (incluindo "EVT-")
+        ID_Produto = None  # Produto normal não é informado
+
+        # Verifica o estoque antes de cadastrar a venda
+        resultado_estoque = DecrementarEstoque(Quantidade, ID_Produto_Evento, 'produto evento')
+        if resultado_estoque == "Quantidade insuficiente em estoque.":
+            Popup(resultado_estoque)  # Exibe o Popup com a mensagem de erro
+            return  # Sai da função sem cadastrar a venda
+
+        AdicionarVenda(
+            Quantidade=Quantidade,
+            Vendedor=Vendedor,
+            Data=datetime.strptime(Timestamp, "%d/%m/%Y %H:%M:%S"),
+            Valor_Total=ValorTotal,
+            ID_Produto=ID_Produto,
+            ID_Produto_Evento=ID_Produto_Evento
+        )
+        Popup('Venda cadastrada com sucesso!')
+    else:
+        # É um produto normal
+        ID_Produto = Cód  # Usa o código do produto normal
+        ID_Produto_Evento = None  # Produto de evento não é informado
+
+        # Verifica o estoque antes de cadastrar a venda
+        resultado_estoque = DecrementarEstoque(Quantidade, ID_Produto, 'produto')
+        if resultado_estoque == "Quantidade insuficiente em estoque.":
+            Popup(resultado_estoque)  # Exibe o Popup com a mensagem de erro
+            return  # Sai da função sem cadastrar a venda
+
+        AdicionarVenda(
+            Quantidade=Quantidade,
+            Vendedor=Vendedor,
+            Data=datetime.strptime(Timestamp, "%d/%m/%Y %H:%M:%S"),
+            Valor_Total=ValorTotal,
+            ID_Produto=ID_Produto,
+            ID_Produto_Evento=ID_Produto_Evento
+        )
+        Popup('Venda cadastrada com sucesso!')
+        AtualizaCompleterSearchMonitoramento(ui)
+
+    # Atualiza a tabela de vendas e limpa os campos
+    try:
+        AtualizarTabelaVendas(ui)
+        ui.line_codigo_vendas.clear()
+        ui.line_quantidade_vendas.clear()
+        ui.line_colaborador_vendedor.clear()
+        ui.line_data_venda.clear()
+        ui.line_data_horario.clear()
+        ui.line_total_venda.clear()
+    except Exception as e:
+        Popup(f'Erro ao cadastrar venda: {e}')
         
+        
+def CadastrarEvento(ui):
+    # Coleta os dados do formulário
+    nome = ui.line_event_name.text().strip()
+    datainicio = ui.line_data_event.text().strip()
+    datafim = ui.line_dataend_event.text().strip()
+    descricao = ui.line_descricao_event.text().strip()
+
+    # Verificando campos obrigatórios
+    missing_fields = [
+        field for field, value in {
+            'Nome': nome,
+            '\nData Inicio': datainicio,
+            '\nData Fim': datafim,
+            '\nDescrição': descricao
+        }.items() if not value
+    ]
+
+    if missing_fields:
+        Popup(f'Os seguintes campos estão faltando ou são inválidos:\n{"    ".join(missing_fields)}')
+        return
+
+    # Validando o formato das datas
+    try:
+        data_inicio = datetime.strptime(datainicio, '%d/%m/%Y')
+        data_fim = datetime.strptime(datafim, '%d/%m/%Y')
+    except ValueError:
+        Popup('Formato de data inválido. Use o formato DD/MM/AAAA.')
+        return
+
+    # Verificando se a data de início é maior que a data de fim
+    if data_inicio > data_fim:
+        Popup('A data de início não pode ser maior que a data de fim.')
+        return
+
+    # Verificando se há produtos na lista
+    if not hasattr(ui, 'lista_produtos') or not ui.lista_produtos:
+        Popup('Adicione pelo menos um produto ao evento.')
+        return
+
+    # Gerando o ID do evento
+    id_evento = gerar_id_evento()
+    if not id_evento:
+        Popup('Erro ao gerar ID do evento. Tente novamente.')
+        return
+
+    # Cadastrando o evento
+    try:
+        AdicionarEvento(id_evento, nome, data_inicio, data_fim, descricao)
+        print('PRINT DO CADASTRO', id_evento, nome, data_inicio, data_fim, descricao)
+    except Exception as e:
+        print(f"Erro ao cadastrar evento: {e}")
+        Popup('Erro ao cadastrar evento. Tente novamente.')
+        return
+
+    # Cadastrando os produtos do evento
+    try:
+        AdicionarProdutosEvento(id_evento, ui.lista_produtos)
+        Popup('Evento e produtos cadastrados com sucesso!')
+        AtualizarTabelaEventos(ui)
+   
+    except Exception as e:
+        print(f"Erro ao cadastrar produtos: {e}")
+        Popup('Erro ao cadastrar produtos. Verifique os dados.')
+        
+    
 
 
         

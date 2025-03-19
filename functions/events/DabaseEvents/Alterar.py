@@ -1,7 +1,8 @@
 
-from database.Datalogic import AlterarUsuario, AlterarProduto
+from database.Datalogic import AlterarProdutoEvento, AlterarUsuario, AlterarProduto, VerificarSeProdutoEhEvento
 from functions.events.InterfaceError.popup import Popup, SucessPopup
 from functions.events.DabaseEvents.UpdateTables import AtualizaTabelasLogin, AtualizarTabelasProdutos
+from functions.events.searchs.ColaboradorSearch import AtualizaCompleterSearchColaboradores
 
 
 
@@ -10,6 +11,7 @@ def AlterarColaboradores(ui):
     DataNasc = ui.line_datanasc_alterar_colaboradores.text()
     Login = ui.line_login_alterar_colaboradores.text()
     Senha = ui.line_senha_alterar_colaboradores.text()
+    Cpf = ui.line_cpf_alterar_colaboradores.text()
     
     missing_fields = [
         field for field, value in {
@@ -33,18 +35,21 @@ def AlterarColaboradores(ui):
     
         
     # Chama a função para atualizar o usuário no banco de dados
-    response = AlterarUsuario(Oldusername, Nome, DataNasc, Login, Senha)
+    response = AlterarUsuario(Oldusername, Nome, DataNasc, Login, Senha, Cpf)
     SucessPopup(response.get("message", "Cadastro realizado com sucesso!"))
     
     AtualizaTabelasLogin(ui)
+    AtualizaCompleterSearchColaboradores(ui)
+
+    
     
     ui.line_nome_alterar_colaboradores.clear()
     ui.line_datanasc_alterar_colaboradores.clear()
     ui.line_login_alterar_colaboradores.clear()
     ui.line_senha_alterar_colaboradores.clear()
+    ui.line_cpf_alterar_colaboradores.clear()
     
 def AlterarProdutos(ui):
-    
     Nome = ui.line_nome_alterar_produto.text()
     Quantidade = ui.line_qtde_alterar_produto.text()
     Valor = ui.line_valor_alterar_produto.text()
@@ -59,22 +64,25 @@ def AlterarProdutos(ui):
         }.items() if not value
     ]
     
-        
     if not hasattr(ui, 'IDPRODUTO') or not ui.IDPRODUTO:
         Popup("Erro: Nenhum produto selecionado.")
         return
     
-    
     Id = ui.IDPRODUTO
     
     if missing_fields:
-        Popup(f'Os seguintes campos estão faltando ou são inválidos:\n{', '.join(missing_fields)}')
+        Popup(f'Os seguintes campos estão faltando ou são inválidos:\n{", ".join(missing_fields)}')
         return
 
     try:
+        # Verifica se o produto é de um evento
+        if VerificarSeProdutoEhEvento(Id):
+            # Se for um produto de evento, chama a função de alteração de produto de evento
+            response = AlterarProdutoEvento(Id, Nome, Quantidade, Valor, Descrição)
+        else:
+            # Se não for um produto de evento, chama a função de alteração de produto normal
+            response = AlterarProduto(Id, Nome, Quantidade, Valor, Descrição)
         
-    # Chama a função para atualizar o usuário no banco de dados
-        response = AlterarProduto(Id, Nome, Quantidade, Valor, Descrição)
         SucessPopup(response.get("message", "Cadastro realizado com sucesso!"))
         
         AtualizarTabelasProdutos(ui)
@@ -84,4 +92,4 @@ def AlterarProdutos(ui):
         ui.line_valor_alterar_produto.clear()
         ui.line_decricao_alterar_produto.clear()
     except Exception as e:
-        print(f"Erro ao conectar ao servidor{e}. Tente novamente mais tarde.")
+        print(f"Erro ao conectar ao servidor {e}. Tente novamente mais tarde.")

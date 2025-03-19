@@ -1,4 +1,3 @@
-from functions.Admin import WindowManager
 from database.Datalogic import DataLoginUser
 from PyQt5.QtCore import QTimer
 
@@ -6,33 +5,22 @@ from PyQt5.QtCore import QTimer
 
 
 def logar(ui, janela_atual):
-    
-    
-    redirect = 'admin'
-    status = 'sucess'
-    user = 'carlos'
-    
-    if redirect == 'admin' and status == 'sucess':
+    from functions.Admin import WindowManager
+
+   
+    User = ui.lineEdit.text()
+    Password = ui.lineEdit_2.text()
+
+    result = DataLoginUser(User, Password)
+
+    if result['status'] == 'success' and result['redirect'] == 'admin':
         ui.lineEdit.setStyleSheet(StyleSucess.style)
         ui.lineEdit_2.setStyleSheet(StyleSucess.style)
         print("Redirecionando para Admin")
         QTimer.singleShot(200, janela_atual.close)
-        WindowManager.open_admin(user)
+        WindowManager.open_admin(User)  # Passa o 'User' para a função de abrir o admin, se necessário
 
-    
-    #User = ui.lineEdit.text()
-    #Password = ui.lineEdit_2.text()
-#
-    #result = DataLoginUser(User, Password)
-#
-    #if result['status'] == 'success' and result['redirect'] == 'admin':
-    #    ui.lineEdit.setStyleSheet(StyleSucess.style)
-    #    ui.lineEdit_2.setStyleSheet(StyleSucess.style)
-    #    print("Redirecionando para Admin")
-    #    QTimer.singleShot(200, janela_atual.close)
-    #    WindowManager.open_admin(User)  # Passa o 'User' para a função de abrir o admin, se necessário
-#
-    #    #QTIMER PARA JANELA DIRETA
+        #QTIMER PARA JANELA DIRETA
        
         
 #    FUTURA PAGE DE COLABORADOR

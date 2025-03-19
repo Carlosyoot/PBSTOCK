@@ -21,6 +21,8 @@ def preencherCampos(ui, row):
     ui.line_datanasc_alterar_colaboradores.setText(dados_linha[3])
     ui.line_login_alterar_colaboradores.setText(dados_linha[1])
     ui.line_senha_alterar_colaboradores.setText(dados_linha[2])
+    ui.line_cpf_alterar_colaboradores.setText(dados_linha[4])
+    
 
     id_colaborador = ui.tabela_alterar_colaboradores.item(row, 0).data(Qt.UserRole)
     ui.IDUSERNAME = id_colaborador  

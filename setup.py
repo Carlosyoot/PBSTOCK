@@ -1,11 +1,10 @@
 import sys
 import socket
+import threading
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from functions.Login import logar
 from view.pages.FRMlogin import Ui_login
-import cProfile
-import pstats
-
+import zeromq  # Importa o zeromq.py
 
 class MinhaJanela(QMainWindow):
     def __init__(self):
@@ -14,32 +13,19 @@ class MinhaJanela(QMainWindow):
         self.ui.setupUi(self)
 
         # Botão de logar no sistema
-        #self.ui.pushButton.clicked.connect(lambda: logar(self.ui, self))
-        
-        logar(self.ui, self)
+        self.ui.pushButton.clicked.connect(lambda: logar(self.ui, self))
 
-    def showEvent(self, event):
-        """
-        Método chamado quando a janela é exibida.
-        Envia uma mensagem via socket para sinalizar que a janela foi exibida.
-        """
-        super().showEvent(event)
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.connect(("localhost", 5000))  # Conecta ao processo pai
-            s.sendall(b"ready")  # Envia a mensagem "ready"
-
+def start_zeromq_thread():
+    """Inicia o servidor ZeroMQ em uma thread separada."""
+    zeromq_thread = threading.Thread(target=zeromq.start_zeromq, daemon=True)
+    zeromq_thread.start()
 
 if __name__ == "__main__":
+    # Inicia a thread do ZeroMQ antes da interface gráfica
+    start_zeromq_thread()
 
-    # Cria a aplicação PyQt5
+    # Inicia a aplicação PyQt
     app = QApplication(sys.argv)
-
-    # Cria e exibe a janela
     janela = MinhaJanela()
     janela.show()
-
-    # Executa a aplicação
-    app_exec_return = app.exec_()
-
-    # Encerra o programa
-    sys.exit(app_exec_return)
+    app.exec_()

@@ -1,5 +1,5 @@
 from functions.events.DabaseEvents.Cadastro import *
-from functions.events.dialogBox.dialogedit import adicionar_produtos
+from functions.events.dialogBox.dialogedit import adicionar_produtos, verificar_texto_apagado
 from functions.events.dialogBox.filteredit import iniciarFiltro
 from functions.events.DabaseEvents.Excluir import *
 from functions.events.searchs.ColaboradorSearch import *
@@ -27,7 +27,7 @@ def conect_button(ui, parent):
     ui.btn_gerar_excel.clicked.connect(lambda: exportar_para_excel(ui))
     ui.btn_gerar_pdf.clicked.connect(lambda: exportar_para_pdf(ui.tabela_monitoramento))
     ui.btn_filtro_vendas.clicked.connect(lambda: alternar_filtro_e_atualizar_botao(ui))
-    
-    
-
+    ui.btn_finalizar_venda.clicked.connect(lambda: CadastroVenda(ui))
+    ui.line_produtos_block.textChanged.connect(lambda: verificar_texto_apagado(ui))
+    ui.btn_finalizar_cadastro_evento.clicked.connect(lambda: CadastrarEvento(ui))    
 

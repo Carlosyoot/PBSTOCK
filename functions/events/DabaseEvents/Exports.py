@@ -1,11 +1,22 @@
 import pandas as pd
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
-from openpyxl import Workbook
 from openpyxl.styles import PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
+
+import os
+
+from functions.events.InterfaceError.popup import Popup
+# Caminho para a pasta Documentos do usuário
+documentos_path = os.path.expanduser("~/Documents")
+
+# Caminho para a pasta PBSTOCK dentro de Documentos
+pbstock_path = os.path.join(documentos_path, "PBSTOCK")
+
+# Verifica se a pasta PBSTOCK existe, se não, cria a pasta
+if not os.path.exists(pbstock_path):
+    os.makedirs(pbstock_path)
 
 
 
@@ -17,6 +28,9 @@ def exportar_para_excel(ui, nome_arquivo="tabela_monitoramento.xlsx"):
     :param nome_arquivo: Nome do arquivo Excel a ser gerado.
     """
     try:
+        # Caminho completo para o arquivo Excel
+        caminho_completo = os.path.join(pbstock_path, nome_arquivo)
+
         # Coleta os dados da tabela
         dados = []
         colunas = []
@@ -40,7 +54,7 @@ def exportar_para_excel(ui, nome_arquivo="tabela_monitoramento.xlsx"):
         df = pd.DataFrame(dados, columns=colunas)
 
         # Cria um arquivo Excel usando openpyxl
-        with pd.ExcelWriter(nome_arquivo, engine='openpyxl') as writer:
+        with pd.ExcelWriter(caminho_completo, engine='openpyxl') as writer:
             df.to_excel(writer, sheet_name='Monitoramento', index=False)
             workbook = writer.book
             worksheet = writer.sheets['Monitoramento']
@@ -72,18 +86,26 @@ def exportar_para_excel(ui, nome_arquivo="tabela_monitoramento.xlsx"):
                 for cell in row:
                     cell.border = borda
 
-        print(f"Tabela exportada para {nome_arquivo}")
+        Popup(f"Tabela exportada para \n{caminho_completo}")
+
     except Exception as e:
         print(f"Erro ao exportar para Excel: {e}")
+        Popup(f"Erro ao exportar para PDF: {e}")
         
 def exportar_para_pdf(tabela, nome_arquivo="tabela_monitoramento.pdf"):
     """Exporta a tabela para PDF."""
     try:
+        # Caminho completo para o arquivo PDF
+        caminho_completo = os.path.join(pbstock_path, nome_arquivo)
+
+        # Coleta os dados da tabela
         dados = [[tabela.horizontalHeaderItem(col).text() for col in range(tabela.columnCount())]]
         for row in range(tabela.rowCount()):
             linha = [tabela.item(row, col).text() if tabela.item(row, col) else "" for col in range(tabela.columnCount())]
             dados.append(linha)
-        pdf = SimpleDocTemplate(nome_arquivo, pagesize=A4)
+
+        # Cria o PDF
+        pdf_document = SimpleDocTemplate(caminho_completo, pagesize=A4)  # Renomeado para evitar conflito
         estilo_tabela = TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
@@ -95,8 +117,11 @@ def exportar_para_pdf(tabela, nome_arquivo="tabela_monitoramento.pdf"):
         ])
         tabela_pdf = Table(dados)
         tabela_pdf.setStyle(estilo_tabela)
-        pdf.build([tabela_pdf])
-        print(f"Tabela exportada para {nome_arquivo}")
+        pdf_document.build([tabela_pdf])
+
+        # Exibe uma mensagem de sucesso com o caminho do arquivo
+        Popup(f"Tabela exportada para \n{caminho_completo}")
+
     except Exception as e:
         print(f"Erro ao exportar para PDF: {e}")
-        
+        Popup(f"Erro ao exportar para PDF: {e}")

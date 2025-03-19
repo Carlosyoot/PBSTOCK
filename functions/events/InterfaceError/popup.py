@@ -4,7 +4,7 @@ from PyQt5.QtGui import QIcon, QPixmap
 
 def Popup(missing_fields):
     msg = QMessageBox()
-    msg.setWindowTitle("Erro - Cadastro de Colaboradores")
+    msg.setWindowTitle("Erro - Operação falhou")
     msg.setText(f'{missing_fields}')
     icon = QIcon()
     icon.addPixmap(QPixmap("view/QRC/alerticon.png"), QIcon.Normal, QIcon.Off)
