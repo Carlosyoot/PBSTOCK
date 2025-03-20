@@ -1,5 +1,7 @@
 # 🏆 PBSTOCK - GERENCIAMENTO DE ESTOQUE  
 
+**PYTHON - MYSQL - PYQT5 - ZEROMQ - POO**
+
 ![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen)  
 ![License](https://img.shields.io/badge/Licença-Creative%20Commons%20BY--NC-blue)  
 ![Python](https://img.shields.io/badge/Python-3.10-blue)  
