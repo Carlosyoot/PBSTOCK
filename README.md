@@ -11,7 +11,7 @@
 🔹 Oferece **controle total de produtos, relatórios avançados e integração** com Excel e PDF.  
 🔹 Seu design distribuído permite **operações em múltiplas filiais** com dados sempre sincronizados.  
 
-🎥 **Demonstração do Projeto** → [Assista ao vídeo aqui](https://bit.ly/PyStockVideo)  
+🎥 **Demonstração do Projeto** → [Assista ao vídeo aqui](https://www.youtube.com/watch?v=G4ky5aTrUO0)  
 
 ---
 
