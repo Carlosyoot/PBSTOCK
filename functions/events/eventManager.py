@@ -9,7 +9,6 @@ from PyQt5.QtWidgets import QLineEdit
 class EventManager:
     @staticmethod
     def configurar_eventos(ui, parent):
-        """Conecta todos os eventos da interface."""
         conectar_eventos(ui, parent)
         conect_button(ui, parent)
 
@@ -27,32 +26,28 @@ class EventManager:
 
     @staticmethod
     def iniciar_tempo(ui, parent):
-        """Inicia o timer para atualizar hora/data e verificar saída."""
         parent.tempo = QTimer(parent)
         parent.tempo.timeout.connect(lambda: HoraData(ui))
         parent.tempo.start(1000)
         
         parent.timer_frames = QTimer(parent)
         parent.timer_frames.timeout.connect(lambda: UpdateFrames(ui))
-        parent.timer_frames.start(120 * 1000)  # Verifica a cada 2 segundos
-        print("Timer de frames iniciado!")  # Verifica se o timer foi iniciado
+        parent.timer_frames.start(120 * 1000)  
+
 
     @staticmethod
     def mousePressEvent(ui, event, tabelas):
-        """Sobrescreve o evento de clique do mouse para limpar a seleção das tabelas."""
-        # Verifica se o clique foi fora das tabelas
+       
         for tabela in tabelas:
             if not tabela.geometry().contains(event.pos()):
-                tabela.clearSelection()  # Limpa a seleção da tabela
+                tabela.clearSelection() 
 
     @staticmethod
     def limpar_selecao_tabelas(tabelas):
-        """Limpa a seleção de todas as tabelas."""
         for tabela in tabelas:
             tabela.clearSelection()
             
     @staticmethod
     def configurar_clique_widgets(ui, tabelas):
-        """Sobrescreve o evento de clique para QLineEdit e outros widgets."""
         for widget in ui.findChildren(QLineEdit): 
             widget.mousePressEvent = lambda event, tabelas=tabelas: EventManager.limpar_selecao_tabelas(tabelas)

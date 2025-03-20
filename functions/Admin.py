@@ -13,10 +13,10 @@ class FrmAdmin(QMainWindow):
         self.ui = Ui_FrmAdmin()
         self.ui.setupUi(self)
 
-        self.parent_window = parent_window  # Guarda a referência da janela de login
+        self.parent_window = parent_window  
 
-        self.ui.lbl_seja_bem_vindo_primary.setText(f'Olá, {user_name}')
-        self.ui.lbl_seja_bem_vindo.setText('Seja Bem-Vindo')
+        #self.ui.lbl_seja_bem_vindo_primary.setText(f'Olá, {user_name}')
+        #self.ui.lbl_seja_bem_vindo.setText('Seja Bem-Vindo')
         self.ui.lbl_seja_bem_vindo.setFixedWidth(500)
 
         self.ui.admin_button.setChecked(True)
@@ -32,9 +32,9 @@ class FrmAdmin(QMainWindow):
         EventManager.iniciar_tempo(self.ui, self)
         
     def voltar_para_login(self):
-        self.close()  # Fecha a janela do admin
-        self.parent_window = MinhaJanela()  # Cria uma nova instância da tela de login
-        self.parent_window.show()  # Exibe a tela de login novamente
+        self.close()  
+        self.parent_window = MinhaJanela() 
+        self.parent_window.show()  
 
     def save_ordenar_item_combo_selection(self):
         settings = QtCore.QSettings("MeuApp", "Config")
@@ -47,11 +47,11 @@ class FrmAdmin(QMainWindow):
     def load_combo_selections(self):
         settings = QtCore.QSettings("MeuApp", "Config")
 
-        # Carrega o índice do ordenar_item_combo
+       
         ordenar_item_index = settings.value("ordenar_item_combo_index", 0, type=int) 
         self.ui.ordenar_item_combo.setCurrentIndex(ordenar_item_index)
 
-        # Carrega o índice do update_time_combo
+      
         update_time_index = settings.value("update_time_combo_index", 0, type=int) 
         self.ui.update_time_combo.setCurrentIndex(update_time_index)
 

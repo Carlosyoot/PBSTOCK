@@ -2,7 +2,6 @@ from PyQt5.QtCore import QTime
 import datetime
 
 def HoraData(ui):
-    """Atualiza os rótulos com a data e hora atuais"""
     tempoAtual = QTime.currentTime()
     tempoTexto = tempoAtual.toString('hh:mm:ss')
     data_atual = datetime.date.today()

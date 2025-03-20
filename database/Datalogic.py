@@ -157,13 +157,10 @@ def AdicionarVenda(Quantidade, Vendedor, Data, Valor_Total, ID_Produto=None, ID_
             connection_time = datetime.now() - start_time
             logger.debug(f"Tempo de Conexão: {connection_time.total_seconds()} segundos")
 
-            # Inicializa as variáveis para Produto e Valor Un
             Produto = None
             ValorUn = None
 
-            # Busca Produto e ValorUn na tabela correspondente
             if ID_Produto:
-                # Busca na tabela produtos
                 cursor.execute("SELECT Produto, ValorUn FROM pbstock.produtos WHERE Cód = %s", (ID_Produto,))
                 resultado = cursor.fetchone()
                 if resultado:
@@ -171,7 +168,6 @@ def AdicionarVenda(Quantidade, Vendedor, Data, Valor_Total, ID_Produto=None, ID_
                 else:
                     raise HTTPException(status_code=404, detail="Produto não encontrado.")
             elif ID_Produto_Evento:
-                # Busca na tabela produtos_eventos
                 cursor.execute("SELECT Produto, ValorPromocional FROM pbstock.produtos_eventos WHERE Cód = %s", (ID_Produto_Evento,))
                 resultado = cursor.fetchone()
                 if resultado:
@@ -179,7 +175,6 @@ def AdicionarVenda(Quantidade, Vendedor, Data, Valor_Total, ID_Produto=None, ID_
                 else:
                     raise HTTPException(status_code=404, detail="Produto de evento não encontrado.")
 
-            # Query de inserção com os novos campos
             query = """
             INSERT INTO `pbstock`.`vendas`
             (`ID_PRODUTO`, `ID_PRODUTO_EVENTO`, `Produto`, `Valor Un`, `Quantidade_vendida`, `Vendedor`, `Data`, `Valor_total`)
@@ -199,7 +194,7 @@ def AdicionarVenda(Quantidade, Vendedor, Data, Valor_Total, ID_Produto=None, ID_
             return {"message": "Venda adicionada com sucesso!"}
 
     except HTTPException as e:
-        raise e  # Re-lança exceções HTTPException
+        raise e 
     except Exception as e:
         if 'conn' in locals():
             conn.rollback()
@@ -322,8 +317,7 @@ def DataGetAllColaboradoresNomes():
 
     except Exception as e:
         print(f"Erro ao buscar nomes de colaboradores: {e}")
-        return []  # Retorna uma lista vazia em caso de erro
-
+        return [] 
 def DataGetAllLogins():
     try:
         with pool.connection() as conn:
@@ -331,7 +325,7 @@ def DataGetAllLogins():
             cursor.execute('SELECT * FROM usuários')
             logins = cursor.fetchall()
             
-            # Se não houver registros, retorna ['vazio']
+           
             if not logins:
                 return ['vazio']
             
@@ -339,7 +333,7 @@ def DataGetAllLogins():
 
     except Exception as e:
         print(f"Erro ao buscar logins: {e}")
-        return []  # Retorna uma lista vazia em caso de erro
+        return []  
 
     
 def GetProdutos():
@@ -350,9 +344,9 @@ def GetProdutos():
                 cursor.execute(query)
                 data = cursor.fetchall()
                 
-                # Verifica se a consulta retornou dados
+                
                 if not data:
-                    return []  # Retorna uma lista vazia se não houver dados
+                    return []  
 
                 return data
 
@@ -368,10 +362,9 @@ def GetProdutosEvento():
                 cursor.execute(query)
                 data = cursor.fetchall()
                 
-                # Verifica se a consulta retornou dados
+              
                 if not data:
-                    return []  # Retorna uma lista vazia se não houver dados
-
+                    return [] 
                 return data
 
     except Exception as e:
@@ -379,9 +372,7 @@ def GetProdutosEvento():
         return []
     
 def GetProdutosVendas():
-    """
-    Obtém os dados das vendas, incluindo o valor unitário (Valor_un).
-    """
+   
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
@@ -392,9 +383,9 @@ def GetProdutosVendas():
                 cursor.execute(query)
                 data = cursor.fetchall()
                 
-                # Verifica se a consulta retornou dados
+                
                 if not data:
-                    return []  # Retorna uma lista vazia se não houver dados
+                    return []  
 
                 return data
 
@@ -404,9 +395,7 @@ def GetProdutosVendas():
     
     
 def GetAllEventos():
-    """
-    Obtém os dados das vendas, incluindo o valor unitário (Valor_un).
-    """
+   
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
@@ -417,9 +406,9 @@ def GetAllEventos():
                 cursor.execute(query)
                 data = cursor.fetchall()
                 
-                # Verifica se a consulta retornou dados
+         
                 if not data:
-                    return []  # Retorna uma lista vazia se não houver dados
+                    return [] 
 
                 return data
 
@@ -428,12 +417,7 @@ def GetAllEventos():
         return []
     
 def GetContagemProduto(id_evento):
-    """
-    Retorna o número de produtos associados a um evento específico.
-
-    :param id_evento: ID do evento.
-    :return: Número de produtos associados ao evento.
-    """
+   
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
@@ -443,37 +427,31 @@ def GetContagemProduto(id_evento):
                     WHERE id_evento = %s
                 """
                 cursor.execute(query, (id_evento,))
-                contagem = cursor.fetchone()[0]  # Extrai o valor da contagem
+                contagem = cursor.fetchone()[0] 
                 return contagem
     except Exception as e:
         print(f"Erro ao contar produtos do evento {id_evento}: {e}")
-        return 0  # Retorna 0 em caso de erro
-    
+        return 0  
 def inserir_mudanca_card_init():
-    """
-    Insere um registro na tabela de mudanças com o tipo 'CARD_INIT' e a data/hora atual.
-
-    Args:
-        conn: Conexão ativa com o banco de dados.
-    """
+   
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
 
                 tabela = 'card tela'
                 tipo_mudanca = 'CARD'
-                data_modificacao = datetime.now()  # Data/hora atual
+                data_modificacao = datetime.now()  
 
-                # Query SQL para inserir o registro
+              
                 query = """
                     INSERT INTO log_mudancas (tabela, tipo_mudanca, data_modificacao)
                     VALUES (%s, %s,%s)
                 """
 
-                # Executa a query com os valores
+               
                 cursor.execute(query, (tabela, tipo_mudanca, data_modificacao))
 
-                # Confirma a transação
+               
                 conn.commit()
 
                 print("Registro inserido com sucesso!")
@@ -481,7 +459,7 @@ def inserir_mudanca_card_init():
                 return
 
     except Exception as e:
-        # Em caso de erro, faz rollback e exibe a mensagem de erro
+       
         conn.rollback()
         print(f"Erro ao inserir registro: {e}")
 
@@ -503,8 +481,7 @@ def GetQuantidadeProduto(product_id):
                 
     except Exception as e:
         print(f"Erro ao obter dados da tabela Produto: {e}")
-        return 0  # Retorna 0 em caso de 
-    
+        return 0 
 def GetQuantidadeProdutoEvento(product_id):
     try:
         with pool.connection() as conn:
@@ -521,15 +498,10 @@ def GetQuantidadeProdutoEvento(product_id):
                 
     except Exception as e:
         print(f"Erro ao obter dados da tabela Produto: {e}")
-        return 0  # Retorna 0 em caso de 
+        return 0  
     
 def VerificarSeProdutoEhEvento(id_produto):
-    """
-    Verifica se o produto é de um evento.
-
-    :param id_produto: ID do produto.
-    :return: True se o produto for de um evento, False caso contrário.
-    """
+  
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
@@ -538,9 +510,9 @@ def VerificarSeProdutoEhEvento(id_produto):
                 data = cursor.fetchone()
 
                 if data:
-                    return True  # O produto é de um evento
+                    return True 
                 else:
-                    return False  # O produto não é de um evento
+                    return False  
 
     except Exception as e:
         print(f"Erro ao verificar se o produto é de um evento: {e}")
@@ -549,21 +521,15 @@ def VerificarSeProdutoEhEvento(id_produto):
     
 
 def UpdateStatus(id_produto, status):
-    """
-    Atualiza o status de um produto no banco de dados.
-
-    :param id_produto: ID do produto.
-    :param status: Novo status do produto (ex: 'Ativo', 'Pausado', 'Esgotado').
-    """
+   
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Verifica se o produto é de um evento
+              
                 query_verificar_evento = "SELECT id_produto_evento FROM produtos_eventos WHERE id_produto_evento = %s"
                 cursor.execute(query_verificar_evento, (id_produto,))
                 is_evento = cursor.fetchone() is not None
 
-                # Atualiza o status na tabela correta
                 if is_evento:
                     query = "UPDATE produtos_eventos SET Condição = %s WHERE id_produto_evento = %s"
                 else:
@@ -578,27 +544,20 @@ def UpdateStatus(id_produto, status):
 
 
 def UpdateStock(id, quantidade):
-    """
-    Atualiza a quantidade e a quantidade disponível de um produto no banco de dados.
-    """
+   
     try:
         print("updatestock", id, quantidade)
 
-        # Obtendo uma conexão do pool de conexões
         with pool.connection() as conn:
-            # Criando um cursor para executar a query
             with conn.cursor() as cursor:
-                # Definindo a query de atualização
                 query = """
                 UPDATE pbstock.produtos
                 SET Quantidade = %s, 
                 Quantidade_Disponível = Quantidade_Disponível + %s
                 WHERE Id_produto = %s
                 """
-                # Executando a query com os parâmetros fornecidos
                 cursor.execute(query, (quantidade, quantidade, id))
 
-                # Confirmando as mudanças no banco
                 conn.commit()
 
         print("Status atualizado para o produto ID", id)
@@ -615,21 +574,21 @@ def UpdateStockEvento(id, quantidade):
     try:
         print("updatestock", id, quantidade)
 
-        # Obtendo uma conexão do pool de conexões
+       
         with pool.connection() as conn:
-            # Criando um cursor para executar a query
+         
             with conn.cursor() as cursor:
-                # Definindo a query de atualização
+               
                 query = """
                 UPDATE pbstock.produtos_eventos
                 SET Quantidade = %s, 
                 Quantidade_Disponível = Quantidade_Disponível + %s
                 WHERE id_produto_evento = %s
                 """
-                # Executando a query com os parâmetros fornecidos
+               
                 cursor.execute(query, (quantidade, quantidade, id))
 
-                # Confirmando as mudanças no banco
+             
                 conn.commit()
 
         print("Status atualizado para o produto ID", id)
@@ -641,17 +600,14 @@ def UpdateStockEvento(id, quantidade):
     
 
 def DecrementarEstoque(Quantidade_vendida, cod, filtro):
-    """
-    Decrementa a quantidade do estoque após a venda, baseado no Cód do produto ou produto de evento.
-    Garante que o estoque não fique negativo e define o status como 'Esgotado' se chegar a zero.
-    """
+  
     start_time = datetime.now()
 
     try:
-        # Converte a quantidade vendida para inteiro
+       
         Quantidade_vendida = int(Quantidade_vendida)
 
-        # Determina a tabela com base no filtro
+     
         if filtro == 'produto':
             tabela = 'produtos'
         elif filtro == 'produto evento':
@@ -659,7 +615,7 @@ def DecrementarEstoque(Quantidade_vendida, cod, filtro):
         else:
             raise HTTPException(status_code=400, detail="Filtro inválido. Use 'produto' ou 'produto evento'.")
 
-        # Primeiro, busca a quantidade atual do produto
+       
         query_busca = f"SELECT Quantidade_Disponível FROM pbstock.{tabela} WHERE Cód = %s"
 
         with pool.connection() as conn:
@@ -672,15 +628,15 @@ def DecrementarEstoque(Quantidade_vendida, cod, filtro):
 
             quantidade_atual = resultado[0]
 
-            # Verifica se a venda não deixará o estoque negativo
+    
             if Quantidade_vendida > quantidade_atual:
                 return "Quantidade insuficiente em estoque."
 
-            # Calcula a nova quantidade
+           
             nova_quantidade = max(quantidade_atual - Quantidade_vendida, 0)
             novo_status = 'Esgotado' if nova_quantidade == 0 else 'Ativo'
 
-            # Atualiza o estoque e o status
+
             query_update = f"""
             UPDATE pbstock.{tabela}
             SET Quantidade_Disponível = %s, Condição = %s
@@ -714,24 +670,23 @@ def GetProdutoNomesCod():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Consulta para buscar produtos da tabela produtos
+              
                 query_produtos = """
                     SELECT Produto, Cód FROM produtos
                 """
                 cursor.execute(query_produtos)
                 data_produtos = cursor.fetchall()
 
-                # Consulta para buscar produtos da tabela produtos_eventos
+              
                 query_produtos_eventos = """
                     SELECT Produto, Cód FROM produtos_eventos
                 """
                 cursor.execute(query_produtos_eventos)
                 data_produtos_eventos = cursor.fetchall()
 
-                # Combinar os resultados das duas consultas
                 combined_data = data_produtos + data_produtos_eventos
 
-                # Formatar os dados no formato "Produto - Cód"
+             
                 lista_produtos_cod = [f"{produto} - {cod}" for produto, cod in combined_data]
 
                 return lista_produtos_cod
@@ -742,49 +697,66 @@ def GetProdutoNomesCod():
     
     
 def getVendas():
-    """
-    Obtém a lista de produtos da tabela vendas.
-    Retorna uma lista de strings com os nomes dos produtos, sem duplicatas.
-    """
+   
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
                 query = "SELECT Produto FROM vendas"
                 cursor.execute(query)
                 data = cursor.fetchall()
-                # Extrai os nomes dos produtos das tuplas e remove duplicatas
-                produtos_unicos = list(set([item[0] for item in data]))  # Usa set para remover duplicatas
+                
+                produtos_unicos = list(set([item[0] for item in data])) 
                 return produtos_unicos
     except Exception as e:
         print(f"Erro ao obter dados da tabela Produto: {e}")
-        return []  # Retorna uma lista vazia em caso de erro
-
+        return []  
 
 def GetProdutoNomesCodAtivo():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Consulta para buscar produtos ativos da tabela produtos
+              
                 query_produtos = """
                     SELECT Produto, Cód FROM produtos WHERE Condição = 'Ativo'
                 """
                 cursor.execute(query_produtos)
                 data_produtos = cursor.fetchall()
 
-                # Consulta para buscar produtos ativos da tabela produtos_eventos
                 query_produtos_eventos = """
-                    SELECT Produto, Cód FROM produtos_eventos WHERE Condição = 'Ativo'
+                    SELECT Produto, Cód, id_evento FROM produtos_eventos WHERE Condição = 'Ativo'
                 """
                 cursor.execute(query_produtos_eventos)
                 data_produtos_eventos = cursor.fetchall()
 
-                # Combinar os resultados das duas consultas
-                combined_data = data_produtos + data_produtos_eventos
+               
+                eventos = {}
+                if data_produtos_eventos:
+                    
+                    id_eventos = list(set([row[2] for row in data_produtos_eventos]))
+                    
+                    
+                    query_eventos = """
+                        SELECT id_evento, nome FROM eventos WHERE id_evento IN %s
+                    """
+                    cursor.execute(query_eventos, (tuple(id_eventos),))
+                    eventos = {row[0]: row[1] for row in cursor.fetchall()}
 
-                # Formatar os dados no formato "Produto - Cód"
-                lista_produtos_cod = [f"{produto} - {cod}" for produto, cod in combined_data]
+                
+                combined_data = []
 
-                return lista_produtos_cod
+               
+                for produto, cod in data_produtos:
+                    combined_data.append(f"{produto} - {cod}")
+
+            
+                for produto, cod, id_evento in data_produtos_eventos:
+                    nome_evento = eventos.get(id_evento, "")
+                    if nome_evento:
+                        combined_data.append(f"{produto} - {nome_evento} - {cod}")
+                    else:
+                        combined_data.append(f"{produto} - {cod}")
+
+                return combined_data
 
     except Exception as e:
         print(f"Erro ao obter dados das tabelas Produto e Produtos_Eventos: {e}")
@@ -818,27 +790,25 @@ def gerar_id_evento():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Obtém o ano e mês atuais
                 data_atual = datetime.now()
                 ano_mes = data_atual.strftime('%Y%m')  # Formato AAAAMM
 
-                # Consulta o último ID gerado no mesmo ano e mês
                 query = "SELECT id_evento FROM eventos WHERE id_evento LIKE %s ORDER BY id_evento DESC LIMIT 1"
                 cursor.execute(query, (f"EVT{ano_mes}%",))
                 ultimo_id = cursor.fetchone()
 
                 if ultimo_id:
-                    # Extrai o número sequencial do último ID e incrementa
-                    ultimo_sequencial = int(ultimo_id[0][-4:])  # Pega os últimos 4 dígitos
+                    
+                    ultimo_sequencial = int(ultimo_id[0][-4:]) 
                     novo_sequencial = ultimo_sequencial + 1
                 else:
-                    # Se não houver IDs no mesmo ano/mês, começa com 0001
+                    
                     novo_sequencial = 1
 
-                # Formata o número sequencial com 4 dígitos
+              
                 codigo = f"{novo_sequencial:04d}"
 
-                # Retorna o ID completo
+                
                 return f"EVT{ano_mes}-{codigo}"
 
     except Exception as e:
@@ -860,28 +830,22 @@ def AdicionarEvento(id_evento,nome, data_inicio, data_fim, descricao):
         return
     
 def AdicionarProdutosEvento(id_evento, produtos):
-    """
-    Adiciona uma lista de produtos ao evento no banco de dados.
-
-    :param id_evento: ID do evento ao qual os produtos serão vinculados.
-    :param produtos: Lista de tuplas contendo os dados dos produtos.
-                    Cada tupla deve ter o formato (nome, quantidade, valor, descricao, codigo).
-    """
+   
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
                 for produto in produtos:
-                    # Extrai os dados do produto
-                    nome_produto = produto[0]  # Nome do produto
-                    quantidade = produto[1]    # Quantidade
-                    valor = produto[2]         # Valor unitário
-                    descricao_produto = produto[3]  # Descrição
-                    codigo_produto = produto[4]  # Código do produto
+                   
+                    nome_produto = produto[0]  
+                    quantidade = produto[1]   
+                    valor = produto[2]        
+                    descricao_produto = produto[3]  
+                    codigo_produto = produto[4] 
 
-                    # Obtém a data e hora atuais
+                    
                     data_atual = datetime.now()
 
-                    # Insere o produto no banco de dados
+                    
                     query = """
                         INSERT INTO produtos_eventos (
                             Produto, Cód, Quantidade, ValorPromocional, 
@@ -890,19 +854,19 @@ def AdicionarProdutosEvento(id_evento, produtos):
                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                     """
                     cursor.execute(query, (
-                        nome_produto,  # Nome do produto
-                        codigo_produto,  # Código do produto (já gerado)    
-                        quantidade,       # Quantidade
-                        valor,            # Valor promocional
-                        descricao_produto,  # Descrição
-                        data_atual,       # Data e hora atuais
-                        quantidade,       # Quantidade disponível (assumindo que é igual à quantidade)
-                        id_evento,        # ID do evento
+                        nome_produto,  
+                        codigo_produto,   
+                        quantidade,      
+                        valor,            
+                        descricao_produto, 
+                        data_atual,       
+                        quantidade,      
+                        id_evento,        
                     ))
                 conn.commit()
     except Exception as e:
         print(f"Erro ao cadastrar produtos: {e}")
-        raise  # Re-lança a exceção para ser tratada no chamador
+        raise 
 
     
 def GetUltimoCodigo():
@@ -923,14 +887,14 @@ def GetRecentsProduct():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Define a data limite (5 dias atrás)
+              
                 data_limite = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d %H:%M:%S")
                 
-                # Logs para depuração
+                
                 print("Data limite:", data_limite)
                 print("Horário agora:", datetime.now())
 
-                # Query SQL para buscar produtos recentes que não excederam 5 dias
+            
                 query = """
                 SELECT Produto, Cód, Quantidade, ValorUn, Descrição, Data 
                 FROM produtos 
@@ -950,32 +914,29 @@ def GetValueProduto(cod):
         
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Verifica se o código contém "EVT"
                 if "EVT" in cod:
-                    # Consulta na tabela produtos_eventos
                     query = "SELECT ValorPromocional FROM produtos_eventos WHERE Cód = %s"
                 else:
-                    # Consulta na tabela produtos
                     query = "SELECT ValorUn FROM produtos WHERE Cód = %s"
                 
-                cursor.execute(query, (cod,))  # Passa o código como parâmetro para evitar SQL injection
-                result = cursor.fetchone()  # Busca apenas uma linha (já que estamos procurando por um código específico)
-
+                cursor.execute(query, (cod,)) 
+                result = cursor.fetchone()  
                 if result:
-                    valor_un = result[0]  # Pega o valor unitário (primeira coluna do resultado)
-                    return valor_un  # Retorna apenas o valor unitário
+                    valor_un = result[0] 
+                    return valor_un 
                 else:
                     print(f"Produto com código {cod} não encontrado.")
-                    return None  # Retorna None se o produto não for encontrado
+                    return None  
 
     except Exception as e:
         print(f"Erro ao obter dados da tabela Produto: {e}")
-        return None  # Retorna None em caso de erro
+        return None 
 
 
     
 def DataLoginUser(User, Password):
-    
+    from datetime import datetime
+
     start_time = datetime.now()
 
     try:
@@ -983,12 +944,12 @@ def DataLoginUser(User, Password):
             cursor = conn.cursor()
             connection_time = datetime.now() - start_time
 
-            query = "SELECT * FROM usuários WHERE Login = %s AND Senha = %s"
+            query = "SELECT * FROM usuários WHERE BINARY Login = %s AND BINARY Senha = %s"
             query_start_time = datetime.now()
-            cursor.execute(query, (User, Password))  # Usando parâmetros para evitar injeção de SQL
+            cursor.execute(query, (User, Password)) 
             query_execution_time = datetime.now() - query_start_time
 
-            user = cursor.fetchone()  # Pega apenas o primeiro resultado (não precisa de um 'for' aqui)
+            user = cursor.fetchone()  
             
             total_execution_time = datetime.now() - start_time
 
@@ -1006,6 +967,7 @@ def DataLoginUser(User, Password):
         return {'status': 'error', 'message': str(e)}
 
 
+
 def GetCardsInfo(intervalo):
     """
     Retorna os 3 produtos mais vendidos com base no intervalo de data especificado.
@@ -1017,43 +979,43 @@ def GetCardsInfo(intervalo):
     Retorno:
         Lista de tuplas contendo (produto, quantidade_total) em ordem decrescente de quantidade.
     """
-    start_time = datetime.now()  # Marca o início da execução da função
+    start_time = datetime.now() 
 
     try:
-        # Inicia a conexão e mede o tempo
+       
         with pool.connection() as conn:
             cursor = conn.cursor()
 
-            # Calcula o tempo de conexão
+           
             connection_time = datetime.now() - start_time
 
-            # Define a coluna a ser usada com base no intervalo
+           
             if intervalo == 'dia':
                 coluna = 'venda_dia'
             elif intervalo == 'semana':
                 coluna = 'venda_semana'
             elif intervalo == 'mes':
                 coluna = 'venda_mes'
-            else:  # 'total' ou qualquer outro valor
+            else: 
                 coluna = 'venda_total'
 
-            # Prepara e executa a consulta
             query_start_time = datetime.now()
             cursor.execute(f"""
                 SELECT produto, {coluna}
                 FROM vendas_produtos
+                WHERE venda_total > 0  -- Sempre aplica a condição venda_total > 0
                 ORDER BY {coluna} DESC
                 LIMIT 3
             """)
-            query_execution_time = datetime.now() - query_start_time  # Tempo de execução da query
+            query_execution_time = datetime.now() - query_start_time  
 
-            # Obtém os dados da consulta
             dados = cursor.fetchall()
 
-            # Formata o resultado como uma lista de tuplas (produto, quantidade)
+            if not dados:
+                return []
+
             resultado_formatado = [(produto, quantidade) for produto, quantidade in dados]
 
-            # Calcula o tempo total de execução
             total_execution_time = datetime.now() - start_time
             print(f"Tempo de Conexão: {connection_time.total_seconds():.4f} segundos")
             print(f"Tempo de Execução da Query: {query_execution_time.total_seconds():.4f} segundos")
@@ -1063,14 +1025,13 @@ def GetCardsInfo(intervalo):
 
     except Exception as e:
         print(f"Erro ao processar os dados getcard: {e}")
-        return None
+        return []
     
 
 def GetRecentSales():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Consulta SQL para buscar as vendas recentes
                 query = """
                     SELECT Produto, Quantidade_vendida, Vendedor
                     FROM vendas
@@ -1078,26 +1039,23 @@ def GetRecentSales():
                     LIMIT 3
                 """
                 cursor.execute(query)
-                results = cursor.fetchall()  # Busca todas as linhas retornadas
-
+                results = cursor.fetchall() 
                 if results:
-                    return results  # Retorna as vendas com as três colunas
+                    return results  
                 else:
                     print("Nenhuma venda recente encontrada.")
-                    return []  # Retorna uma lista vazia se não houver vendas
+                    return []  
 
     except Exception as e:
         print(f"Erro ao obter dados das vendas recentes: {e}")
-        return []  # Retorna uma lista vazia em caso de erro
-    
+        return [] 
 def UpdateTimes():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Obtém a data atual (apenas a parte da data, sem hora)
+               
                 agora = datetime.now().date()
 
-                # Obtém as próximas datas de atualização
                 query = """
                 SELECT proxima_mudanca_dia, proxima_mudanca_semana, proxima_mudanca_mes
                 FROM atualizacao
@@ -1106,14 +1064,12 @@ def UpdateTimes():
                 cursor.execute(query)
                 result = cursor.fetchone()
 
-                # Se o resultado for None ou algum valor vazio, retorna sem fazer nada
                 if not result or not all(result):
                     print("Nenhuma data de atualização definida, nada a fazer.")
                     return False
 
                 proxima_dia, proxima_semana, proxima_mes = result
 
-                # Verifica se as variáveis são do tipo datetime.date e já estão no formato correto
                 if isinstance(proxima_dia, datetime):
                     proxima_dia = proxima_dia.date()
                 if isinstance(proxima_semana, datetime):
@@ -1121,12 +1077,10 @@ def UpdateTimes():
                 if isinstance(proxima_mes, datetime):
                     proxima_mes = proxima_mes.date()
 
-                # Verifica se agora é maior ou igual a pelo menos uma das datas de atualização
                 if not (agora >= proxima_dia or agora >= proxima_semana or agora >= proxima_mes):
                     print("Nenhuma data de atualização atingida. Saindo da função sem alterações.")
                     return False
 
-                # Verifica se é hora de zerar as vendas do dia
                 if agora >= proxima_dia:
                     cursor.execute("UPDATE vendas_produtos SET venda_dia = 0")
                     nova_proxima_dia = agora + timedelta(days=1)
@@ -1136,10 +1090,8 @@ def UpdateTimes():
                     """, (nova_proxima_dia.strftime("%Y-%m-%d"),))
                     print("Vendas do dia zeradas!")
 
-                # Verifica se é hora de zerar as vendas da semana
                 if agora >= proxima_semana:
                     cursor.execute("UPDATE vendas_produtos SET venda_semana = 0")
-                    # Calcula o início da próxima semana
                     dias_ate_proxima_semana = 7 - agora.weekday()
                     nova_proxima_semana = agora + timedelta(days=dias_ate_proxima_semana)
                     cursor.execute("""
@@ -1148,10 +1100,8 @@ def UpdateTimes():
                     """, (nova_proxima_semana.strftime("%Y-%m-%d"),))
                     print("Vendas da semana zeradas!")
 
-                # Verifica se é hora de zerar as vendas do mês
                 if agora >= proxima_mes:
                     cursor.execute("UPDATE vendas_produtos SET venda_mes = 0")
-                    # Calcula o primeiro dia do próximo mês
                     primeiro_dia_proximo_mes = (agora.replace(day=1) + timedelta(days=32)).replace(day=1)
                     cursor.execute("""
                         UPDATE atualizacao
@@ -1159,7 +1109,6 @@ def UpdateTimes():
                     """, (primeiro_dia_proximo_mes.strftime("%Y-%m-%d"),))
                     print("Vendas do mês zeradas!")
 
-                # Confirma as alterações (só vai fazer o commit se for necessário)
                 conn.commit()
                 return True
 
@@ -1177,16 +1126,13 @@ def GetEventosAtivos():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Query para buscar os eventos ativos
                 query = "SELECT nome, data_inicio FROM eventos"
                 cursor.execute(query)
                 data = cursor.fetchall()
 
-                # Se não houver dados, retorna uma lista vazia
                 if not data:
                     return []
                 
-                # Retorna os dados diretamente, sem formatação
                 return data
 
     except Exception as e:
@@ -1202,12 +1148,10 @@ def getevento():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Query para buscar os eventos ativos
                 query = "SELECT nome FROM eventos"
                 cursor.execute(query)
                 data = cursor.fetchall()
 
-                # Se não houver dados, retorna uma lista vazia
                 return [evento[0] for evento in data] if data else []
 
     except Exception as e:
@@ -1220,7 +1164,6 @@ def GetItensForaEstoque():
     try:
         with pool.connection() as conn:
             with conn.cursor() as cursor:
-                # Query para buscar os produtos esgotados nas duas tabelas
                 query = """
                     SELECT Produto, Data
                     FROM produtos
@@ -1233,16 +1176,34 @@ def GetItensForaEstoque():
                 cursor.execute(query)
                 data = cursor.fetchall()
 
-                # Se não houver dados, retorna uma lista vazia
                 if not data:
                     return []
 
-                # Retorna os produtos e suas respectivas datas
                 return data
 
     except Exception as e:
         print(f"Erro ao obter dados dos produtos esgotados: {e}")
         return []
+    
+def ExcluirEvento(id_evento):
+    try:
+        with pool.connection() as conn:
+            with conn.cursor() as cursor:
+                query = "DELETE FROM eventos WHERE id_evento = %s"
+                cursor.execute(query, (id_evento,))
+                conn.commit() 
+
+                if cursor.rowcount > 0:
+                    print(f"Evento com ID {id_evento} excluído com sucesso.")
+                    return True
+                else:
+                    print(f"Nenhum evento encontrado com o ID {id_evento}.")
+                    return False
+
+    except Exception as e:
+        print(f"Erro ao excluir evento: {e}")
+        return False
+    
 
     
 #def excluir_venda(id_venda):

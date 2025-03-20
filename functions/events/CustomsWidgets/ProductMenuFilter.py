@@ -1,19 +1,18 @@
 from PyQt5.QtWidgets import QDialog
 from PyQt5.QtGui import QIcon
 from functions.events.DabaseEvents.UpdateTables import AtualizarTabelasProdutosStatus
-from view.pages.filterbotao import Ui_Dialog  # Importando a classe gerada do arquivo .ui
-from view.QRC import file_principal_rc  # Importando o arquivo de recursos
+from functions.events.InterfaceError.popup import Popup
+from view.pages.filterbotao import Ui_Dialog  
+from view.QRC import file_principal_rc  
 
 
 class FiltroDialog(QDialog, Ui_Dialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setupUi(self)  # Inicializa a interface gerada pela classe Ui_Dialog
+        self.setupUi(self)  
 
-        # Conectar o botão "Aplicar" à função aplicar_filtros
         self.filter_aplicar_btn.clicked.connect(self.aplicar_filtros)
 
-        # Definir o foco no botão "Aplicar"
         self.filter_aplicar_btn.setFocus()
 
     def aplicar_filtros(self):
@@ -30,90 +29,56 @@ class FiltroDialog(QDialog, Ui_Dialog):
 
         if filtros: 
             print("Filtros aplicados:", filtros)
-            # Atualiza os botões no parent (MainWindow)
             if self.parent():
                 self.parent().atualizar_botoes_pesquisar(filtros)
         else:
             print("Nenhum filtro selecionado.")
 
-        self.close()  # Fecha o diálogo após aplicar os filtros
+        self.close() 
 
 
 def FILTERPRODUTO(ui, parent_widget):
-    """
-    Configura os botões de pesquisa para abrir a janela de filtro e atualizar os ícones.
 
-    Args:
-        ui: A interface gerada pelo pyuic5 (por exemplo, Ui_FrmAdmin).
-        parent_widget: O widget pai (por exemplo, a janela principal ou o widget que contém os botões).
-    """
     def abrir_menu_filtro(ui):
-        """Abre o diálogo de filtros."""
-        dialog = FiltroDialog(parent_widget)  # Passa o widget pai como parent para o diálogo
-        dialog.exec_()  # Exibe o diálogo de forma modal
+        dialog = FiltroDialog(parent_widget) 
+        dialog.exec_() 
 
-    def atualizar_botoes_pesquisar(ui, filtros):
-        """Atualiza o visual dos botões com base nos filtros aplicados."""
-        AtualizarTabelasProdutosStatus(ui, filtros)
+    def atualizar_botoes_pesquisar(ui, filtros=None):
 
-        if filtros:
-            # Atualiza o botão "btn_pesquisar_produto"
-            ui.btn_pesquisar_produto.setIcon(QIcon(":/icones/removefilter2.png"))  # Adiciona um ícone de "X"
-            ui.btn_pesquisar_produto.setText("")  # Limpa o texto, deixando apenas o ícone
-
-            # Evitar múltiplas conexões ao botão
-            try:
-                ui.btn_pesquisar_produto.clicked.disconnect()  # Remove conexões anteriores
-            except TypeError:
-                pass  # Se já estiver desconectado, ignora o erro
-
-            ui.btn_pesquisar_produto.clicked.connect(lambda: remover_filtros(ui))  # Conecta à função de remover filtros
-
-            # Atualiza o botão "btn_pesquisar_alterar_produto"
-            ui.btn_pesquisar_alterar_produto.setIcon(QIcon(":/icones/removefilter2.png"))  # Adiciona um ícone de "X"
-            ui.btn_pesquisar_alterar_produto.setText("")  # Limpa o texto, deixando apenas o ícone
-
-            # Evitar múltiplas conexões ao botão
-            try:
-                ui.btn_pesquisar_alterar_produto.clicked.disconnect()  # Remove conexões anteriores
-            except TypeError:
-                pass  # Se já estiver desconectado, ignora o erro
-
-            ui.btn_pesquisar_alterar_produto.clicked.connect(lambda: remover_filtros(ui))  # Conecta à função de remover filtros
-        else:
-            # Restaura o ícone da lupa no botão "btn_pesquisar_produto"
-            ui.btn_pesquisar_produto.setIcon(QIcon(":/icones/lupa.png"))  # Caminho do ícone no arquivo .qrc
-            ui.btn_pesquisar_produto.setText("")  # Limpa o texto, deixando apenas o ícone
-
-            # Evitar múltiplas conexões ao botão
-            try:
-                ui.btn_pesquisar_produto.clicked.disconnect()  # Remove conexões anteriores
-            except TypeError:
-                pass  # Se já estiver desconectado, ignora o erro
-
-            ui.btn_pesquisar_produto.clicked.connect(lambda: abrir_menu_filtro(ui))  # Conecta à função de abrir filtro
-
-            # Restaura o ícone da lupa no botão "btn_pesquisar_alterar_produto"
-            ui.btn_pesquisar_alterar_produto.setIcon(QIcon(":/icones/lupa.png"))  # Caminho do ícone no arquivo .qrc
-            ui.btn_pesquisar_alterar_produto.setText("")  # Limpa o texto, deixando apenas o ícone
-
-            # Evitar múltiplas conexões ao botão
-            try:
-                ui.btn_pesquisar_alterar_produto.clicked.disconnect()  # Remove conexões anteriores
-            except TypeError:
-                pass  # Se já estiver desconectado, ignora o erro
+        try:
+            if filtros is None:
+                filtros = []
+    
+            AtualizarTabelasProdutosStatus(ui, filtros)
+    
+            def configurar_botao(botao, icone, funcao):
+                botao.setIcon(QIcon(icone))  
+                botao.setText("") 
+                try:
+                    botao.clicked.disconnect() 
+                except TypeError:
+                    pass  
+                botao.clicked.connect(funcao) 
+    
+            if filtros:
+                configurar_botao(ui.btn_pesquisar_produto, ":/icones/removefilter2.png", lambda: remover_filtros(ui))
+                configurar_botao(ui.btn_pesquisar_alterar_produto, ":/icones/removefilter2.png", lambda: remover_filtros(ui))
+            else:
+                configurar_botao(ui.btn_pesquisar_produto, ":/icones/lupa.png", lambda: abrir_menu_filtro(ui))
+                configurar_botao(ui.btn_pesquisar_alterar_produto, ":/icones/lupa.png", lambda: abrir_menu_filtro(ui))
+    
+        except Exception as e:
+            print(f"Erro ao atualizar botões de pesquisa: {e}")
+            Popup(f"Erro ao atualizar botões de pesquisa: {e}")
 
            
 
     def remover_filtros(ui):
-        """Remove os filtros e restaura os botões ao estado original."""
         print("Filtros removidos.")
-        atualizar_botoes_pesquisar(ui, [])  # Atualiza os botões para o estado original
+        atualizar_botoes_pesquisar(ui, [])  
 
-    # Conectar os botões à função abrir_menu_filtro
-    ui.btn_pesquisar_alterar_produto.clicked.connect(lambda: abrir_menu_filtro(ui))  # Conecta à função de abrir filtro
+    ui.btn_pesquisar_alterar_produto.clicked.connect(lambda: abrir_menu_filtro(ui)) 
     ui.btn_pesquisar_produto.clicked.connect(lambda: abrir_menu_filtro(ui))
     ui.OutStockButton.clicked.connect(lambda: (ui.Telas_do_menu.setCurrentWidget(ui.pg_produtos), atualizar_botoes_pesquisar(ui, filtros=["Esgotado","Eventos"])))
 
-    # Adicionar o método atualizar_botoes_pesquisar ao widget pai
     parent_widget.atualizar_botoes_pesquisar = lambda filtros: atualizar_botoes_pesquisar(ui, filtros)

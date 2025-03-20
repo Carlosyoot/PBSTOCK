@@ -10,7 +10,6 @@ class UiTabelaProduto:
     
     @staticmethod
     def setup_table(ui):
-        """Configurações iniciais da tabela."""
         ui.tabela_produto.setContextMenuPolicy(Qt.CustomContextMenu)
         ui.tabela_produto.customContextMenuRequested.connect(lambda pos: UiTabelaProduto.MostrarMenu(ui, pos))
         ui.tabela_produto.setFocusPolicy(Qt.NoFocus)
@@ -20,9 +19,8 @@ class UiTabelaProduto:
         
     @staticmethod
     def block_column_selection(ui):
-        """Impede a seleção da coluna 5, mesmo em seleções múltiplas."""
         for index in ui.tabela_produto.selectedIndexes():
-            if index.column() == 5:  # Coluna que não deve ser selecionável
+            if index.column() == 5:  
                 ui.tabela_produto.selectionModel().select(index, ui.tabela_produto.selectionModel().Deselect)
 
     @staticmethod
@@ -87,7 +85,6 @@ class UiTabelaProduto:
     def FecharMenu(ui, Menu, MenuEscolhido):
         Menu.close()
 
-        # Agora verifica qual ação foi selecionada com base no identificador
         if MenuEscolhido == "Renovar":
             UiTabelaProduto.AbrirJanelaRenovar(ui, ui.tabela_produto.currentRow())
         elif MenuEscolhido == "Pausar":
@@ -97,100 +94,76 @@ class UiTabelaProduto:
 
     @staticmethod
     def AbrirJanelaRenovar(ui, linha):
-        # Criação do diálogo utilizando a classe Ui_Dialog gerada pelo pyuic
-        dialog = QDialog(ui.tabela_produto)  # Criação do QDialog
-        ui_dialog = Ui_Dialog()  # Instancia a classe Ui_Dialog gerada
-        ui_dialog.setupUi(dialog)  # Configura a interface do diálogo
+        dialog = QDialog(ui.tabela_produto)  
+        ui_dialog = Ui_Dialog()  
+        ui_dialog.setupUi(dialog)  
 
-        # Conectar a ação do botão de confirmação
         ui_dialog.finalizar_renovar.clicked.connect(lambda: UiTabelaProduto.ConfirmarRenovação(ui, dialog, linha, ui_dialog.line_renovar_quantidade.text(), ui_dialog.renovar_checkbox))
 
-        # Exibe o diálogo
         dialog.exec_()
 
     @staticmethod
     def ConfirmarRenovação(ui, dialog, linha, quantidade, renovar_padrao_checkbox):
         try:
-            # Verifica se ambos os campos foram preenchidos: a quantidade manual e o checkbox
             if renovar_padrao_checkbox.isChecked() and quantidade:
-                # Se ambos forem preenchidos, exibe uma mensagem de erro
                 QMessageBox.warning(ui.tabela_produto, "Erro", "Escolha apenas uma opção: insira a quantidade ou marque a opção de renovar com a mesma quantidade.")
                 return
 
-            # Se o checkbox estiver marcado, usar a quantidade padrão (10)
             if renovar_padrao_checkbox.isChecked():
-                # Obtém o ID do produto
                 id_produto = ui.IDPRODUTOQUANTIDADE
 
-                # Verifica se o produto é de um evento
                 is_evento = VerificarSeProdutoEhEvento(id_produto)
 
-                # Obtém a quantidade atual do produto
                 if is_evento:
-                    quantidade = GetQuantidadeProdutoEvento(id_produto)  # Função para produtos de eventos
+                    quantidade = GetQuantidadeProdutoEvento(id_produto)  
                 else:
-                    quantidade = GetQuantidadeProduto(id_produto)  # Função para produtos normais
+                    quantidade = GetQuantidadeProduto(id_produto)
 
-            # Validar se a quantidade inserida é um número válido
             try:
-                quantidade = int(quantidade)  # Tenta converter para inteiro
+                quantidade = int(quantidade)  
                 if quantidade <= 0:
-                    raise ValueError  # Se a quantidade for 0 ou negativa, gera um erro
+                    raise ValueError  
             except ValueError:
                 QMessageBox.warning(ui.tabela_produto, "Erro", "Por favor, insira uma quantidade válida.")
                 return
 
-            # Atualizar o status do produto para 'Ativo'
             UiTabelaProduto.AtualizarStatus(ui, linha, "Ativo")
 
-            # Obtém o ID do produto
             id_produto = ui.IDPRODUTOQUANTIDADE
 
-            # Verifica se o produto é de um evento
             is_evento = VerificarSeProdutoEhEvento(id_produto)
 
-            # Chamar a função para atualizar o estoque no banco de dados
             if is_evento:
-                UpdateStockEvento(id_produto, quantidade)  # Função para atualizar estoque de produtos de eventos
+                UpdateStockEvento(id_produto, quantidade) 
             else:
-                UpdateStock(id_produto, quantidade)  # Função para atualizar estoque de produtos normais
+                UpdateStock(id_produto, quantidade)  
 
-            # Fechar o box
             dialog.accept()
 
-            # Exibir uma mensagem de sucesso
             QMessageBox.information(ui.tabela_produto, "Sucesso", f"Estoque renovado com {quantidade} unidades.")
 
         except Exception as e:
-        # Tratar erros (como exceções de conversão de tipo)
             QMessageBox.critical(ui.tabela_produto, "Erro", f"Ocorreu um erro: {str(e)}")
 
     @staticmethod
     def AtualizarStatus(ui, linha, texto):
         try:
-            # Verifica se a linha é válida
             if linha < 0 or linha >= ui.tabela_produto.rowCount():
                 print(f"Erro: Linha {linha} fora dos limites da tabela.")
                 return
     
-            # Obtém o item da coluna de status (coluna 5)
             item = ui.tabela_produto.item(linha, 5)
     
-            # Se o item não existir, cria um novo
             if item is None:
-                item = QTableWidgetItem()  # Cria um novo QTableWidgetItem
-                ui.tabela_produto.setItem(linha, 5, item)  # Define o item na tabela
+                item = QTableWidgetItem()  
+                ui.tabela_produto.setItem(linha, 5, item)  
     
-            # Atualiza o texto do item
             item.setText(texto)
     
-            # Obtém o ID do produto
             id_produto = ui.IDPRODUTOQUANTIDADE
     
-            # Atualiza o status no banco de dados
             UpdateStatus(id_produto, texto)
     
-            # Aplica a estilização ao item
             UiTabelaProduto.EstilizarStatus(item, texto)
     
         except Exception as e:
@@ -213,9 +186,8 @@ class UiTabelaProduto:
 
     @staticmethod
     def Estilizar(ui):
-        """Percorre as linhas da tabela e aplica a estilização de status."""
         for linha in range(ui.tabela_produto.rowCount()):
-            item = ui.tabela_produto.item(linha, 5)  # Coluna de status
+            item = ui.tabela_produto.item(linha, 5)  
             if item:
                 texto_status = item.text()
                 UiTabelaProduto.EstilizarStatus(item, texto_status)

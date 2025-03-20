@@ -8,38 +8,26 @@ from openpyxl.utils import get_column_letter
 import os
 
 from functions.events.InterfaceError.popup import Popup
-# Caminho para a pasta Documentos do usuário
 documentos_path = os.path.expanduser("~/Documents")
 
-# Caminho para a pasta PBSTOCK dentro de Documentos
 pbstock_path = os.path.join(documentos_path, "PBSTOCK")
 
-# Verifica se a pasta PBSTOCK existe, se não, cria a pasta
 if not os.path.exists(pbstock_path):
     os.makedirs(pbstock_path)
 
 
 
 def exportar_para_excel(ui, nome_arquivo="tabela_monitoramento.xlsx"):
-    """
-    Exporta a tabela_monitoramento para um arquivo Excel.
-
-    :param ui: Interface do usuário (contendo a tabela_monitoramento).
-    :param nome_arquivo: Nome do arquivo Excel a ser gerado.
-    """
+   
     try:
-        # Caminho completo para o arquivo Excel
         caminho_completo = os.path.join(pbstock_path, nome_arquivo)
 
-        # Coleta os dados da tabela
         dados = []
         colunas = []
 
-        # Obtém os cabeçalhos da tabela
         for col in range(ui.tabela_monitoramento.columnCount()):
             colunas.append(ui.tabela_monitoramento.horizontalHeaderItem(col).text())
 
-        # Obtém os dados da tabela
         for row in range(ui.tabela_monitoramento.rowCount()):
             linha = []
             for col in range(ui.tabela_monitoramento.columnCount()):
@@ -47,41 +35,34 @@ def exportar_para_excel(ui, nome_arquivo="tabela_monitoramento.xlsx"):
                 if item is not None:
                     linha.append(item.text())
                 else:
-                    linha.append("")  # Célula vazia
+                    linha.append("")  
             dados.append(linha)
 
-        # Cria um DataFrame do pandas
         df = pd.DataFrame(dados, columns=colunas)
 
-        # Cria um arquivo Excel usando openpyxl
         with pd.ExcelWriter(caminho_completo, engine='openpyxl') as writer:
             df.to_excel(writer, sheet_name='Monitoramento', index=False)
             workbook = writer.book
             worksheet = writer.sheets['Monitoramento']
 
-            # Define larguras de coluna (3,00 cm para todas, 4,00 cm para a última)
-            col_widths = [17] * (len(colunas))  # 3,00 cm para todas as colunas
-            col_widths[-1] = 17.07  # 4,00 cm para a última coluna
+            col_widths = [17] * (len(colunas))  
+            col_widths[-1] = 17.07  
 
             for i, width in enumerate(col_widths, start=1):
                 col_letter = get_column_letter(i)
                 worksheet.column_dimensions[col_letter].width = width
 
-            # Estilo de cabeçalho: cor cinza claro
             cinza_claro = PatternFill(start_color='D3D3D3', end_color='D3D3D3', fill_type='solid')
 
-            # Estilo de borda
             borda = Border(left=Side(style='thin'),
                            right=Side(style='thin'),
                            top=Side(style='thin'),
                            bottom=Side(style='thin'))
 
-            # Aplica o estilo ao cabeçalho
             for col_num, cell in enumerate(worksheet[1], start=1):
                 cell.fill = cinza_claro
                 cell.border = borda
 
-            # Aplica bordas às células com dados
             for row in worksheet.iter_rows(min_row=2, max_row=worksheet.max_row, min_col=1, max_col=worksheet.max_column):
                 for cell in row:
                     cell.border = borda
@@ -93,19 +74,15 @@ def exportar_para_excel(ui, nome_arquivo="tabela_monitoramento.xlsx"):
         Popup(f"Erro ao exportar para PDF: {e}")
         
 def exportar_para_pdf(tabela, nome_arquivo="tabela_monitoramento.pdf"):
-    """Exporta a tabela para PDF."""
     try:
-        # Caminho completo para o arquivo PDF
         caminho_completo = os.path.join(pbstock_path, nome_arquivo)
 
-        # Coleta os dados da tabela
         dados = [[tabela.horizontalHeaderItem(col).text() for col in range(tabela.columnCount())]]
         for row in range(tabela.rowCount()):
             linha = [tabela.item(row, col).text() if tabela.item(row, col) else "" for col in range(tabela.columnCount())]
             dados.append(linha)
 
-        # Cria o PDF
-        pdf_document = SimpleDocTemplate(caminho_completo, pagesize=A4)  # Renomeado para evitar conflito
+        pdf_document = SimpleDocTemplate(caminho_completo, pagesize=A4)  
         estilo_tabela = TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
@@ -119,7 +96,6 @@ def exportar_para_pdf(tabela, nome_arquivo="tabela_monitoramento.pdf"):
         tabela_pdf.setStyle(estilo_tabela)
         pdf_document.build([tabela_pdf])
 
-        # Exibe uma mensagem de sucesso com o caminho do arquivo
         Popup(f"Tabela exportada para \n{caminho_completo}")
 
     except Exception as e:

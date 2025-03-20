@@ -3,21 +3,15 @@ from functions.events.CustomsWidgets.ProductMenuFilter import FILTERPRODUTO
 from functions.events.CustomsWidgets.cardInit import init_custom_frame
 from functions.events.DabaseEvents.UpdateTables import InitializeTables
 from functions.events.NavEvents.autoFormater import initAutoFormatar
-from functions.events.searchs.ColaboradorSearch import AtualizaCompleterSearchColaboradores
-from functions.events.searchs.ProdutoSearch import AtualizaCompleterSearchProdutos
 from functions.events.alterable.ManagerAlter import IniciarAlterarText
 from PyQt5.QtCore import Qt
 
-from functions.events.searchs.eventos import AtualizaCompleterSearchEventos
-from functions.events.searchs.monitoramentoSearch import AtualizaCompleterSearchMonitoramento
-from functions.events.searchs.vendas import AtualizaCompleterSearchVendas
 
 
 
 
 def conectar_eventos(ui, parent):
         """Função que atribui eventos aos botões da UI"""
-        # Conectar botões de navegação
         ui.btn_home.clicked.connect(lambda: ui.Telas_do_menu.setCurrentWidget(ui.pg_home))
         ui.btn_colaboradores.clicked.connect(lambda: ui.Telas_do_menu.setCurrentWidget(ui.pg_colaboradores))
         ui.btn_cadastrar_colaboradores.clicked.connect(lambda: ui.Telas_do_menu.setCurrentWidget(ui.pg_cadastro_colaboradores))
@@ -56,7 +50,6 @@ def conectar_eventos(ui, parent):
         
         
 
-        # Conecta os botões à função de alternância
 
 
 
@@ -68,7 +61,7 @@ def conectar_eventos(ui, parent):
         #ui.tabela_vendas.setColumnWidth(3, 50)
         #ui.tabela_vendas.setColumnWidth(4, 50)
         #ui.tabela_vendas.setColumnWidth(5, 50)
-#       
+     
         ui.tabela_produto.setColumnWidth(0, 180)
         ui.tabela_produto.setColumnWidth(1, 80)
         ui.tabela_produto.setColumnWidth(2, 80)
@@ -103,30 +96,22 @@ def conectar_eventos(ui, parent):
         ui.tabela_colaboradores.setColumnWidth(2, 270)  
         
         
-#
-        #ui.tabela_alterar_produto_2.setColumnWidth(0, 50)
-        #ui.tabela_alterar_produto_2.setColumnWidth(1, 50)
-        #ui.tabela_alterar_produto_2.setColumnWidth(2, 50)
-        #ui.tabela_alterar_produto_2.setColumnWidth(3, 50)
-        #ui.tabela_alterar_produto_2.setColumnWidth(4, 50)
-        #ui.tabela_alterar_produto_2.setColumnWidth(5, 50)
 
-        # Configurações do filtro de vendas
+
         
         
         ui.valor_filtro = None
         ui.line_data_venda.setPlaceholderText("Data: DD/MM/YYYY")
-        ui.line_data_horario.setPlaceholderText("Hora: HH:MM")  # Define o placeholder
+        ui.line_data_horario.setPlaceholderText("Hora: HH:MM") 
         
         UpdateTimes()
         initAutoFormatar(ui)
         IniciarAlterarText(ui)
-        FILTERPRODUTO(ui, parent)  # Passa a UI (self.ui) e o widget pai (self) como argumentos
+        FILTERPRODUTO(ui, parent) 
         init_custom_frame(ui)
         InitializeTables(ui)
         
         
         
-       
-# py            uic5 -o view/ui/FrmAdmin.py view/ui/FrmAdmin.ui
+# pyuic5 -o view/ui/FrmAdmin.py view/ui/FrmAdmin.ui
 # pyrcc5 -o view/QRC/file_principal_rc.py view/QRC/file_principal_rc.qrc

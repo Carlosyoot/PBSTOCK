@@ -34,7 +34,6 @@ def AlterarColaboradores(ui):
 
     
         
-    # Chama a função para atualizar o usuário no banco de dados
     response = AlterarUsuario(Oldusername, Nome, DataNasc, Login, Senha, Cpf)
     SucessPopup(response.get("message", "Cadastro realizado com sucesso!"))
     
@@ -75,12 +74,9 @@ def AlterarProdutos(ui):
         return
 
     try:
-        # Verifica se o produto é de um evento
         if VerificarSeProdutoEhEvento(Id):
-            # Se for um produto de evento, chama a função de alteração de produto de evento
             response = AlterarProdutoEvento(Id, Nome, Quantidade, Valor, Descrição)
         else:
-            # Se não for um produto de evento, chama a função de alteração de produto normal
             response = AlterarProduto(Id, Nome, Quantidade, Valor, Descrição)
         
         SucessPopup(response.get("message", "Cadastro realizado com sucesso!"))

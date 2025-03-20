@@ -7,6 +7,7 @@ from functions.events.DabaseEvents.Alterar import *
 from functions.events.searchs.ColaboradorSearch import filtrar_tabela_colaboradores, reexibir_tabela_colaboradores
 from functions.events.DabaseEvents.Exports import *
 from functions.events.NavEvents.filtro import alternar_filtro_e_atualizar_botao
+from functions.events.searchs.eventos import excluir_evento_clicado
 
 def conect_button(ui, parent):
     ui.btn_cadastro.clicked.connect(lambda: CadastroUsuario(ui))
@@ -30,4 +31,6 @@ def conect_button(ui, parent):
     ui.btn_finalizar_venda.clicked.connect(lambda: CadastroVenda(ui))
     ui.line_produtos_block.textChanged.connect(lambda: verificar_texto_apagado(ui))
     ui.btn_finalizar_cadastro_evento.clicked.connect(lambda: CadastrarEvento(ui))    
+    ui.btn_excluir_evento.clicked.connect(lambda: excluir_evento_clicado(ui,parent))
+
 

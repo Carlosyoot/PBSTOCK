@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(159, 63, 250);
+     <string notr="true">    background-color: rgb(253, 188, 55);
 border-radius: 10px;</string>
     </property>
     <property name="frameShape">
@@ -36,17 +36,20 @@ border-radius: 10px;</string>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>6</x>
+       <x>20</x>
        <y>250</y>
-       <width>451</width>
-       <height>261</height>
+       <width>441</width>
+       <height>301</height>
       </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="../QRC/file_rc.qrc">:/Imagens/Icones-Controle-de-Estoque-05.png</pixmap>
+      <pixmap resource="../QRC/file_rc.qrc">:/Imagens/estoque2.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -57,14 +60,14 @@ border-radius: 10px;</string>
       <rect>
        <x>30</x>
        <y>50</y>
-       <width>161</width>
+       <width>241</width>
        <height>61</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Montserrat</family>
-       <pointsize>28</pointsize>
+       <pointsize>32</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -72,30 +75,31 @@ border-radius: 10px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">color: white;
-font: 28pt &quot;Montserrat&quot;;</string>
+font: 32pt &quot;Montserrat&quot;;</string>
      </property>
      <property name="text">
-      <string>PyStock</string>
+      <string>PBSTOCK</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>110</y>
+       <y>150</y>
        <width>401</width>
        <height>111</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">color: white;
-font: 12pt &quot;Montserrat&quot;;</string>
+font: 12pt &quot;Montserrat&quot;;
+</string>
      </property>
      <property name="text">
-      <string>Olá caro colaborador, seja bem-vindo novamente!
-
-Caso ainda não tenha um login, contate seu super-
-visor para criá-lo.</string>
+      <string>OLÁ CARO COLABORADOR, SEJA BEM-VINDO
+CASO AINDA NÃO TENHA UM LOGIN CONTATE 
+SEU SUPERVISOR PARA CRIÁ-LO.
+</string>
      </property>
     </widget>
    </widget>
@@ -111,7 +115,9 @@ visor para criá-lo.</string>
     <property name="styleSheet">
      <string notr="true">background-color: white;
 border-radius: 10px;
-border: 4px solid #9F3FFA;
+border: 4px solid  rgb(253, 188, 55);
+
+
 color: white;
 font: 10pt &quot;Montserrat&quot;;
 </string>
@@ -151,11 +157,9 @@ border: 0px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgba(0, 0 , 0, 0);
-border: 2px solid rgba(0,0,0,0);
-border-bottom-color: rgb(159, 63, 250);
-color: rgb(0,0,0);
-padding-bottom: 8px;
-border-radius: 0px;
+border: 2px solid  rgb(253, 188, 55);
+padding-left:10px;
+color: black;
 font: 10pt &quot;Montserrat&quot;;</string>
      </property>
      <property name="placeholderText">
@@ -173,11 +177,9 @@ font: 10pt &quot;Montserrat&quot;;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgba(0, 0 , 0, 0);
-border: 2px solid rgba(0,0,0,0);
-border-bottom-color: rgb(159, 63, 250);
-color: rgb(0,0,0);
-padding-bottom: 8px;
-border-radius: 0px;
+border: 2px solid  rgb(253, 188, 55);
+padding-left:10px;
+color: black;
 font: 10pt &quot;Montserrat&quot;;</string>
      </property>
      <property name="text">
@@ -202,16 +204,41 @@ font: 10pt &quot;Montserrat&quot;;</string>
      <property name="styleSheet">
       <string notr="true">QPushButton {
 border: 2px;
-background-color: rgb(159, 63, 250);
+background-color: rgb(253, 188, 55);
 }
 
 QPushButton:hover {
-	background-color: rgb(197, 62, 255);
+background-color: rgb(240, 174, 6);
 }
 </string>
      </property>
      <property name="text">
       <string>Acessar Sistema</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_close">
+     <property name="geometry">
+      <rect>
+       <x>314</x>
+       <y>20</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color: rgb(225, 0, 0);
+border-color: rgb(225, 0, 0);
+border-radius: 12px;}
+
+QPushButton:hover {
+    background-color: rgb(180, 0, 0);  /* Vermelho mais escuro */
+    border-color: rgb(180, 0, 0);  /* Bordas também mais escuras */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>X</string>
      </property>
     </widget>
    </widget>

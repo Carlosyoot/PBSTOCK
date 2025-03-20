@@ -198,34 +198,32 @@ class MyDialog(CustomDialog):
             if i == 0:
                 line_edit.setFixedWidth(200)
                 line_edit.setPlaceholderText('Produto')
-                campo_produto = line_edit  # Armazena o campo de "Produto"
+                campo_produto = line_edit 
             elif i == 3:
                 line_edit.setFixedWidth(320)
                 line_edit.setPlaceholderText('Descrição')
-                campo_descricao = line_edit  # Armazena o campo de "Descrição"
+                campo_descricao = line_edit  
             elif i == 1:
                 line_edit.setFixedWidth(100)
                 line_edit.setPlaceholderText('Quantidade')
-                campo_quantidade = line_edit  # Armazena o campo de "Quantidade"
+                campo_quantidade = line_edit 
             elif i == 2:
                 line_edit.setFixedWidth(140)
                 line_edit.setPlaceholderText('Valor unitário')
-                campo_valor = line_edit  # Armazena o campo de "Valor unitário"
+                campo_valor = line_edit 
 
             campos.append(line_edit)
             item_layout.addWidget(line_edit)
 
-        # Configura o DetailedCompleter para o campo de "Produto"
+       
         detailed_completer = DetailedCompleter(
-            GetProdutosAll,  # Função que busca os dados dos produtos
-            campo_produto,   # Campo de "Produto"
-            campo_quantidade,    # Campo de "Quantidade"
-            campo_valor,         # Campo de "Valor unitário"
-            campo_descricao      # Campo de "Descrição"
+            GetProdutosAll,  
+            campo_produto,  
+            campo_quantidade,   
+            campo_descricao     
         )
         campo_produto.setCompleter(detailed_completer)
 
-        # Botão de deletar
         delete_button = QPushButton(ui)
         delete_button.setFixedSize(60, 41)
         delete_button.setIcon(QIcon(":/icones/delete.png"))

@@ -73,7 +73,7 @@
      <enum>QFrame::Sunken</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="pg_home">
      <widget class="QLabel" name="lbl_seja_bem_vindo">

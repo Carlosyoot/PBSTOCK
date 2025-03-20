@@ -3,66 +3,57 @@ from database.Datalogic import DataGetAllColaboradoresNomes
 from PyQt5.QtCore import Qt
 
 def AtualizaCompleterSearchMonitoramento(ui):
-    """
-    Configura o QCompleter para o campo de busca de monitoramento.
-    """
+
     try:
-        # Obtém a lista de nomes de colaboradores
         nomes_colaboradores = DataGetAllColaboradoresNomes()
 
-        # Verifica se é uma lista simples
         if not all(isinstance(nome, str) for nome in nomes_colaboradores):
-            nomes_colaboradores = [str(nome) for nome in nomes_colaboradores]  # Converte para string se necessário
+            nomes_colaboradores = [str(nome) for nome in nomes_colaboradores]
 
-        # Cria o autocompleter com a lista corrigida
         CustomComptMonitoramento = QCompleter(nomes_colaboradores)
-        CustomComptMonitoramento.setCaseSensitivity(False)  # Ignora maiúsculas/minúsculas
-        CustomComptMonitoramento.setFilterMode(Qt.MatchContains)  # Permite pesquisa parcial
+        CustomComptMonitoramento.setCaseSensitivity(False) 
+        CustomComptMonitoramento.setFilterMode(Qt.MatchContains) 
 
-        # Define o autocompleter para o campo de busca
         ui.line_search_bar_monitoramentoto.setCompleter(CustomComptMonitoramento)
+
+        ui.line_search_bar_monitoramentoto.textChanged.connect(lambda: filtrar_tabela_monitoramento(ui))
 
     except Exception as e:
         print(f"Erro ao configurar completer para monitoramento: {e}")
 
-
 def filtrar_tabela_monitoramento(ui):
-    """
-    Filtra a tabela de monitoramento com base no nome do vendedor digitado no campo de busca.
-    """
     try:
-        texto_busca = ui.line_search_bar_monitoramento.text().strip().lower()
+        texto_busca = ui.line_search_bar_monitoramentoto.text().strip().lower()
         tabela = ui.tabela_monitoramento
 
-        print(f"Texto de busca: {texto_busca}")
+        if not texto_busca:
+            reexibir_tabela_monitoramento(ui)
+            return
 
-        # Percorre as linhas da tabela e verifica se o texto de busca está presente na coluna do vendedor
         row_count = tabela.rowCount()
 
         for row in range(row_count):
-            # Obtém o nome do vendedor da linha atual
-            vendedor = tabela.item(row, 0).text().lower()  # Coluna 0: Vendedor
+            vendedor_item = tabela.item(row, 0) 
 
-            # Verifica se o texto de busca está presente no nome do vendedor
-            match = texto_busca in vendedor if texto_busca else True
+            if vendedor_item:
+                vendedor = vendedor_item.text().lower()
+                match = texto_busca in vendedor
+            else:
+                match = False  
 
-            # Mostra ou oculta a linha com base no resultado da busca
             tabela.setRowHidden(row, not match)
-            print(f"Linha {row}: {'Mostrar' if match else 'Ocultar'} - Vendedor: {vendedor}")
 
     except Exception as e:
         print(f"Erro ao filtrar tabela de monitoramento: {e}")
 
-
 def reexibir_tabela_monitoramento(ui):
-    """
-    Reexibe todas as linhas da tabela de monitoramento quando o campo de busca está vazio.
-    """
+ 
     try:
-        # Reexibe todas as linhas da tabela de monitoramento
-        row_count = ui.tabela_monitoramento.rowCount()
+        tabela = ui.tabela_monitoramento
+        row_count = tabela.rowCount()
+
         for row in range(row_count):
-            ui.tabela_monitoramento.setRowHidden(row, False)  # Mostra todas as linhas
+            tabela.setRowHidden(row, False)  
 
     except Exception as e:
         print(f"Erro ao reexibir tabela de monitoramento: {e}")

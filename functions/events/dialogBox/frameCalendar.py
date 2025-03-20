@@ -6,7 +6,6 @@ from PyQt5.QtGui import QIntValidator
 
 
 class DateEditCompleto(QWidget):
-    """Widget personalizado que combina QLineEdit com um botão de calendário."""
     def __init__(ui, parent=None):
         super().__init__(parent)
 
@@ -31,7 +30,6 @@ class DateEditCompleto(QWidget):
         ui.calendar.clicked.connect(ui.on_calendar_clicked)
 
     def format_date(ui):
-        """Formata o texto para o padrão de data (dd/MM/yyyy)."""
         text = ui.line_edit.text().replace("/", "")  
         if len(text) > 8: 
             text = text[:8]
@@ -46,7 +44,6 @@ class DateEditCompleto(QWidget):
         ui.line_edit.setText(formatted_text)
 
     def show_calendar(ui):
-        """Exibe o calendário pop-up e aponta para a data digitada."""
        
         date = ui.get_date()
         if date and date.isValid():
@@ -56,12 +53,10 @@ class DateEditCompleto(QWidget):
         ui.calendar.show()
 
     def on_calendar_clicked(ui, date):
-        """Atualiza o campo de texto com a data selecionada no calendário."""
         ui.line_edit.setText(date.toString("dd/MM/yyyy"))
         ui.calendar.hide()
 
     def get_date(ui):
-        """Retorna a data como um objeto QDate, ou None se inválida."""
         text = ui.line_edit.text()
         try:
             day, month, year = map(int, text.split("/"))
@@ -122,14 +117,12 @@ class MyDialog(QDialog):
             ui.move(parent.geometry().center() - ui.rect().center())
 
     def on_date_type_changed(ui, index):
-        """Atualiza as datas com base no tipo de data selecionado."""
         if index == 1: 
             ui.update_weekly_dates()
         elif index == 2:  
             ui.update_monthly_dates()
 
     def update_weekly_dates(self):
-        """Atualiza a data inicial para o domingo e a final para o sábado da semana correspondente."""
         start_date = self.start_date_edit.get_date()
         if start_date:
            
@@ -146,14 +139,12 @@ class MyDialog(QDialog):
 
 
     def update_monthly_dates(ui):
-        """Atualiza a data final para o fim do mês."""
         start_date = ui.start_date_edit.get_date()
         if start_date:
             end_date = QDate(start_date.year(), start_date.month(), start_date.daysInMonth())
             ui.end_date_edit.line_edit.setText(end_date.toString("dd/MM/yyyy"))
 
     def on_ok_clicked(ui):
-        """Coleta os dados e fecha o diálogo."""
         data = []
 
         ui.selected_date_type = ui.date_type_combo.currentText()
@@ -164,7 +155,6 @@ class MyDialog(QDialog):
             QMessageBox.warning(ui, "Erro", "Por favor, insira datas válidas.")
             return
 
-        # Formata as datas para o padrão brasileiro
         ui.start_date = start_date.toString("dd/MM/yyyy")
         ui.end_date = end_date.toString("dd/MM/yyyy")
 

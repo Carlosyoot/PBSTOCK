@@ -17,24 +17,10 @@ def logar(ui, janela_atual):
         ui.lineEdit.setStyleSheet(StyleSucess.style)
         ui.lineEdit_2.setStyleSheet(StyleSucess.style)
         print("Redirecionando para Admin")
-        QTimer.singleShot(200, janela_atual.close)
-        WindowManager.open_admin(User)  # Passa o 'User' para a função de abrir o admin, se necessário
-
-        #QTIMER PARA JANELA DIRETA
-       
-        
-#    FUTURA PAGE DE COLABORADOR
-    #elif redirect == 'colaborador' and status == 'sucess':
-    #    ui.lineEdit.setStyleSheet(StyleSucess.style)
-    #    ui.lineEdit_2.setStyleSheet(StyleSucess.style)
-    #    print("Redirecionando para colaborador")
-#
-    #    # Fecha a janela atual
-    #    janela_atual.close()
-    
-    
+        janela_atual.close()
+        WindowManager.open_admin(User)  
+      
     else:
-        #print(result['message'])
         ui.lineEdit.setStyleSheet(StyleError.style)
         ui.lineEdit_2.setStyleSheet(StyleError.style)
         print('Erro ao efetuar login')
