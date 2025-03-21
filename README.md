@@ -41,6 +41,7 @@
 ✅ Suporte para **múltiplas filiais** com **sincronização em tempo real**.  
 
 ### 🔐 **7. Segurança e Acessibilidade**  
+✅ **Validação** de CPF.  
 ✅ **Criptografia** avançada para proteger dados.  
 ✅ **Acesso remoto** seguro para gerenciamento à distância.  
 
