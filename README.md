@@ -59,19 +59,31 @@
 ## 🖥️ **Telas do Sistema**  
 
 ### 🔐 Login  
-![Login](caminho/para/imagem_login.png)  
+![Login](pbstock/login.PNG)  
 
 ### 🏠 Tela Inicial  
-![Home](caminho/para/imagem_home.png)  
+![Home](pbstock/inicial.PNG)  
 
-### 👥 Clientes  
-![Clientes](caminho/para/imagem_clientes.png)  
+### 👥 Colaboradores  
+![Clientes](pbstock/colaboradores.PNG)  
 
 ### 📦 Produtos  
-![Produtos](caminho/para/imagem_produtos.png)  
+![Produtos](pbstock/produtos.PNG)  
 
 ### 💰 Vendas  
-![Vendas](caminho/para/imagem_vendas.png)  
+![Vendas](pbstock/vendas.PNG) 
+
+### 📅 Eventos  
+![Vendas](pbstock/eventos.PNG)  
+
+### ⚙ Configurações  
+![Vendas](pbstock/configurações.PNG)  
+
+### 🧾 Pdf  
+![Vendas](pbstock/pdf.PNG)  
+
+### 🧾 Excel  
+![Vendas](pbstock/EXCEL.PNG)  
 
 ---
 
