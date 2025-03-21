@@ -13,7 +13,7 @@
 🔹 Oferece **controle total de produtos, relatórios avançados e integração** com Excel e PDF.  
 🔹 Seu design distribuído permite **operações em múltiplas filiais** com dados sempre sincronizados.  
 
-🎥 **Demonstração do Projeto** → [Assista ao vídeo aqui](https://www.youtube.com/watch?v=G4ky5aTrUO0)  
+🎥 **Demonstração do Projeto** → [Assista ao vídeo aqui](https://youtu.be/KYRcrwppV44)  
 
 ---
 
@@ -59,35 +59,42 @@
 ## 🖥️ **Telas do Sistema**  
 
 ### 🔐 Login  
-![Login]()  
+![Login](pbstock/login.PNG)  
 
 ### 🏠 Tela Inicial  
-![Home]()  
+![Home](pbstock/telainicial.PNG)  
 
 ### 👥 Colaboradores  
-![Clientes]()  
+![Clientes](pbstock/telacolaboradores.PNG)  
 
 ### 📦 Produtos  
-![Produtos]()  
+![Produtos](pbstock/telaprodutos.PNG)  
 
 ### 💰 Vendas  
-![Vendas]() 
+![Vendas](pbstock/telavendas.PNG) 
 
 ### 📅 Eventos  
-![Vendas]()  
+![Vendas](pbstock/telaeventos.PNG)  
 
 ### ⚙ Configurações  
-![Vendas]()  
+![Vendas](pbstock/telaconfigurações.PNG)  
 
 ### 🧾 Pdf  
-![Vendas]()  
+![Vendas](pbstock/pdf.PNG)  
 
 ### 🧾 Excel  
-![Vendas]()  
+![Vendas](pbstock/EXCEL.PNG)  
 
 ---
 
 ## 🛠️ **Como Instalar e Rodar o Projeto?**  
+
+- **Execute o instalador disponível em realeses**
+  **Instale MySql, MySqlServer e XAMPP**
+  **Execute MySql e inicie o servidor local/próprio distribuído**
+  **Importe o banco pbstock.sql no local/servidor**
+  **Inicie sua primeira conexão com Usuário: ADMIN, Senha: PBSTOCK**
+  **Aproveite seu uso!**
 
 ### **📌 Pré-requisitos**  
 - **Python 3.10+**  
