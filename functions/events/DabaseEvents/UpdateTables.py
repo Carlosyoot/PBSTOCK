@@ -314,7 +314,8 @@ def AtualizarTabelasProdutosStatus(ui, status_filtro=None):
             ui.tabela_produto.setItem(i, 1, QTableWidgetItem(str(produto[2])))  
             ui.tabela_produto.setItem(i, 2, NumericTableWidgetItem(str(produto[3]))) 
             ui.tabela_produto.setItem(i, 3, NumericTableWidgetItem(str(produto[4]))) 
-            ui.tabela_produto.setItem(i, 4, QTableWidgetItem(str(produto[5]))) 
+            ui.tabela_produto.setItem(i, 4, QTableWidgetItem(str(produto[5])))
+            ui.tabela_produto.setItem(i, 5, QTableWidgetItem(str(produto[6])))
 
             item_produto = ui.tabela_produto.item(i, 0)  
             item_produto.setData(Qt.UserRole, produto[0])
