@@ -3,7 +3,7 @@
 block_cipher = None
 
 a = Analysis(
-    ['setup.py'],  # Substitua pelo arquivo principal correto
+    ['setup.py'],  
     pathex=[],
     binaries=[],
     datas=[
@@ -42,4 +42,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='Images\icone.ico', 
 )

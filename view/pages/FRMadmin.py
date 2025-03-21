@@ -2217,7 +2217,9 @@ class Ui_FrmAdmin(object):
 
     def retranslateUi(self, FrmAdmin):
         _translate = QtCore.QCoreApplication.translate
-        FrmAdmin.setWindowTitle(_translate("FrmAdmin", "PyStock"))
+        FrmAdmin.setWindowTitle(_translate("FrmAdmin", "PBSTOCK"))
+        FrmAdmin.setWindowIcon(QtGui.QIcon("Images\icone.ico"))
+
         self.lbl_seja_bem_vindo.setText(_translate("FrmAdmin", "Olá,"))
         self.RecentSell_label.setText(_translate("FrmAdmin", "Vendas Recentes"))
         self.EventAtive_label.setText(_translate("FrmAdmin", "Eventos Ativos"))
